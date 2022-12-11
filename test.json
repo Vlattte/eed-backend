@@ -1,0 +1,14 @@
+{
+  "step_0": {
+    "step": 0,
+    "id": 1001,
+    "draggable": false,
+    "currentValue": "center"
+  },
+  "step_1": {
+    "step": 1,
+    "id": 1001,
+    "draggable": false,
+    "currentValue": "center"
+  }
+}
