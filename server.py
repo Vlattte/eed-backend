@@ -12,21 +12,10 @@ import websockets
 
 async def echo(websocket):
     async for message in websocket:
-        event = json.loads(message)
-        cmp_exit_code = comparer.Comparer("test", event)
-        if cmp_exit_code == "RIGHT STEP":
-            return_json = {
-                "id": 1001,
-                "next_id": 1017,
-                "flag": False
-            }
-        else:
-            return_json = {
-                "flag": False
-            }
 
+        event = json.loads(message)
+        return_json = comparer.Comparer("P302O", event)
         await websocket.send(json.dumps(return_json))
-        print(cmp_exit_code)
 
 
 

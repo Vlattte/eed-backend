@@ -21,20 +21,29 @@ def Comparer(app, message): #message - json от фронта, app - аппар�
     # [5][1] - left
     # [6][1] - top
 
-    print(instruction["id"])
-    if instruction["id"] == message[1][1]:
-        print(message[1][1])
-    else:
-        return "BAD ID"
+    # Количество шагов:
+    # П302-O: 5 шагов
 
-    if instruction["draggable"] == message[2][1]:
-        print(message[2][1])
-    else:
-        return "BAD DRAGGABLE"
+    steps_num = 0
+    if app == "P302O":
+        steps_num = 5
 
-    if instruction["currentValue"] == message[4][1]:
-        print(message[4][1])
-    else:
-        return "BAD VALUE"
+    return_request = {"validation": False}
 
-    return "RIGHT STEP"
+    for i in range(steps_num):
+        if message["isTraining"]:
+            return_request["next_id"] = instruction["next_id"]
+            #TODO next_actions
+
+        if instruction["id"] == message[1][1]:  # element id
+            if message[2][1]:  # is element draggable
+                if message[5][1] >= instruction["left"] - 5 or message[5][1] <= instruction["left"] + 5:
+                    if message[6][1] >= instruction["top"] - 5 or message[6][1] >= instruction["top"] + 5:
+                        return_request["validation"] = True
+            else:
+                if message[4][1] == instruction["currentValue"]:
+                    return_request["validation"] = True
+
+        return_request[""]
+
+    return return_request

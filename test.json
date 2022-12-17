@@ -3,12 +3,91 @@
     "step": 0,
     "id": 1001,
     "draggable": false,
-    "currentValue": "center"
+    "current_value": "center",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "action_id": 1017,
+        "action_value": "on"
+      }
+    ],
+    "count_next": 1,
+    "next_actions":[
+      {
+        "next_id": 1003,
+        "annotation": "Нажмите на рычаг"
+      }
+    ]
+
   },
   "step_1": {
     "step": 1,
+    "id": 1003,
+    "draggable": false,
+    "current_value": "center",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "count_next": 1,
+    "next_actions":[
+      {
+        "next_id": 1001,
+        "annotation": "Нажмите на рычаг"
+      }
+    ]
+  },
+  "step_2": {
+    "step": 2,
     "id": 1001,
     "draggable": false,
-    "currentValue": "center"
+    "current_value": "down",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions":[
+      {
+        "next_id": 1003,
+        "annotation": "Нажмите на рычаг"
+      }
+    ]
+  },
+  "step_3": {
+    "step": 3,
+    "id": 1003,
+    "draggable": false,
+    "current_value": "down",
+    "actions_for_step": 1,
+    "count_next": 1,
+    "next_actions":[
+      {
+        "next_id": 1004,
+        "annotation": "Переведите РН в положение -15"
+      }
+    ]
+  },
+  "step_4": {
+    "step": 4,
+    "id": 1004,
+    "draggable": false,
+    "current_value": "-15",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions":[
+      {
+        "next_id": 1006,
+        "annotation": "Нажмите на рычаг"
+      }
+    ]
+  },
+  "step_5": {
+    "step": 5,
+    "id": 1006,
+    "draggable": true,
+    "left": 525,
+    "top":  163,
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 0
   }
 }
