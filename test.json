@@ -15,7 +15,7 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1003,
+        "next_id": 1002,
         "annotation": "Нажмите на рычаг"
       }
     ]
@@ -23,7 +23,7 @@
   },
   "step_1": {
     "step": 1,
-    "id": 1003,
+    "id": 1002,
     "draggable": false,
     "current_value": "center",
     "actions_for_step": 1,
@@ -46,14 +46,14 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1003,
+        "next_id": 1002,
         "annotation": "Нажмите на рычаг"
       }
     ]
   },
   "step_3": {
     "step": 3,
-    "id": 1003,
+    "id": 1002,
     "draggable": false,
     "current_value": "down",
     "actions_for_step": 1,
@@ -84,8 +84,8 @@
     "step": 5,
     "id": 1006,
     "draggable": true,
-    "left": 525,
-    "top":  163,
+    "left": 304,
+    "top":  94,
     "actions_for_step": 1,
     "count_action": 0,
     "count_next": 0
