@@ -47,12 +47,21 @@ def write_row(session_id, step_num, actions_for_step, attempts_left):
         connection = psycopg2.connect(**connect_params)
 
         cursor = connection.cursor()
-        cursor.execute(
-            f"""
-                INSERT INTO test_table (session_id, step_num, actions_per_step, attempts_left)
-                VALUES('{session_id}', {step_num}, {actions_for_step}, {attempts_left})
-            """
-        )
+        if step_num == 0:
+            cursor.execute(
+                f"""
+                    INSERT INTO test_table (session_id, step_num, actions_per_step, attempts_left)
+                    VALUES('{session_id}', {step_num}, {actions_for_step}, {attempts_left})
+                """
+            )
+        elif step_num >= 1:
+            cursor.execute(
+                f"""
+                    UPDATE test_table SET step_num = {step_num}, 
+                    actions_per_step = {actions_for_step}, attempts_left = {attempts_left}
+                    WHERE session_id = '{session_id}'
+                """
+            )
         cursor.close()
         connection.commit()
     except (Exception, Error) as error:

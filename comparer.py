@@ -3,7 +3,7 @@ import json
 import db
 
 def GetInstruction(app, step_id): #app - аппаратура, step_id - номер шага
-    instr_file = open("test.json")
+    instr_file = open("test.json", encoding='utf-8')
     data = json.load(instr_file)
 
     for i in range(len(data)):
@@ -31,7 +31,11 @@ def Comparer(app, message): #message - json от фронта, app - аппар�
 
 
     instruction = GetInstruction(app, step)
-    #print(f'instruction: \n{instruction}')
+    next_actions = instruction['next_actions']
+    before_id = instruction['before_id']
+    count_next =  instruction['count_next']
+
+    #print(instruction['next_actions'][0]['annotation'])
 
     # [0][1] - session_id (надо придумать)
     # [1][1] - id
@@ -46,10 +50,13 @@ def Comparer(app, message): #message - json от фронта, app - аппар�
 
     steps_num = 0
     if app == "P302O":
-        steps_num = 5
+        steps_num = 4
     
     # По умолчанию считаем, что отдаваемый ответ = False
-    return_request = {"validation": False, "next_id": 1017, "id": message[1][1], "is_fail": False, "is_finished": False}
+    return_request = {"validation": False, "next_id": 1017, 
+                      "id": message[1][1], "is_fail": False, 
+                      "is_finished": False, 'next_actions': next_actions, 
+                      'before_id': before_id, 'count_next': count_next}
 
     #if message["isTraining"]:
     #    return_request["next_id"] = instruction["next_id"]

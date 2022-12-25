@@ -2,6 +2,7 @@
   "step_0": {
     "step": 0,
     "id": 1001,
+    "before_id": 1001,
     "draggable": false,
     "current_value": "center",
     "actions_for_step": 1,
@@ -16,7 +17,7 @@
     "next_actions":[
       {
         "next_id": 1002,
-        "annotation": "Нажмите на рычаг"
+        "annotation": "2. Переведите правый рычаг в верхнем левом углу в центральное положение"
       }
     ]
 
@@ -24,6 +25,7 @@
   "step_1": {
     "step": 1,
     "id": 1002,
+    "before_id": 1002,
     "draggable": false,
     "current_value": "center",
     "actions_for_step": 1,
@@ -32,13 +34,14 @@
     "next_actions":[
       {
         "next_id": 1001,
-        "annotation": "Нажмите на рычаг"
+        "annotation": "3. Переведите левый рычаг в верхнем левом углу в нижнее положение"
       }
     ]
   },
   "step_2": {
     "step": 2,
     "id": 1001,
+    "before_id": 1001,
     "draggable": false,
     "current_value": "down",
     "actions_for_step": 1,
@@ -47,13 +50,14 @@
     "next_actions":[
       {
         "next_id": 1002,
-        "annotation": "Нажмите на рычаг"
+        "annotation": "4. Переведите правый рычаг в верхнем левом углу в нижнее положение"
       }
     ]
   },
   "step_3": {
     "step": 3,
     "id": 1002,
+    "before_id": 1002,
     "draggable": false,
     "current_value": "down",
     "actions_for_step": 1,
@@ -61,33 +65,24 @@
     "next_actions":[
       {
         "next_id": 1004,
-        "annotation": "Переведите РН в положение -15"
+        "annotation": "5. Переведите РН в положение 0,1"
       }
     ]
   },
   "step_4": {
     "step": 4,
     "id": 1004,
+    "before_id": 1004,
     "draggable": false,
     "current_value": "-15",
     "actions_for_step": 1,
     "count_action": 0,
-    "count_next": 1,
+    "count_next": 1, 
     "next_actions":[
       {
-        "next_id": 1006,
-        "annotation": "Нажмите на рычаг"
+        "next_id": 1004,
+        "annotation": "Тестовая карта пройдена"
       }
     ]
-  },
-  "step_5": {
-    "step": 5,
-    "id": 1006,
-    "draggable": true,
-    "left": 304,
-    "top":  94,
-    "actions_for_step": 1,
-    "count_action": 0,
-    "count_next": 0
   }
 }
