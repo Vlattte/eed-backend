@@ -11,8 +11,8 @@ import websockets
 
 
 async def handler(websocket):
-    print("INSIDE")
     message = await websocket.recv()
+    print(message + "\n")
     event = json.loads(message)
     return_json = comparer.Comparer("P302O", event)
     await websocket.send(json.dumps(return_json, ensure_ascii=False))

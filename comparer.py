@@ -47,8 +47,6 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                 # print("a2")
 
                 if sub_steps[i][name] == "False":
-
-                    print("Верный многошагный шаг")
                     sub_steps[i][name] = "True"
                     return_code = 0
 
@@ -115,7 +113,6 @@ def Comparer(app, message): #message - json от фронта, app - аппар�
     multiple_res = 1
 
     # multiple == несколько действий за шаг
-    print(instruction)
     if instruction["id"] == "multiple":
         multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps)
         print("res: " + str(multiple_res))
@@ -145,9 +142,7 @@ def Comparer(app, message): #message - json от фронта, app - аппар�
             pass
         else:
             if multiple_res == 1:
-                print("свежак")
                 new_instruction = GetInstruction(app, step + 1)
-                print(new_instruction)
                 sub_steps = {'name': 'nan'}
                 db.write_row(session_id=session_id,
                          step_num=step + step_increm,

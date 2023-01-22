@@ -1,0 +1,277 @@
+{
+  "step_0": {
+    "step": 0,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод1",
+        "current_value": "on",
+        "before_id": "провод1"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод2",
+        "current_value": "on",
+        "before_id": "провод2"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "next_id": 6007
+      }
+    ],
+    "annotation": "1. На ЩКНЧ1 перевести рычаг СЛ. в положение КАН."
+  },
+  "step_1": {
+    "step": 1,
+    "id": 6007,
+    "before_id": 6007,
+    "draggable": false,
+    "current_value": "center",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "next_id": "провод3"
+      },
+      {
+        "next_id": "провод4"
+      }
+    ],
+    "annotation": "2. гн. «КАН.ПЕР-ПР» выбранного канала и гн. «СЛ.ПР-ПЕР» выбранной СЛ."
+  },
+  "step_2": {
+    "step": 2,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод3",
+        "current_value": "on",
+        "before_id": "провод3"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод4",
+        "current_value": "on",
+        "before_id": "провод4"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "next_id": "провод5"
+      },
+      {
+        "next_id": "провод6"
+      }
+    ],
+    "annotation": "3. На ЩКНЧ2 соединить 4-х пр. шнуром гн. СЛ ПВУ и гн. СЛ ТР [х] расположенными под гн. СЛ сдаваемого канала"
+  },
+  "step_3": {
+    "step": 3,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод5",
+        "current_value": "on",
+        "before_id": "провод5"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод6",
+        "current_value": "on",
+        "before_id": "провод6"
+      }
+    ],
+    "count_next": 2,
+    "next_actions": [
+      {
+        "next_id": "провод7"
+      },
+      {
+        "next_id": "провод8"
+      }
+    ],
+    "annotation": "4. Соединить 4-х пр.  шнуром гн. «КАН.ПЕР-ПР» панели «ДС» \nс гн. «КАН.ПЕР-ПР» \nнужного кТЧ."
+  },
+  "step_4": {
+    "step": 4,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод7",
+        "current_value": "on",
+        "before_id": "провод7"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод8",
+        "current_value": "on",
+        "before_id": "провод8"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "next_id": "провод9"
+      },
+      {
+        "next_id": "провод10"
+      }
+    ],
+    "annotation": "Соединить 2-х пр шнуром гн. «2ПР» панели «ДС» с гн. 2-ПР. ПВУ."
+  },
+  "step_5": {
+    "step": 5,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод9",
+        "current_value": "on",
+        "before_id": "провод9"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод10",
+        "current_value": "on",
+        "before_id": "провод10"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "next_id": 6010
+      }
+    ],
+    "annotation": "Правый рычаг перевести в нижнее положение"
+  },
+  "step_6": {
+    "step": 6,
+    "id": 6010,
+    "before_id": 6010,
+    "draggable": false,
+    "current_value": "center",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "next_id": 6010
+      }
+    ],
+    "annotation": "Правый рычаг перевести в нижнее положение"
+  },
+  "step_7": {
+    "step": 7,
+    "id": 6010,
+    "before_id": 6010,
+    "draggable": false,
+    "current_value": "down",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "next_id": "провод11"
+      },
+      {
+        "next_id": "провод12"
+      }
+    ],
+    "annotation": "Переставить 2-х пр.шнур в нужную СЛ. \nВ 2-х пр. режиме каналы сдаются по любым свободным исправным парам."
+  },
+  "step_8": {
+    "step": 8,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод11",
+        "current_value": "on",
+        "before_id": "провод11"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод12",
+        "current_value": "on",
+        "before_id": "провод12"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "next_id": "провод13"
+      },
+      {
+        "next_id": "провод14"
+      }
+    ],
+    "annotation": " Для контроля разговора по сданному каналу необходимо соединить 2-х пр. шнуром гн. 2ПР ПВУ и гн. СЛ ТР [х] расположенное под гн. СЛ сдаваемого канала."
+  },
+  "step_9": {
+    "step": 9,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод13",
+        "current_value": "on",
+        "before_id": "провод13"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод14",
+        "current_value": "on",
+        "before_id": "провод14"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "next_id": -1
+      }
+    ],
+    "annotation": "ПРОЙДЕНО"
+  }
+}
