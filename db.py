@@ -10,7 +10,8 @@ CREATE TABLE test_table
 	step_num smallint,
 	actions_per_step smallint, 
 	sub_steps json, 
-	attempts_left smallint
+	attempts_left smallint,
+	is_training text
 )
 """
 # Параметры для подключения к БД
@@ -42,7 +43,7 @@ def get_session_id_list():
         if connection:
             connection.close()
 
-def write_row(session_id, step_num, actions_for_step, sub_steps, attempts_left):
+def write_row(session_id, step_num, actions_for_step, sub_steps, attempts_left, is_training = True):
     # Функция для записи о действии пользователя в таблицу
     try:
         # Подключение к существующей базе данных
@@ -52,9 +53,9 @@ def write_row(session_id, step_num, actions_for_step, sub_steps, attempts_left):
         if step_num == 0:
             cursor.execute(
                 f"""
-                    INSERT INTO test_table (session_id, step_num, actions_per_step, sub_steps, attempts_left)
+                    INSERT INTO test_table (session_id, step_num, actions_per_step, sub_steps, attempts_left, is_training)
                     VALUES('{session_id}', {step_num}, {actions_for_step},
-                            '{json.dumps(sub_steps)}', {attempts_left})
+                            '{json.dumps(sub_steps)}', {attempts_left}, {is_training})
                 """
             )
         elif step_num >= 1:
@@ -83,13 +84,13 @@ def get_step_attempts(session_id):
         cursor = connection.cursor()
         cursor.execute(
             f"""
-            SELECT step_num, attempts_left, actions_per_step FROM test_table 
+            SELECT step_num, attempts_left, actions_per_step, is_training FROM test_table 
             WHERE id = (SELECT MAX(id) FROM test_table WHERE session_id = '{session_id}')
             """
         )
-        step, left_attempts, left_steps = cursor.fetchone()
+        step, left_attempts, left_steps, is_training = cursor.fetchone()
         cursor.close()
-        return step, left_attempts, left_steps
+        return step, left_attempts, left_steps, is_training
     except (Exception, Error) as error:
         print("Ошибка при работе с PostgreSQL", error)
     finally:

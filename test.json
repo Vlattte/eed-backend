@@ -1,6 +1,18 @@
 {
-  "step_0": {
+  "step_0":
+  {
     "step": 0,
+    "id": 1001,
+    "count_next": 1,
+    "next_actions":[
+      {
+        "next_id": 1001,
+        "annotation": "1.  Переведите левый рычаг в верхнем левом углу в нижнее положение"
+      }
+    ]
+  },
+  "step_1": {
+    "step": 1,
     "id": "multiple",
     "before_id": 1001,
     "draggable": false,
@@ -36,8 +48,8 @@
     ]
 
   },
-  "step_1": {
-    "step": 1,
+  "step_2": {
+    "step": 2,
     "id": 1002,
     "before_id": 1002,
     "draggable": false,
@@ -52,8 +64,8 @@
       }
     ]
   },
-  "step_2": {
-    "step": 2,
+  "step_3": {
+    "step": 3,
     "id": 1001,
     "before_id": 1001,
     "draggable": false,
@@ -68,8 +80,8 @@
       }
     ]
   },
-  "step_3": {
-    "step": 3,
+  "step_4": {
+    "step": 4,
     "id": 1004,
     "before_id": 1004,
     "draggable": false,
@@ -83,8 +95,8 @@
       }
     ]
   },
-  "step_4": {
-    "step": 4,
+  "step_5": {
+    "step": 5,
     "id": "multiple",
     "before_id": 1004,
     "draggable": false,

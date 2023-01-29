@@ -3,7 +3,7 @@ import json
 import db
 
 def GetInstruction(app, step_id): #app - аппаратура, step_id - номер шага
-    instr_file = open("test.json", encoding='utf-8')
+    instr_file = open(app, encoding='utf-8')
     data = json.load(instr_file)
 
     for i in range(len(data)):
@@ -60,26 +60,52 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                                  attempts_left=left_attempts)
     return return_code
 
+def WhatExercise(message):
+    is_training = "nan"
+    exercise_name = "test.json"
+
+    if message[0][0] == "session_id":
+        exercise_name = "test.json"
+
+    # проверяем флаг тренировки
+    if message[1][0] == "is_training":
+        is_training = message[1][1]
+
+    # id норматива
+    if message[2][1] == "ex_id":
+        if "ex_id" == 0:
+            exercise_name = "test.json"
+        #TODO: добавить потом другие нормативы
+
+    return exercise_name, is_training
 
 #[["session_id","1gjolm7fq"],["id",1015],["draggble",false],["rotatable",true],["currentValue",60],["left",249.99999999999997],["top",105.55555555555554]]
-def Comparer(app, message): #message - json от фронта, app - аппаратура
-
+def Comparer(message): #message - json от фронта, app - аппаратура
+    # по id норматива получаем название соответсвующего файла
+    # так же получаем значение флага is_training
+    exercise_name, is_training = WhatExercise(message)
     session_id = message[0][1]
     session_id_list = db.get_session_id_list()
 
+
     # Если session_id нет в таблице, то создаем запись для него и устанавливаем номер шага = 0
     if session_id not in session_id_list:
-        instruction = GetInstruction(app, 0)
+        instruction = GetInstruction(exercise_name, 0)
         sub_steps = {'name': 'nan'}
         db.write_row(session_id=session_id, 
                      step_num=0,
                      actions_for_step=instruction['actions_for_step'],
                      sub_steps=sub_steps,
-                     attempts_left=1)
+                     attempts_left=1,
+                     is_training=is_training)
 
-    step, left_attempts, left_steps = db.get_step_attempts(session_id=session_id)
+    if is_training != 'nan':
+        instruction = GetInstruction(exercise_name, 0)
+        return_request = {'next_actions': instruction['next_actions']}
 
-    instruction = GetInstruction(app, step)
+    step, left_attempts, left_steps, is_training = db.get_step_attempts(session_id=session_id)
+
+    instruction = GetInstruction(exercise_name, step)
     next_actions = instruction['next_actions']
     before_id = instruction['before_id']
     count_next = instruction['count_next']
@@ -96,7 +122,7 @@ def Comparer(app, message): #message - json от фронта, app - аппар�
     # П302-O: 5 шагов
 
     steps_num = 0
-    if app == "P302O":
+    if exercise_name == "test.json":
         steps_num = 4
     
     # По умолчанию считаем, что отдаваемый ответ = False
@@ -125,8 +151,6 @@ def Comparer(app, message): #message - json от фронта, app - аппар�
 
     elif instruction["id"] == message[1][1]:  # element id
         if message[2][1]:  # is element draggable
-            #(message[6][1], instruction["top"])
-
             if abs(message[5][1] - instruction["left"]) <= 10:
                 if abs(message[6][1] - instruction["top"]) <= 10:
                     return_request["validation"] = True
@@ -142,7 +166,7 @@ def Comparer(app, message): #message - json от фронта, app - аппар�
             pass
         else:
             if multiple_res == 1:
-                new_instruction = GetInstruction(app, step + 1)
+                new_instruction = GetInstruction(exercise_name, step + 1)
                 sub_steps = {'name': 'nan'}
                 db.write_row(session_id=session_id,
                          step_num=step + step_increm,
