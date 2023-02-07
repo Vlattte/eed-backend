@@ -126,6 +126,7 @@
     "draggable": false,
     "current_value": "-15",
     "tag": "rotate",
+    "count_action": 0,
     "actions_for_step": 1,
     "count_next": 1,
     "next_actions":[

@@ -130,6 +130,10 @@ def Comparer(message): #message - json от фронта, app - аппарату
         steps_num = 4
 
     has_action = False
+    array_actions = False
+    if "array_actions" in instruction:
+        array_actions = instruction["array_actions"]
+
     # По умолчанию считаем, что отдаваемый ответ = False
     if instruction["count_action"] > 0:
         has_action = True
@@ -137,12 +141,12 @@ def Comparer(message): #message - json от фронта, app - аппарату
     return_request = {"validation": False,
                       "has_action": has_action,
                       "annotation":    instruction["annotation"],
-                      "fail": False,
+                      "fail":       False,
                       "count_action":  instruction["count_action"],
-                      "array_actions": instruction["array_actions"],
+                      "array_actions": ,
                       "count_next":    instruction["count_next"],
                       "next_actions":  instruction["next_actions"],
-                      "finish": False,
+                      "finish":     False,
                       "before_id":     instruction["before_id"]}
 
     
