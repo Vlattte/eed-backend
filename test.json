@@ -9,7 +9,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1001
+        "apparat_id": 1,
+        "next_id": 1001,
+        "draggable": false,
+        "current_value": "center"
       }
     ],
     "count_action": 0,
@@ -44,6 +47,7 @@
     "count_action": 1,
     "array_actions": [
       {
+        "apparat_id": 1,
         "action_id": 1017,
         "action_value": "on"
       }
@@ -51,7 +55,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1002
+        "apparat_id": 1,
+        "next_id": 1002,
+        "draggable": false,
+        "current_value": "down"
       }
     ],
     "annotation": "2.  Переведите правый рычаг в верхнем левом углу в нижнее положение"
@@ -67,7 +74,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1001
+        "apparat_id": 1,
+        "next_id": 1001,
+        "draggable": false,
+        "current_value": "down"
       }
     ],
     "annotation": "3. Переведите левый рычаг в верхнем левом углу в нижнее положение"
@@ -83,7 +93,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1004
+        "apparat_id": 1,
+        "next_id": 1004,
+        "draggable": false,
+        "current_value": "-15"
       }
     ],
     "annotation": "4. Переведите РН в положение 0,1"
@@ -98,7 +111,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 2022
+        "apparat_id": 5,
+        "next_id": 2022,
+        "draggable": false,
+        "current_value": "on"
       }
     ],
     "annotation": "5. Нажмите на кнопку под рычагом УСТ МРУ на аппаратуре ЛО"
@@ -126,7 +142,10 @@
     "count_next": 1, 
     "next_actions":[
       {
-        "next_id": 1004
+        "apparat_id": 1,
+        "next_id": 1004,
+        "draggable": false,
+        "current_value": "on"
       }
     ],
     "annotation": "Тестовая карта пройдена"
