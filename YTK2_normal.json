@@ -33,7 +33,7 @@
   },
 
   "step_1": {
-    "step_1": 1,
+    "step": 1,
     "id": "multiple",
     "draggable": false,
     "current_value": "multiple",
