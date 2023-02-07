@@ -3,7 +3,7 @@
     "step": 0,
     "id": "multiple",
     "before_id": "multiple",
-    "draggable": true,
+    "draggable": false,
     "current_value": "multiple",
     "tag": "multiple",
     "count_next": 2,
