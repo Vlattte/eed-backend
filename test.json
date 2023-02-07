@@ -3,11 +3,20 @@
   {
     "step": 0,
     "id": 1001,
+    "before_id": 1001,
+    "draggable": false,
+    "current_value": "nan",
     "count_next": 1,
     "next_actions":[
       {
         "next_id": 1001,
         "annotation": "1.  Переведите левый рычаг в верхнем левом углу в нижнее положение"
+      }
+    ],
+    "count_action": 1,
+    "array_actions": [
+      {
+        "name": "nan"
       }
     ]
   },

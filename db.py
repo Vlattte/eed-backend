@@ -17,9 +17,9 @@ CREATE TABLE test_table
 # Параметры для подключения к БД
 connect_params = {"user": "postgres", # пароль, который указали при установке PostgreSQL
                   "database":'test_db',
-                  "password":"postgres",
+                  "password":"ghj5jhg5f",
                   "host":"localhost",
-                  "port":"5432"} 
+                  "port":"5433"} 
 
 
 def get_session_id_list():
@@ -39,9 +39,9 @@ def get_session_id_list():
         return [id[0] for id in list_id]
     except (Exception, Error) as error:
         print("Ошибка при работе с PostgreSQL", error)
-    finally:
-        if connection:
-            connection.close()
+    # finally:
+    #     if connection:
+    #         connection.close()
 
 def write_row(session_id, step_num, actions_for_step, sub_steps, attempts_left, is_training = True):
     # Функция для записи о действии пользователя в таблицу

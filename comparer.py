@@ -83,6 +83,7 @@ def WhatExercise(message):
 def Comparer(message): #message - json от фронта, app - аппаратура
     # по id норматива получаем название соответсвующего файла
     # так же получаем значение флага is_training
+    is_zero_step = False
     exercise_name, is_training = WhatExercise(message)
     session_id = message[0][1]
     session_id_list = db.get_session_id_list()
@@ -92,9 +93,10 @@ def Comparer(message): #message - json от фронта, app - аппарату
     if session_id not in session_id_list:
         instruction = GetInstruction(exercise_name, 0)
         sub_steps = {'name': 'nan'}
+        is_zero_step = True
         db.write_row(session_id=session_id, 
                      step_num=0,
-                     actions_for_step=instruction['actions_for_step'],
+                     actions_for_step=instruction["count_action"],
                      sub_steps=sub_steps,
                      attempts_left=1,
                      is_training=is_training)
@@ -138,55 +140,58 @@ def Comparer(message): #message - json от фронта, app - аппарату
     step_increm = 1
     multiple_res = 1
 
-    # multiple == несколько действий за шаг
-    if instruction["id"] == "multiple":
-        multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps)
-        print("res: " + str(multiple_res))
-        if multiple_res != -1:
-            return_request["validation"] = True
-            step_increm = 0
-        if multiple_res == 1:
-            step_increm = 1
 
-
-    elif instruction["id"] == message[1][1]:  # element id
-        if message[2][1]:  # is element draggable
-            if abs(message[5][1] - instruction["left"]) <= 10:
-                if abs(message[6][1] - instruction["top"]) <= 10:
-                    return_request["validation"] = True
-        else:
-            if str(message[4][1]) == str(instruction["current_value"]):
+    print(is_zero_step)
+    if not is_zero_step:
+            # multiple == несколько действий за шаг
+        if instruction["id"] == "multiple":
+            multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps)
+            print("res: " + str(multiple_res))
+            if multiple_res != -1:
                 return_request["validation"] = True
-
-    if return_request['validation']:        # если правильное действие
-        print('Правильное действие')
-        if step == steps_num:                       # если финальный шаг
-            print('Карта пройдена')
-            return_request['is_finished'] = True
-            pass
-        else:
+                step_increm = 0
             if multiple_res == 1:
-                new_instruction = GetInstruction(exercise_name, step + 1)
-                sub_steps = {'name': 'nan'}
-                db.write_row(session_id=session_id,
-                         step_num=step + step_increm,
-                         actions_for_step=new_instruction['actions_for_step'],
-                         sub_steps=sub_steps,
-                         attempts_left=1)
+                step_increm = 1
 
-    elif return_request['validation'] == False:
-        print('Неправильное действие')
-        if left_attempts == 1:
-            print('Попытка провалена')
-            return_request['is_fail'] = True
-            pass
-        else:
-            #return_request['is_finished'] = True
-            sub_steps = {'name': 'nan'}
-            db.write_row(session_id=session_id, 
-                     step_num=step, 
-                     actions_for_step=instruction['actions_for_step'],
-                     sub_steps=sub_steps,
-                     attempts_left=left_attempts - 1)
+
+        elif instruction["id"] == message[1][1]:  # element id
+            if message[2][1]:  # is element draggable
+                if abs(message[5][1] - instruction["left"]) <= 10:
+                    if abs(message[6][1] - instruction["top"]) <= 10:
+                        return_request["validation"] = True
+            else:
+                if str(message[4][1]) == str(instruction["current_value"]):
+                    return_request["validation"] = True
+
+        if return_request['validation']:        # если правильное действие
+            print('Правильное действие')
+            if step == steps_num:                       # если финальный шаг
+                print('Карта пройдена')
+                return_request['is_finished'] = True
+                pass
+            else:
+                if multiple_res == 1:
+                    new_instruction = GetInstruction(exercise_name, step + 1)
+                    sub_steps = {'name': 'nan'}
+                    db.write_row(session_id=session_id,
+                            step_num=step + step_increm,
+                            actions_for_step=new_instruction['actions_for_step'],
+                            sub_steps=sub_steps,
+                            attempts_left=1)
+
+        elif return_request['validation'] == False:
+            print('Неправильное действие')
+            if left_attempts == 1:
+                print('Попытка провалена')
+                return_request['is_fail'] = True
+                pass
+            else:
+                #return_request['is_finished'] = True
+                sub_steps = {'name': 'nan'}
+                db.write_row(session_id=session_id, 
+                        step_num=step, 
+                        actions_for_step=instruction['actions_for_step'],
+                        sub_steps=sub_steps,
+                        attempts_left=left_attempts - 1)
     
     return return_request
