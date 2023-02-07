@@ -6,13 +6,15 @@
     "before_id": 1001,
     "draggable": false,
     "current_value": "start",
+    "tag": "lever",
     "count_next": 1,
     "next_actions":[
       {
         "apparat_id": 1,
         "next_id": 1001,
         "draggable": false,
-        "current_value": "center"
+        "current_value": "center",
+        "tag": "lever"
       }
     ],
     "count_action": 0,
@@ -29,19 +31,22 @@
     "before_id": 1001,
     "draggable": false,
     "current_value": "center",
+    "tag": "multiple",
     "actions_for_step": 2,
     "sub_steps": [
       {
         "name": "sub_step_1",
         "action_id": 1001,
         "current_value": "center",
-        "before_id": 1001
+        "before_id": 1001,
+        "tag": "lever"
       },
       {
         "name": "sub_step_2",
         "action_id": 1002,
         "current_value": "center",
-        "before_id": 1002
+        "before_id": 1002,
+        "tag": "lever"
       }
     ],
     "count_action": 1,
@@ -49,7 +54,8 @@
       {
         "apparat_id": 1,
         "action_id": 1017,
-        "action_value": "on"
+        "action_value": "on",
+        "tag": "lever"
       }
     ],
     "count_next": 1,
@@ -58,7 +64,8 @@
         "apparat_id": 1,
         "next_id": 1002,
         "draggable": false,
-        "current_value": "down"
+        "current_value": "down",
+        "tag": "lever"
       }
     ],
     "annotation": "2.  Переведите правый рычаг в верхнем левом углу в нижнее положение"
@@ -69,6 +76,7 @@
     "before_id": 1002,
     "draggable": false,
     "current_value": "down",
+    "tag": "lever",
     "actions_for_step": 1,
     "count_action": 1,
     "count_next": 1,
@@ -77,7 +85,8 @@
         "apparat_id": 1,
         "next_id": 1001,
         "draggable": false,
-        "current_value": "down"
+        "current_value": "down",
+        "tag": "lever"
       }
     ],
     "annotation": "3. Переведите левый рычаг в верхнем левом углу в нижнее положение"
@@ -88,6 +97,7 @@
     "before_id": 1001,
     "draggable": false,
     "current_value": "down",
+    "tag": "lever",
     "actions_for_step": 1,
     "count_action": 0,
     "count_next": 1,
@@ -96,7 +106,8 @@
         "apparat_id": 1,
         "next_id": 1004,
         "draggable": false,
-        "current_value": "-15"
+        "current_value": "-15",
+        "tag": "lever"
       }
     ],
     "annotation": "4. Переведите РН в положение 0,1"
@@ -107,14 +118,16 @@
     "before_id": 1004,
     "draggable": false,
     "current_value": "-15",
+    "tag": "rotate",
     "actions_for_step": 1,
     "count_next": 1,
     "next_actions":[
       {
-        "apparat_id": 5,
+        "apparat_id": 2,
         "next_id": 2022,
         "draggable": false,
-        "current_value": "on"
+        "current_value": "on",
+        "tag": "button"
       }
     ],
     "annotation": "5. Нажмите на кнопку под рычагом УСТ МРУ на аппаратуре ЛО"
@@ -125,17 +138,20 @@
     "before_id": 1004,
     "draggable": false,
     "current_value": "on",
+    "tag": "multiple",
     "actions_for_step": 2,
     "sub_steps": [
       {
         "name": "sub_step_1",
         "action_id": 2022,
-        "current_value": "on"
+        "current_value": "on",
+        "tag": "button"
       },
       {
         "name": "sub_step_2",
         "action_id": 2023,
-        "current_value": "on"
+        "current_value": "on",
+        "tag": "button"
       }
     ],
     "count_action": 0,
@@ -145,7 +161,8 @@
         "apparat_id": 1,
         "next_id": 1004,
         "draggable": false,
-        "current_value": "on"
+        "current_value": "on",
+        "tag": "button"
       }
     ],
     "annotation": "Тестовая карта пройдена"

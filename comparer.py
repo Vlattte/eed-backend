@@ -145,15 +145,22 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
 
     if not is_zero_step:
-            # multiple == несколько действий за шаг
+        # multiple == несколько действий за шаг
         if instruction["id"] == "multiple":
             multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps)
             print("res: " + str(multiple_res))
+
+            # если еще есть подшаги и не было ошибки
             if multiple_res != -1:
                 return_request["validation"] = True
                 step_increm = 0
+                # нужен для фронта, чтобы не заменять на одно и то же
+                return_request["correct"] = True
+            # если подшаги кончились
             if multiple_res == 1:
                 step_increm = 1
+
+
 
 
         elif instruction["id"] == message[1][1]:  # element id
