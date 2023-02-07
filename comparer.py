@@ -39,12 +39,6 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
         if instruction["sub_steps"][i]["action_id"] == message[1][1]:
             if instruction["sub_steps"][i]["current_value"] == message[4][1]:
                 name = instruction["sub_steps"][i]["name"]
-                # print(len(sub_steps))
-                # print("a1")
-                # print(sub_steps)
-                # print(sub_steps[i])
-                # print(sub_steps[i][name])
-                # print("a2")
 
                 if sub_steps[i][name] == "False":
                     sub_steps[i][name] = "True"
@@ -101,6 +95,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
                      attempts_left=1,
                      is_training=is_training)
 
+
+
     if is_training != 'nan':
         instruction = GetInstruction(exercise_name, 0)
         return_request = {'next_actions': instruction['next_actions']}
@@ -108,9 +104,6 @@ def Comparer(message): #message - json от фронта, app - аппарату
     step, left_attempts, left_steps, is_training = db.get_step_attempts(session_id=session_id)
 
     instruction = GetInstruction(exercise_name, step)
-    next_actions = instruction['next_actions']
-    before_id = instruction['before_id']
-    count_next = instruction['count_next']
 
     # [0][1] - session_id
     # [1][1] - id
@@ -126,12 +119,22 @@ def Comparer(message): #message - json от фронта, app - аппарату
     steps_num = 0
     if exercise_name == "test.json":
         steps_num = 4
-    
+
+    has_action = False
     # По умолчанию считаем, что отдаваемый ответ = False
-    return_request = {"validation": False, "next_id": 1017, 
-                      "id": message[1][1], "is_fail": False, 
-                      "is_finished": False, 'next_actions': next_actions, 
-                      'before_id': before_id, 'count_next': count_next}
+    if instruction["count_actions"] > 0:
+        has_action = True
+
+    return_request = {"validation": False,
+                      "has_action": has_action,
+                      "annotation":    instruction["annotation"],
+                      "fail": False,
+                      "count_action":  instruction["count_action"],
+                      "array_actions": instruction["array_actions"],
+                      "count_next":    instruction["count_next"],
+                      "next_actions":  instruction["next_actions"],
+                      "finish": False,
+                      "before_id":     instruction["before_id"]}
 
     #if message["isTraining"]:
     #    return_request["next_id"] = instruction["next_id"]
@@ -141,7 +144,6 @@ def Comparer(message): #message - json от фронта, app - аппарату
     multiple_res = 1
 
 
-    print(is_zero_step)
     if not is_zero_step:
             # multiple == несколько действий за шаг
         if instruction["id"] == "multiple":
@@ -167,7 +169,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
             print('Правильное действие')
             if step == steps_num:                       # если финальный шаг
                 print('Карта пройдена')
-                return_request['is_finished'] = True
+                return_request['finish'] = True
                 pass
             else:
                 if multiple_res == 1:
@@ -183,7 +185,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
             print('Неправильное действие')
             if left_attempts == 1:
                 print('Попытка провалена')
-                return_request['is_fail'] = True
+                return_request['fail'] = True
                 pass
             else:
                 #return_request['is_finished'] = True

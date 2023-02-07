@@ -5,20 +5,20 @@
     "id": 1001,
     "before_id": 1001,
     "draggable": false,
-    "current_value": "nan",
+    "current_value": "start",
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1001,
-        "annotation": "1.  Переведите левый рычаг в верхнем левом углу в нижнее положение"
+        "next_id": 1001
       }
     ],
-    "count_action": 1,
+    "count_action": 0,
     "array_actions": [
       {
         "name": "nan"
       }
-    ]
+    ],
+    "annotation": "1.  Переведите левый рычаг в верхнем левом углу в нижнее положение"
   },
   "step_1": {
     "step": 1,
@@ -51,11 +51,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1002,
-        "annotation": "2.  Переведите правый рычаг в верхнем левом углу в нижнее положение"
+        "next_id": 1002
       }
-    ]
-
+    ],
+    "annotation": "2.  Переведите правый рычаг в верхнем левом углу в нижнее положение"
   },
   "step_2": {
     "step": 2,
@@ -68,10 +67,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1001,
-        "annotation": "3. Переведите левый рычаг в верхнем левом углу в нижнее положение"
+        "next_id": 1001
       }
-    ]
+    ],
+    "annotation": "3. Переведите левый рычаг в верхнем левом углу в нижнее положение"
   },
   "step_3": {
     "step": 3,
@@ -84,10 +83,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 1004,
-        "annotation": "4. Переведите РН в положение 0,1"
+        "next_id": 1004
       }
-    ]
+    ],
+    "annotation": "4. Переведите РН в положение 0,1"
   },
   "step_4": {
     "step": 4,
@@ -99,10 +98,10 @@
     "count_next": 1,
     "next_actions":[
       {
-        "next_id": 2022,
-        "annotation": "5. Нажмите на кнопку под рычагом УСТ МРУ на аппаратуре ЛО"
+        "next_id": 2022
       }
-    ]
+    ],
+    "annotation": "5. Нажмите на кнопку под рычагом УСТ МРУ на аппаратуре ЛО"
   },
   "step_5": {
     "step": 5,
@@ -127,9 +126,9 @@
     "count_next": 1, 
     "next_actions":[
       {
-        "next_id": 1004,
-        "annotation": "Тестовая карта пройдена"
+        "next_id": 1004
       }
-    ]
+    ],
+    "annotation": "Тестовая карта пройдена"
   }
 }
