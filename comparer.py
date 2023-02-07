@@ -3,6 +3,7 @@ import json
 import db
 
 def GetInstruction(app, step_id): #app - аппаратура, step_id - номер шага
+    print(step_id)
     instr_file = open(app, encoding='utf-8')
     data = json.load(instr_file)
 
@@ -98,10 +99,14 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
 
     if is_training != 'nan':
-        instruction = GetInstruction(exercise_name, 0)
+        print("Тренировка")
+        # instruction = GetInstruction(exercise_name, 0)
         return_request = {'next_actions': instruction['next_actions']}
 
     step, left_attempts, left_steps, is_training = db.get_step_attempts(session_id=session_id)
+
+    if step == 0 and not is_zero_step:
+        step = 1
 
     instruction = GetInstruction(exercise_name, step)
 
@@ -122,7 +127,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
     has_action = False
     # По умолчанию считаем, что отдаваемый ответ = False
-    if instruction["count_actions"] > 0:
+    if instruction["count_action"] > 0:
         has_action = True
 
     return_request = {"validation": False,
@@ -136,31 +141,27 @@ def Comparer(message): #message - json от фронта, app - аппарату
                       "finish": False,
                       "before_id":     instruction["before_id"]}
 
-    #if message["isTraining"]:
-    #    return_request["next_id"] = instruction["next_id"]
-    #    #TODO next_actions
     
     step_increm = 1
     multiple_res = 1
 
-
+    return_request["status"] = "incorrect"
     if not is_zero_step:
+
         # multiple == несколько действий за шаг
         if instruction["id"] == "multiple":
             multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps)
-            print("res: " + str(multiple_res))
 
             # если еще есть подшаги и не было ошибки
             if multiple_res != -1:
                 return_request["validation"] = True
                 step_increm = 0
                 # нужен для фронта, чтобы не заменять на одно и то же
-                return_request["correct"] = True
+                return_request["status"] = "correct"
             # если подшаги кончились
             if multiple_res == 1:
                 step_increm = 1
-
-
+                return_request["status"] = "correct"
 
 
         elif instruction["id"] == message[1][1]:  # element id
@@ -174,6 +175,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
         if return_request['validation']:        # если правильное действие
             print('Правильное действие')
+            return_request["status"] = "correct"
             if step == steps_num:                       # если финальный шаг
                 print('Карта пройдена')
                 return_request['finish'] = True
