@@ -1,0 +1,390 @@
+{
+  "step_0": {
+    "step": 0,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": true,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": "провод1",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      },
+      {
+        "apparat_id": -1,
+        "next_id": "провод2",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      }
+    ],
+    "count_action": 0,
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "1. Соедините провод1 и провод2"
+  },
+
+  "step_1": {
+    "step_1": 1,
+    "id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод1",
+        "current_value": "on",
+        "before_id": "провод1",
+        "tag": "cable"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод2",
+        "current_value": "on",
+        "before_id": "провод2",
+        "tag": "cable"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": 6007,
+        "draggable": false,
+        "current_value": "center",
+        "tag": "lever"
+      }
+    ],
+    "annotation": "2. На ЩКНЧ1 перевести рычаг СЛ. в положение КАН."
+  },
+  "step_2": {
+    "step": 2,
+    "id": 6007,
+    "before_id": 6007,
+    "draggable": false,
+    "current_value": "down",
+    "tag": "lever",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": "провод3",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      },
+      {
+        "apparat_id": -1,
+        "next_id": "провод4",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      }
+    ],
+    "annotation": "3. гн. «КАН.ПЕР-ПР» выбранного канала и гн. «СЛ.ПР-ПЕР» выбранной СЛ."
+  },
+  "step_3": {
+    "step": 3,
+    "id": "multiple",
+    "before_id": 6007,
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод3",
+        "current_value": "on",
+        "before_id": "провод3",
+        "tag": "cable"
+      },
+      {
+        "name": "sub_step_4",
+        "action_id": "провод4",
+        "current_value": "on",
+        "before_id": "провод2",
+        "tag": "cable"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": "провод5",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      },
+      {
+        "apparat_id": -1,
+        "next_id": "провод6",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      }
+    ],
+    "annotation": "4. На ЩКНЧ2 соединить 4-х пр. шнуром гн. СЛ ПВУ и гн. СЛ ТР [х] расположенными под гн. СЛ сдаваемого канала"
+  },
+  "step_4": {
+    "step": 4,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод5",
+        "current_value": "on",
+        "before_id": "провод5",
+        "tag": "cable"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод5",
+        "current_value": "on",
+        "before_id": "провод6",
+        "tag": "cable"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": "провод7",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      },
+      {
+        "apparat_id": -1,
+        "next_id": "провод8",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      }
+    ],
+    "annotation": "5. Соединить 4-х пр.  шнуром гн. «КАН.ПЕР-ПР» панели «ДС» \nс гн. «КАН.ПЕР-ПР» \nнужного кТЧ."
+  },
+  "step_5": {
+    "step": 5,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод7",
+        "current_value": "on",
+        "before_id": "провод7",
+        "tag": "cable"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод8",
+        "current_value": "on",
+        "before_id": "провод8",
+        "tag": "cable"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": "провод9",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      },
+      {
+        "apparat_id": -1,
+        "next_id": "провод10",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      }
+    ],
+    "annotation": "6. Соединить 2-х пр шнуром гн. «2ПР» панели «ДС» с гн. 2-ПР. ПВУ."
+  },
+  "step_6": {
+    "step": 6,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод9",
+        "current_value": "on",
+        "before_id": "провод9",
+        "tag": "cable"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод10",
+        "current_value": "on",
+        "before_id": "провод10",
+        "tag": "cable"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": 6010,
+        "draggable": false,
+        "current_value": "center",
+        "tag": "lever"
+      }
+    ],
+    "annotation": "7. Правый рычаг перевести в нижнее положение"
+  },
+  "step_7": {
+    "step": 7,
+    "id": 6010,
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "center",
+    "tag": "lever",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": 6010,
+        "draggable": false,
+        "current_value": "down",
+        "tag": "lever"
+      }
+    ],
+    "annotation": "8. Правый рычаг перевести в нижнее положение"
+  },
+  "step_8": {
+    "step": 8,
+    "id": 6010,
+    "before_id": 6010,
+    "draggable": false,
+    "current_value": "down",
+    "tag": "lever",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": "провод11",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      },
+      {
+        "apparat_id": -1,
+        "next_id": "провод12",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      }
+    ],
+    "annotation": "9. Переставить 2-х пр.шнур в нужную СЛ. \nВ 2-х пр. режиме каналы сдаются по любым свободным исправным парам."
+  },
+  "step_9": {
+    "step": 9,
+    "id": "multiple",
+    "before_id": 6010,
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод11",
+        "current_value": "on",
+        "before_id": "провод11",
+        "tag": "cable"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод12",
+        "current_value": "on",
+        "before_id": "провод12",
+        "tag": "cable"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": -1,
+        "next_id": "провод13",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      },
+      {
+        "apparat_id": -1,
+        "next_id": "провод14",
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cable"
+      }
+    ],
+    "annotation": "10. Для контроля разговора по сданному каналу необходимо соединить 2-х пр. шнуром гн. 2ПР ПВУ и гн. СЛ ТР [х] расположенное под гн. СЛ сдаваемого канала."
+  },
+  "step_10": {
+    "step": 10,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод13",
+        "current_value": "on",
+        "before_id": "провод13",
+        "tag": "cable"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод14",
+        "current_value": "on",
+        "before_id": "провод14",
+        "tag": "cable"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 0,
+    "next_actions": [],
+    "annotation": "ПРОЙДЕНО"
+  }
+}
