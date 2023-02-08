@@ -9,7 +9,7 @@
     "count_next": 5,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 11,
         "next_id": 11012,
         "draggable": false,
         "current_value": "on",
@@ -23,21 +23,21 @@
         "tag": "lever"
       },
       {
-        "apparat_id": 1,
+        "apparat_id": 9,
         "next_id": 9010,
         "draggable": false,
         "current_value": "on",
         "tag": "lever"
       },
       {
-        "apparat_id": 1,
+        "apparat_id": 4,
         "next_id": 4000,
         "draggable": false,
         "current_value": "on",
         "tag": "lever"
       },
       {
-        "apparat_id": 1,
+        "apparat_id": 4,
         "next_id": 4001,
         "draggable": false,
         "current_value": "on",
@@ -84,14 +84,14 @@
         "tag": "lever"
       },
       {
-        "name": "sub_step_2",
+        "name": "sub_step_4",
         "action_id": 4000,
         "current_value": "on",
         "before_id": 4000,
         "tag": "lever"
       },
       {
-        "name": "sub_step_3",
+        "name": "sub_step_5",
         "action_id": 4001,
         "current_value": "on",
         "before_id": 4001,
@@ -102,7 +102,7 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 9,
         "next_id": "провод1",
         "draggable": false,
         "current_value": "on",
@@ -119,12 +119,11 @@
     "current_value": "on",
     "actions_for_step": 1,
     "count_action": 0,
+    "array_actions": {
+      "???": "???"
+    },
     "count_next": 0,
-    "next_actions": [
-      {
-        "???": "???"
-      }
-    ],
+    "next_actions": [{}],
     "annotation": "Норматив пройден."
   }
 }
