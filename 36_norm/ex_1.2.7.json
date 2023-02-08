@@ -6,10 +6,10 @@
     "draggable": false,
     "current_value": "start",
     "tag": "multiple",
-    "count_next": 3,
+    "count_next": 5,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 11,
         "next_id": 11012,
         "draggable": false,
         "current_value": "on",
@@ -23,8 +23,22 @@
         "tag": "lever"
       },
       {
-        "apparat_id": 1,
+        "apparat_id": 9,
         "next_id": 9010,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4000,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4001,
         "draggable": false,
         "current_value": "on",
         "tag": "lever"
@@ -46,7 +60,7 @@
     "draggable": false,
     "current_value": "multiple",
     "tag": "multiple",
-    "actions_for_step": 3,
+    "actions_for_step": 5,
     "sub_steps": [
       {
         "name": "sub_step_1",
@@ -68,13 +82,27 @@
         "current_value": "on",
         "before_id": 9010,
         "tag": "lever"
+      },
+      {
+        "name": "sub_step_4",
+        "action_id": 4000,
+        "current_value": "on",
+        "before_id": 4000,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_5",
+        "action_id": 4001,
+        "current_value": "on",
+        "before_id": 4001,
+        "tag": "lever"
       }
     ],
     "count_action": 0,
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 3,
         "next_id": 3014,
         "draggable": true,
         "current_value": "null",
@@ -97,7 +125,7 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 6,
         "next_id": 6003,
         "draggable": false,
         "current_value": "-15",
@@ -118,7 +146,7 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 6,
         "next_id": 6003,
         "draggable": false,
         "current_value": "15",
@@ -139,7 +167,7 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 6,
         "next_id": 6004,
         "draggable": false,
         "current_value": "-80",
@@ -160,7 +188,7 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 6,
         "next_id": 6004,
         "draggable": false,
         "current_value": "-60",
@@ -181,7 +209,7 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 6,
         "next_id": 6004,
         "draggable": false,
         "current_value": "-30",
@@ -202,7 +230,7 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 6,
         "next_id": 6004,
         "draggable": false,
         "current_value": "-10",
@@ -223,14 +251,14 @@
     "count_next": 2,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 6,
         "next_id": "провод1",
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
       },
       {
-        "apparat_id": 1,
+        "apparat_id": 2,
         "next_id": "провод2",
         "draggable": false,
         "current_value": "on",
@@ -264,7 +292,13 @@
     "count_action": 1,
     "array_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 6,
+        "action_id": "кабель",
+        "action_value": "cabel",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 2,
         "action_id": "кабель",
         "action_value": "cabel",
         "tag": "cabel"
@@ -273,7 +307,7 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 3,
         "next_id": 3002,
         "draggable": true,
         "current_value": "null",
