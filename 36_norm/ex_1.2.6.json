@@ -60,7 +60,7 @@
     "draggable": false,
     "current_value": "multiple",
     "tag": "multiple",
-    "actions_for_step": 3,
+    "actions_for_step": 5,
     "sub_steps": [
       {
         "name": "sub_step_1",
