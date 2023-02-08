@@ -128,7 +128,7 @@
     "actions_for_step": 1,
     "count_action": 0,
     "count_next": 0,
-    "next_actions": [],
+    "next_actions": [{"name": "nan"}],
     "annotation": "ПРОЙДЕНО"
   }
 }
