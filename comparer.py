@@ -98,7 +98,7 @@ def WhatExercise(message, session_id):
     # id норматива
     if message[3][0] == "norm":
 
-        full_id =  message[3][1]
+        full_id = message[3][1]
         if message[3][1] != "0":
             app_id = message[3][1][0]    # id оборуования
             ex_id = message[3][1][1:]  # id упражнения
@@ -109,10 +109,10 @@ def WhatExercise(message, session_id):
         print(db_id)
         app_id = db_id[0]
         ex_id = db_id[1:]
-        key_name =  "ex_" + app_id + "_" + ex_id
+        key_name = "ex_" + app_id + "_" + ex_id
 
     # убрать когда будут доделаны карты
-    key_name = "ex_test"
+    # key_name = "ex_test"
 
     exercise_name = data[key_name]
     print(exercise_name)
