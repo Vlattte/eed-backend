@@ -361,7 +361,7 @@
         "tag": "lamp"
       }
     ],
-    "count_next": 0,
+    "count_next": 2,
     "next_actions": [
       {
         "apparat_id": 2,
@@ -374,7 +374,7 @@
         "apparat_id": 2,
         "next_id": 2014,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "off",
         "tag": "lever"
       }
     ],
@@ -392,14 +392,14 @@
       {
         "name": "sub_step_1",
         "action_id": 2002,
-        "current_value": "on",
+        "current_value": "off",
         "before_id": 2002,
         "tag": "lever"
       },
       {
         "name": "sub_step_2",
         "action_id": 2014,
-        "current_value": "on",
+        "current_value": "off",
         "before_id": 2014,
         "tag": "lever"
       }
