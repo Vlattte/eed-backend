@@ -11,8 +11,10 @@ import websockets
 
 
 async def handler(websocket):
+
     message = await websocket.recv()
-    print(message + "\n")
+    print("message: ")
+    print(message)
     event = json.loads(message)
     return_json = comparer.Comparer(event)
     await websocket.send(json.dumps(return_json, ensure_ascii=False))
