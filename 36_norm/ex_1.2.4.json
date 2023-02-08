@@ -129,14 +129,14 @@
       {
         "name": "sub_step_1",
         "action_id": 6202,
-        "current_value": "cabel",
+        "current_value": "on",
         "before_id": 6202,
         "tag": "cabel"
       },
       {
         "name": "sub_step_2",
         "action_id": 3203,
-        "current_value": "cabel",
+        "current_value": "on",
         "before_id": 3203,
         "tag": "cabel"
       }
