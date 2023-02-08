@@ -3,7 +3,6 @@ import json
 import db
 
 def GetInstruction(app, step_id): #app - аппаратура, step_id - номер шага
-    print(step_id)
     instr_file = open(app, encoding='utf-8')
     data = json.load(instr_file)
 
@@ -11,12 +10,31 @@ def GetInstruction(app, step_id): #app - аппаратура, step_id - ном�
         if data["step_"+str(i)]["step"] == step_id:
             return data["step_"+str(i)]
 
+# проверяет есть ли еще такой id в инструкции, то есть проверяет нужно ли убрать выделение желтым с элемента с этим id
+def IsMoreSameId(id, instruction, db_steps, steps_count):
+    for item in db_steps:
+        for step in item:
+            print(item[step])
+            if item[step] == 'False':
+                # значит этот шаг еще не сделан
+                for i in range(steps_count):
+                    if instruction["sub_steps"][i]["name"] == step:
+                        # нашли не выполненный шаг, сравним наш ли это id
+                        if instruction["sub_steps"][i]["action_id"] == id:
+                            return True
+
+    return False
+
 
 # надо записать индексы из массива array_actions_for_step, в виде словаря по типу: "index": bool,
 # где bool - сделан ли шаг под этим индексом
 # в этом шаге может быть написан следующий шаг, значащий следующее положение этого же элемента
 def CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps):
-    # код возврата: -1 - ошибка пользователя, 0 - остались еще под шаги, 1 - шаги кончились, все правильно
+    # код возврата:
+    # -1 - ошибка пользователя (status="incorrect")
+    # 0 - остались еще под шаги (status="correct")
+    # 1 - шаги кончились, все правильно (status="correct")
+    # 2 - подшаги еще есть, но действия с текущим id закончились (status="progres")
     return_code = -1
 
     # print("left_steps: ")
@@ -35,19 +53,24 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                      attempts_left=left_attempts)
     else:
          sub_steps = db.get_field_data(session_id, "sub_steps")
-         #sub_steps = json.dumps(sub_steps)
-
 
     for i in range(steps):
         if instruction["sub_steps"][i]["action_id"] == message[1][1]:
             if instruction["sub_steps"][i]["current_value"] == message[4][1]:
                 name = instruction["sub_steps"][i]["name"]
+                id = instruction["sub_steps"][i]["action_id"]
 
                 if sub_steps[i][name] == "False":
                     sub_steps[i][name] = "True"
+
+                    # True, если остались еще действия с этим элементом
+                    is_no_element_actions = IsMoreSameId(id, instruction, sub_steps, steps)
                     return_code = 0
 
-                    if left_steps == -1:
+                    if is_no_element_actions:
+                        return_code = 2
+
+                    if left_steps == 1:
                         return_code = 1
                     else:
                         db.write_row(session_id=session_id,
@@ -56,8 +79,6 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                                  sub_steps=sub_steps,
                                  attempts_left=left_attempts)
 
-    # print("code: ")
-    # print(return_code)
     return return_code
 
 def WhatExercise(message):
@@ -96,7 +117,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
         is_zero_step = True
         db.write_row(session_id=session_id, 
                      step_num=0,
-                     actions_for_step=instruction["count_action"],
+                     actions_for_step=instruction["count_next"],
                      sub_steps=sub_steps,
                      attempts_left=1,
                      is_training=is_training)
@@ -131,6 +152,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
     has_action = False
     array_actions = False
+
+    # существует ли массив действий (зажечь лампочку, передвинуть стрелку)
     if "array_actions" in instruction:
         array_actions = instruction["array_actions"]
 
@@ -143,13 +166,12 @@ def Comparer(message): #message - json от фронта, app - аппарату
                       "annotation":    instruction["annotation"],
                       "fail":       False,
                       "count_action":  instruction["count_action"],
-                      "array_actions": ,
+                      "array_actions": array_actions,
                       "count_next":    instruction["count_next"],
                       "next_actions":  instruction["next_actions"],
                       "finish":     False,
                       "before_id":     instruction["before_id"]}
 
-    
     step_increm = 1
     multiple_res = 1
 
@@ -171,6 +193,11 @@ def Comparer(message): #message - json от фронта, app - аппарату
                 step_increm = 1
                 return_request["status"] = "correct"
                 return_request["validation"] = True
+            # все верно, шаг не закончен, но подсветку с элемента убирать не надо, т.к. с ним есть еще действия
+            if multiple_res == 2:
+                return_request["status"] = "progres"
+                step_increm = 0
+                return_request["validation"] = False
 
 
         elif instruction["id"] == message[1][1]:  # element id
@@ -178,14 +205,15 @@ def Comparer(message): #message - json от фронта, app - аппарату
                 if abs(message[5][1] - instruction["left"]) <= 10:
                     if abs(message[6][1] - instruction["top"]) <= 10:
                         return_request["validation"] = True
+                        return_request["status"] = "correct"
             else:
                 if str(message[4][1]) == str(instruction["current_value"]):
                     return_request["validation"] = True
+                    return_request["status"] = "correct"
 
-        if return_request['validation'] or return_request["status"] == "correct":        # если правильное действие
+        if return_request['validation'] or return_request["status"] != "incorrect":        # если правильное действие
             print('Правильное действие')
-            return_request["status"] = "correct"
-            if step == steps_num:                       # если финальный шаг
+            if step == steps_num+1 and multiple_res == 1:                       # если финальный шаг
                 print('Карта пройдена')
                 return_request['finish'] = True
                 pass

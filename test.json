@@ -2,11 +2,11 @@
   "step_0":
   {
     "step": 0,
-    "id": "multiple",
-    "before_id": "multiple",
+    "id": 1001,
+    "before_id": 1001,
     "draggable": false,
-    "current_value": "multiple",
-    "tag": "multiple",
+    "current_value": "start",
+    "tag": "lever",
     "count_next": 2,
     "next_actions":[
       {
@@ -25,6 +25,7 @@
       }
     ],
     "count_action": 0,
+    "actions_for_step": 0,
     "array_actions": [
       {
         "name": "nan"
@@ -126,13 +127,20 @@
     "draggable": false,
     "current_value": "-15",
     "tag": "rotate",
-    "count_action": 0,
     "actions_for_step": 1,
-    "count_next": 1,
+    "count_action": 0,
+    "count_next": 2,
     "next_actions":[
       {
         "apparat_id": 2,
         "next_id": 2022,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "button"
+      },
+      {
+        "apparat_id": 2,
+        "next_id": 2023,
         "draggable": false,
         "current_value": "on",
         "tag": "button"
@@ -145,7 +153,7 @@
     "id": "multiple",
     "before_id": 1004,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "multiple",
     "tag": "multiple",
     "actions_for_step": 2,
     "sub_steps": [
@@ -163,7 +171,7 @@
       }
     ],
     "count_action": 0,
-    "count_next": 1, 
+    "count_next": 0, 
     "next_actions":[
       {
         "apparat_id": 1,
