@@ -145,13 +145,13 @@
     "array_actions": [
       {
         "apparat_id": 6,
-        "action_id": 6302,
+        "action_id": 6301,
         "action_value": "cabel",
         "tag": "cabel"
       },
       {
         "apparat_id": 3,
-        "action_id": 3201,
+        "action_id": 3301,
         "action_value": "cabel",
         "tag": "cabel"
       }
