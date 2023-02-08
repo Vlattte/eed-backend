@@ -123,6 +123,7 @@
     "id": 6012,
     "draggable": false,
     "current_value": "on",
+    "before_id": 6012,g
     "tag": "button",
     "actions_for_step": 1,
     "count_action": 0,
