@@ -83,15 +83,17 @@
       },
       {
         "name": "sub_step_4",
-        "next_id": 4000,
+        "action_id": 4000,
         "draggable": false,
+        "before_id": 4000,
         "current_value": "on",
         "tag": "button"
       },
       {
         "name": "sub_step_5",
-        "next_id": 4001,
+        "action_id": 4001,
         "draggable": false,
+        "before_id": 4001,
         "current_value": "on",
         "tag": "button"
       }
@@ -262,8 +264,8 @@
     ],
     "annotation": "8. Тумблеры «АРУ»  на бл.ПКК 64/16 и Ус.-12 в положение «ВКЛ»."
   },
-    "step_10": {
-      "step": 10,
+    "step_9": {
+      "step": 9,
       "id": 2009,
       "before_id": 2009,
       "draggable": false,
