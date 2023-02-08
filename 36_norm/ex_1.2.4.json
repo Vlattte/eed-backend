@@ -160,7 +160,7 @@
     "next_actions": [
       {
         "apparat_id": 6,
-        "next_id": 6303,
+        "next_id": 6003,
         "draggable": false,
         "current_value": "-15",
         "tag": "rotate"
