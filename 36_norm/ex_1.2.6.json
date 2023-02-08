@@ -102,14 +102,14 @@
     "count_next": 2,
     "next_actions": [
       {
-        "apparat_id": 6,
+        "apparat_id": 5,
         "next_id":  5201,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
       },
       {
-        "apparat_id": 6,
+        "apparat_id": 5,
         "next_id": 5202,
         "draggable": false,
         "current_value": "on",
@@ -142,7 +142,7 @@
     "count_action": 1,
     "array_actions": [
       {
-        "apparat_id": 6,
+        "apparat_id": 5,
         "action_id": 5301,
         "action_value": "cabel",
         "tag": "cabel"
