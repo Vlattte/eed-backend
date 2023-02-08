@@ -103,14 +103,14 @@
     "next_actions": [
       {
         "apparat_id": 6,
-        "next_id":  6201,
+        "next_id":  5201,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
       },
       {
         "apparat_id": 6,
-        "next_id": 6202,
+        "next_id": 5202,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
@@ -128,22 +128,22 @@
     "sub_steps": [
       {
         "name": "sub_step_1",
-        "action_id": 6201,
+        "action_id": 5201,
         "current_value": "on",
-        "before_id": 6201
+        "before_id": 5201
       },
       {
         "name": "sub_step_2",
-        "action_id": 6202,
+        "action_id": 5202,
         "current_value": "on",
-        "before_id": 6202
+        "before_id": 5202
       }
     ],
     "count_action": 1,
     "array_actions": [
       {
         "apparat_id": 6,
-        "action_id": 6301,
+        "action_id": 5301,
         "action_value": "cabel",
         "tag": "cabel"
       }
