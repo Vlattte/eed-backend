@@ -112,12 +112,13 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
     # Если session_id нет в таблице, то создаем запись для него и устанавливаем номер шага = 0
     if session_id not in session_id_list:
-        instruction = GetInstruction(exercise_name, 0)
+        # берем первый шаг, потому что count_next, может отличаться от actions_for_step
+        instruction = GetInstruction(exercise_name, 1)
         sub_steps = {'name': 'nan'}
         is_zero_step = True
         db.write_row(session_id=session_id, 
                      step_num=0,
-                     actions_for_step=instruction["count_next"],
+                     actions_for_step=instruction["actions_for_step"],
                      sub_steps=sub_steps,
                      attempts_left=1,
                      is_training=is_training)

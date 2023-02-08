@@ -10,21 +10,21 @@
     "next_actions": [
       {
         "apparat_id": 11,
-        "next_id": "11012",
+        "next_id": 11012,
         "draggable": false,
         "current_value": "on",
         "tag": "button"
       },
       {
         "apparat_id": 1,
-        "next_id": "1019",
+        "next_id": 1019,
         "draggable": false,
         "current_value": "on",
         "tag": "button"
       },
       {
         "apparat_id": 9,
-        "next_id": "9010",
+        "next_id": 9010,
         "draggable": false,
         "current_value": "on",
         "tag": "button"
@@ -48,23 +48,23 @@
     "sub_steps": [
       {
         "name": "sub_step_1",
-        "action_id": "11012",
+        "action_id": 11012,
         "current_value": "on",
-        "before_id": "11012",
+        "before_id": 11012,
         "tag": "button"
       },
       {
         "name": "sub_step_2",
-        "action_id": "1019",
+        "action_id": 1019,
         "current_value": "on",
-        "before_id": "1019",
+        "before_id": 1019,
         "tag": "button"
       },
       {
         "name": "sub_step_3",
-        "action_id": "9010",
+        "action_id": 9010,
         "current_value": "on",
-        "before_id": "9010",
+        "before_id": 9010,
         "tag": "button"
       }
     ],
