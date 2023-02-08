@@ -156,7 +156,7 @@
     "annotation": "3. Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
   },
   "step_4": {
-    "step": 3,
+    "step": 4,
     "id": 6003,
     "before_id": 6003,
     "draggable": false,
@@ -168,14 +168,14 @@
     "next_actions": [
       {
         "apparat_id": 2,
-        "next_id": "провод1",
+        "next_id": 2201,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
       },
       {
         "apparat_id": 6,
-        "next_id": "провод2",
+        "next_id": 6202,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
@@ -183,9 +183,8 @@
     ],
     "annotation": "4. Подключить гнездо «ВЫХ.» бл. Ус.-12 упаковки ЛО-12 соединить с «ВХ.» бл. УУ."
   },
-
   "step_5": {
-    "step": 4,
+    "step": 5,
     "id": "multiple",
     "before_id": "multiple",
     "draggable": false,
@@ -195,30 +194,30 @@
     "sub_steps": [
       {
         "name": "sub_step_1",
-        "action_id": "провод1",
+        "action_id": 2201,
         "current_value": "on",
-        "before_id": "провод1",
+        "before_id": 2201,
         "tag": "cabel"
       },
       {
         "name": "sub_step_2",
-        "action_id": "првоод2",
+        "action_id": 6202,
         "current_value": "on",
-        "before_id": "првоод2",
+        "before_id": 6202,
         "tag": "cabel"
       }
     ],
-    "count_action": 1,
+    "count_action": 2,
     "array_actions":[
       {
         "apparat_id": 2,
-        "action_id": "кабель",
+        "action_id": 2301,
         "action_value": "cabel",
         "tag": "cabel"
       },
       {
         "apparat_id": 6,
-        "action_id": "кабель",
+        "action_id": 6302,
         "action_value": "cabel",
         "tag": "cabel"
       }
