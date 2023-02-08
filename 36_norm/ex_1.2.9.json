@@ -361,15 +361,8 @@
         "tag": "lamp"
       }
     ],
-    "count_next": 2,
+    "count_next": 1,
     "next_actions": [
-      {
-        "apparat_id": 2,
-        "next_id": 2002,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "lever"
-      },
       {
         "apparat_id": 2,
         "next_id": 2014,
@@ -382,28 +375,12 @@
   },
   "step_12": {
     "step": 12,
-    "id": "multiple",
-    "before_id": "multiple",
+    "id": "2014",
+    "before_id": "2014",
     "draggable": false,
-    "current_value": "multiple",
-    "tag": "multiple",
-    "actions_for_step": 2,
-    "sub_steps": [
-      {
-        "name": "sub_step_1",
-        "action_id": 2002,
-        "current_value": "off",
-        "before_id": 2002,
-        "tag": "lever"
-      },
-      {
-        "name": "sub_step_2",
-        "action_id": 2014,
-        "current_value": "off",
-        "before_id": 2014,
-        "tag": "lever"
-      }
-    ],
+    "current_value": "off",
+    "tag": "lever",
+    "actions_for_step": 0,
     "count_action": 2,
     "array_actions": [
       {
