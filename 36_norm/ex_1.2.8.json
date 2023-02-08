@@ -202,11 +202,17 @@
     "current_value": "on",
     "actions_for_step": 1,
     "tag": "button",
-    "count_action": 1,
+    "count_action": 2,
     "array_actions": [
       {
         "apparat_id": 2,
         "action_id": 2020,
+        "action_value": "on",
+        "tag": "lamp"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2018,
         "action_value": "on",
         "tag": "lamp"
       }
