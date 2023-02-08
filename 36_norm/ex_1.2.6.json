@@ -31,14 +31,14 @@
       },
       {
         "apparat_id": 4,
-        "action_id": 4000,
+        "next_id": 4000,
         "current_value": "on",
         "before_id": 4000,
         "tag": "lever"
       },
       {
         "apparat_id": 4,
-        "action_id": 4001,
+        "next_id": 4001,
         "current_value": "on",
         "before_id": 4001,
         "tag": "lever"
