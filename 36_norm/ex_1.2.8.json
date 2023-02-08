@@ -101,24 +101,20 @@
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3002,
+        "next_id": 3003,
         "draggable": true,
-        "current_value": "null",
-        "tag": "drag",
-        "left": "137.6",
-        "top": "48.2"
+        "current_value": "jumper2",
+        "tag": "drag"
       }
     ],
     "annotation": "2. Переставить перемычку в Гн. «16»"
   },
   "step_2": {
     "step": 2,
-    "id": 3002,
-    "before_id": 3002,
-    "draggable": true,
-    "left": "137.6",
-    "top": "48.2",
-    "current_value": "null",
+    "id": 3003,
+    "before_id": 3003,
+    "draggable": false,
+    "current_value": "jumper2",
     "tag": "drag",
     "actions_for_step": 1,
     "count_action": 0,
