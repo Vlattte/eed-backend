@@ -332,6 +332,7 @@
     "tag": "button",
     "actions_for_step": 1,
     "count_action": 0,
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 2,
