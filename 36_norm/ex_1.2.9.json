@@ -375,8 +375,8 @@
   },
   "step_12": {
     "step": 12,
-    "id": "2014",
-    "before_id": "2014",
+    "id": 2014,
+    "before_id": 2014,
     "draggable": false,
     "current_value": "off",
     "tag": "lever",
