@@ -7,7 +7,7 @@
     "current_value": "multiple",
     "tag": "multiple",
     "count_action": 0,
-    "count_next": 3,
+    "count_next": 5,
     "next_actions": [
       {
         "apparat_id": 11,
@@ -29,6 +29,20 @@
         "draggable": false,
         "current_value": "on",
         "tag": "button"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4000,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4001,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
       }
     ],
     "array_actions": [
@@ -36,7 +50,7 @@
         "name": "nan"
       }
     ],
-    "annotation": "1. На упаковках ПИТ, ДСВ, ДП, СС-О аппаратуры П- 302-О тумблеры питания перевести в положение «ВКЛ»"
+    "annotation": "1. РќР° СѓРїР°РєРѕРІРєР°С… РџРРў, Р”РЎР’, Р”Рџ, РЎРЎ-Рћ Р°РїРїР°СЂР°С‚СѓСЂС‹ Рџ- 302-Рћ С‚СѓРјР±Р»РµСЂС‹ РїРёС‚Р°РЅРёСЏ РїРµСЂРµРІРµСЃС‚Рё РІ РїРѕР»РѕР¶РµРЅРёРµ В«Р’РљР›В»."
   },
   "step_1": {
     "step": 1,
@@ -44,7 +58,7 @@
     "draggable": false,
     "current_value": "multiple",
     "tag": "multiple",
-    "actions_for_step": 3,
+    "actions_for_step": 5,
     "sub_steps": [
       {
         "name": "sub_step_1",
@@ -66,6 +80,20 @@
         "current_value": "on",
         "before_id": 9010,
         "tag": "button"
+      },
+      {
+        "name": "sub_step_4",
+        "action_id": 4000,
+        "current_value": "on",
+        "before_id": 4000,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_5",
+        "action_id": 4001,
+        "current_value": "on",
+        "before_id": 4001,
+        "tag": "lever"
       }
     ],
     "count_action": 0,
@@ -86,7 +114,7 @@
         "tag": "cabel"
       }
     ],
-    "annotation": "2. Соединить шнуром «ВЫХ» и «ВХ» бл.УУ."
+    "annotation": "2. РЎРѕРµРґРёРЅРёС‚СЊ С€РЅСѓСЂРѕРј В«Р’Р«РҐВ» Рё В«Р’РҐВ» Р±Р».РЈРЈ."
   },
   "step_2": {
     "step": 2,
@@ -138,7 +166,7 @@
         "draggable": false
       }
     ],
-    "annotation": "3. Переключатели: кГц на 0,8; Нп генератора на 0."
+    "annotation": "3. РџРµСЂРµРєР»СЋС‡Р°С‚РµР»Рё: \nВ«РєР“С†В» в†’ В«0,8В»;\nВ«РќРїВ» РЅР° Р“Р•Рќв†’ В«0В»."
   },
   "step_3": {
     "step": 3,
@@ -224,7 +252,7 @@
         "draggable": false
       }
     ],
-    "annotation": "4. Переключатели: СОПР.ВХ на 600; Нп на 0"
+    "annotation": "4. РџРµСЂРµРєР»СЋС‡Р°С‚РµР»Рё: В«РЎРћРџР .Р’РҐВ»в†’ В«600В», В«РќРїВ» в†’ В«0В»."
   },
   "step_4": {
     "step": 4,
@@ -257,6 +285,6 @@
     "count_action": 0,
     "count_next": 0,
     "next_actions": [],
-    "annotation": "Проверить работоспособность блока указателя уровня (УУ) ВЫПОЛНЕНО"
+    "annotation": "РџСЂРѕРІРµСЂРёС‚СЊ СЂР°Р±РѕС‚РѕСЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ Р±Р»РѕРєР° СѓРєР°Р·Р°С‚РµР»СЏ СѓСЂРѕРІРЅСЏ (РЈРЈ) Р’Р«РџРћР›РќР•РќРћ"
   }
 }
