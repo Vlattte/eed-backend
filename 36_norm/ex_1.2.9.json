@@ -108,7 +108,7 @@
         "tag": "drag"
       }
     ],
-    "annotation": "2. Переставить перемычку в Гн. «16»"
+    "annotation": "2. Переставить перемычку в Гн. «64»"
   },
   "step_2": {
     "step": 2,
@@ -260,6 +260,7 @@
     "current_value": "on",
     "tag": "lever",
     "actions_for_step": 1,
+    "count_action": 0,
     "count_next": 1,
     "next_actions": [
       {
