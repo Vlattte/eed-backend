@@ -105,10 +105,10 @@ def WhatExercise(message, session_id):
             key_name =  "ex_" + app_id + "_" + ex_id
 
     else:
-        db_id = db.get_ex_id(session_id)
-        print(db_id)
-        app_id = db_id[0]
-        ex_id = db_id[1:]
+        full_id = db.get_ex_id(session_id)
+        print(full_id)
+        app_id = full_id[0]
+        ex_id = full_id[1:]
         key_name = "ex_" + app_id + "_" + ex_id
 
     # убрать когда будут доделаны карты
