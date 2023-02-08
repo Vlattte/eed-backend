@@ -55,6 +55,7 @@
   "step_1": {
     "step": 1,
     "id": "multiple",
+    "before_id":"multiple",
     "draggable": false,
     "current_value": "multiple",
     "tag": "multiple",
