@@ -6,28 +6,42 @@
     "draggable": false,
     "current_value": "multiple",
     "tag": "multiple",
-    "count_next": 3,
+    "count_next": 5,
     "next_actions": [
       {
         "apparat_id": 11,
         "next_id": 11012,
         "draggable": false,
         "current_value": "on",
-        "tag": "button"
+        "tag": "lever"
       },
       {
         "apparat_id": 1,
         "next_id": 1019,
         "draggable": false,
         "current_value": "on",
-        "tag": "button"
+        "tag": "lever"
       },
       {
         "apparat_id": 9,
         "next_id": 9010,
         "draggable": false,
         "current_value": "on",
-        "tag": "button"
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4000,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4001,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
       }
     ],
     "count_action": 0,
@@ -43,32 +57,55 @@
     "id": "multiple",
     "draggable": false,
     "current_value": "multiple",
+    "before_id": "multiple",
     "tag": "multiple",
-    "actions_for_step": 3,
+    "actions_for_step": 5,
     "sub_steps": [
       {
         "name": "sub_step_1",
         "action_id": 11012,
         "current_value": "on",
         "before_id": 11012,
-        "tag": "button"
+        "tag": "lever"
       },
       {
         "name": "sub_step_2",
         "action_id": 1019,
         "current_value": "on",
         "before_id": 1019,
-        "tag": "button"
+        "tag": "lever"
       },
       {
         "name": "sub_step_3",
         "action_id": 9010,
         "current_value": "on",
         "before_id": 9010,
-        "tag": "button"
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_4",
+        "action_id": 4000,
+        "current_value": "on",
+        "before_id": 4000,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_5",
+        "action_id": 4001,
+        "current_value": "on",
+        "before_id": 4001,
+        "tag": "lever"
       }
     ],
-    "count_action": 0,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "pos_3",
+        "tag": "arrow"
+      }
+    ],
     "count_next": 1,
     "next_actions": [
       {

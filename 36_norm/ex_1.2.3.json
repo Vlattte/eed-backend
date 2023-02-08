@@ -283,7 +283,15 @@
         "before_id": 6003
       }
     ],
-    "count_action": 0,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "pos_4",
+        "tag": "arrow"
+      }
+    ],
     "count_next": 0,
     "next_actions": [],
     "annotation": "Проверить работоспособность блока указателя уровня (УУ) ВЫПОЛНЕНО"

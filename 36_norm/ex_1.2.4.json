@@ -197,7 +197,15 @@
     "current_value": "15",
     "tag": "rotate",
     "actions_for_step": 1,
-    "count_action": 0,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "pos_2",
+        "tag": "arrow"
+      }
+    ],
     "count_next": 0,
     "next_actions": [
       {
