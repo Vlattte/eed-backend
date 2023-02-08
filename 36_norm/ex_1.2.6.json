@@ -149,7 +149,7 @@
       }
     ],
     "count_next": 0,
-    "next_actions": [{}],
+    "next_actions": [{"name": "nan"}],
     "annotation": "Норматив пройден"
   }
 }
