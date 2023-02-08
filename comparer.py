@@ -14,7 +14,6 @@ def GetInstruction(app, step_id): #app - аппаратура, step_id - ном�
 def IsMoreSameId(id, instruction, db_steps, steps_count):
     for item in db_steps:
         for step in item:
-            print(item[step])
             if item[step] == 'False':
                 # значит этот шаг еще не сделан
                 for i in range(steps_count):
@@ -29,7 +28,7 @@ def IsMoreSameId(id, instruction, db_steps, steps_count):
 # надо записать индексы из массива array_actions_for_step, в виде словаря по типу: "index": bool,
 # где bool - сделан ли шаг под этим индексом
 # в этом шаге может быть написан следующий шаг, значащий следующее положение этого же элемента
-def CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps):
+def CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps, ex_id):
     # код возврата:
     # -1 - ошибка пользователя (status="incorrect")
     # 0 - остались еще под шаги (status="correct")
@@ -50,20 +49,21 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                      step_num=step,
                      actions_for_step=instruction['actions_for_step'],
                      sub_steps=sub_steps,
-                     attempts_left=left_attempts)
+                     attempts_left=left_attempts, 
+                     ex_id=ex_id)
     else:
          sub_steps = db.get_field_data(session_id, "sub_steps")
 
     for i in range(steps):
         if instruction["sub_steps"][i]["action_id"] == message[1][1]:
-            if instruction["sub_steps"][i]["current_value"] == message[4][1]:
+            if str(instruction["sub_steps"][i]["current_value"]) == str(message[4][1]):
                 name = instruction["sub_steps"][i]["name"]
-                id = instruction["sub_steps"][i]["action_id"]
 
                 if sub_steps[i][name] == "False":
                     sub_steps[i][name] = "True"
 
                     # True, если остались еще действия с этим элементом
+                    id = instruction["sub_steps"][i]["action_id"]
                     is_no_element_actions = IsMoreSameId(id, instruction, sub_steps, steps)
                     return_code = 0
 
@@ -77,37 +77,63 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                                  step_num=step,
                                  actions_for_step=left_steps-1,
                                  sub_steps=sub_steps,
-                                 attempts_left=left_attempts)
+                                 attempts_left=left_attempts, 
+                                 ex_id=ex_id)
 
     return return_code
 
-def WhatExercise(message):
+def WhatExercise(message, session_id):
     is_training = "nan"
-    exercise_name = "test.json"
-
-    if message[0][0] == "session_id":
-        exercise_name = "test.json"
+    exercise_name = ""
+    full_id = "0"
+    key_name = "ex_test"
 
     # проверяем флаг тренировки
     if message[1][0] == "is_training":
         is_training = message[1][1]
+    
+    exercise_json = open("id_json.json", encoding='utf-8')
+    data = json.load(exercise_json)
 
     # id норматива
-    if message[2][1] == "ex_id":
-        if "ex_id" == 0:
-            exercise_name = "test.json"
-        #TODO: добавить потом другие нормативы
+    if message[3][0] == "norm":
 
-    return exercise_name, is_training
+        full_id =  message[3][1]
+        if message[3][1] != "0":
+            app_id = message[3][1][0]    # id оборуования
+            ex_id = message[3][1][1:]  # id упражнения
+            key_name =  "ex_" + app_id + "_" + ex_id
+
+    else:
+        db_id = db.get_ex_id(session_id)
+        print(db_id)
+        app_id = db_id[0]
+        ex_id = db_id[1:]
+        key_name =  "ex_" + app_id + "_" + ex_id
+
+    # убрать когда будут доделаны карты
+    key_name = "ex_test"
+
+    exercise_name = data[key_name]
+    print(exercise_name)
+        
+
+    return exercise_name, is_training, full_id, key_name
+
+def GetStepsFromJson(key_name):
+    steps_json = open("steps_json.json", encoding='utf-8')
+    data = json.load(steps_json)
+    return data[key_name]
+
 
 #[["session_id","1gjolm7fq"],["id",1015],["draggble",false],["rotatable",true],["currentValue",60],["left",249.99999999999997],["top",105.55555555555554]]
 def Comparer(message): #message - json от фронта, app - аппаратура
     # по id норматива получаем название соответсвующего файла
     # так же получаем значение флага is_training
     is_zero_step = False
-    exercise_name, is_training = WhatExercise(message)
     session_id = message[0][1]
     session_id_list = db.get_session_id_list()
+    exercise_name, is_training, ex_id, key_name = WhatExercise(message, session_id)
 
 
     # Если session_id нет в таблице, то создаем запись для него и устанавливаем номер шага = 0
@@ -121,6 +147,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
                      actions_for_step=instruction["actions_for_step"],
                      sub_steps=sub_steps,
                      attempts_left=1,
+                     ex_id=ex_id,
                      is_training=is_training)
 
 
@@ -147,9 +174,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
     # Количество шагов:
     # П302-O: 5 шагов
 
-    steps_num = 0
-    if exercise_name == "test.json":
-        steps_num = 4
+    steps_num = GetStepsFromJson(key_name)
 
     has_action = False
     array_actions = False
@@ -181,7 +206,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
         # multiple == несколько действий за шаг
         if instruction["id"] == "multiple":
-            multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps)
+            multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps, ex_id)
 
             # если еще есть подшаги и не было ошибки
             if multiple_res != -1:
@@ -226,7 +251,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
                             step_num=step + step_increm,
                             actions_for_step=new_instruction['actions_for_step'],
                             sub_steps=sub_steps,
-                            attempts_left=1)
+                            attempts_left=1, 
+                            ex_id=ex_id)
 
         elif return_request['validation'] == False:
             print('Неправильное действие')
@@ -241,6 +267,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
                         step_num=step, 
                         actions_for_step=instruction['actions_for_step'],
                         sub_steps=sub_steps,
-                        attempts_left=left_attempts - 1)
+                        attempts_left=left_attempts - 11, 
+                        ex_id=ex_id)
     
     return return_request
