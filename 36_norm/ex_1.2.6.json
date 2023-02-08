@@ -6,10 +6,10 @@
     "draggable": false,
     "current_value": "start",
     "tag": "multiple",
-    "count_next": 3,
+    "count_next": 5,
     "next_actions": [
       {
-        "apparat_id": 1,
+        "apparat_id": 11,
         "next_id": 11012,
         "draggable": false,
         "current_value": "on",
@@ -23,10 +23,24 @@
         "tag": "lever"
       },
       {
-        "apparat_id": 1,
+        "apparat_id": 9,
         "next_id": 9010,
         "draggable": false,
         "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "action_id": 4000,
+        "current_value": "on",
+        "before_id": 4000,
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "action_id": 4001,
+        "current_value": "on",
+        "before_id": 4001,
         "tag": "lever"
       }
     ],
@@ -68,21 +82,35 @@
         "current_value": "on",
         "before_id": 9010,
         "tag": "lever"
+      },
+      {
+        "name": "sub_step_4",
+        "action_id": 4000,
+        "current_value": "on",
+        "before_id": 4000,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_5",
+        "action_id": 4001,
+        "current_value": "on",
+        "before_id": 4001,
+        "tag": "lever"
       }
     ],
     "count_action": 0,
     "count_next": 2,
     "next_actions": [
       {
-        "apparat_id": 1,
-        "next_id": "провод1",
+        "apparat_id": 6,
+        "next_id":  6201,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
       },
       {
-        "apparat_id": 1,
-        "next_id": "провод2",
+        "apparat_id": 6,
+        "next_id": 6202,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
@@ -100,22 +128,22 @@
     "sub_steps": [
       {
         "name": "sub_step_1",
-        "action_id": "провод1",
+        "action_id": 6201,
         "current_value": "on",
-        "before_id": "провод1"
+        "before_id": 6201
       },
       {
         "name": "sub_step_2",
-        "action_id": "провод2",
+        "action_id": 6202,
         "current_value": "on",
-        "before_id": "провод2"
+        "before_id": 6202
       }
     ],
     "count_action": 1,
     "array_actions": [
       {
-        "apparat_id": 1,
-        "action_id": "кабель",
+        "apparat_id": 6,
+        "action_id": 6301,
         "action_value": "cabel",
         "tag": "cabel"
       }
