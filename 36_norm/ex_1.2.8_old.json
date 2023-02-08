@@ -159,8 +159,60 @@
       "current_value": "15",
       "actions_for_step": 1,
       "count_action": 0,
-      "count_next": 1,
+      "count_next": 2,
       "next_actions": [
+        {
+          "apparat_id": "",
+          "next_id": "провод1",
+          "draggable": false,
+          "current_value": "on",
+          "tag": "cabel"
+        },
+        {
+          "apparat_id": "",
+          "next_id": "провод2",
+          "draggable": false,
+          "current_value": "on",
+          "tag": "cabel"
+        }
+      ],
+      "annotation": "4. Подключить гнездо «ВЫХ.» бл. Ус.-12 упаковки ЛО-12 соединить с «ВХ.» бл. УУ."
+    },
+  "step_5": {
+    "step": 5,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "провод1",
+        "current_value": "on",
+        "before_id": "провод1",
+        "tag": "cabel"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "провод2",
+        "current_value": "on",
+        "before_id": "провод2",
+        "tag": "cabel"
+      }
+    ],
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": "",
+        "action_id": "кабель1",
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
       {
         "apparat_id": 2,
         "next_id": 2016,
@@ -169,10 +221,10 @@
         "tag": "rotate"
       }
     ],
-    "annotation": "4.  Установить ручкой «РН» на бл. Ус.-12 уровень сигнала «-2 Нп»."
+    "annotation": "5.  Установить ручкой «РН» на бл. Ус.-12 уровень сигнала «-2 Нп»."
   },
-  "step_5": {
-    "step": 5,
+  "step_6": {
+    "step": 6,
     "id": 2016,
     "before_id": 2016,
     "draggable": false,
@@ -190,10 +242,10 @@
         "tag": "button"
       }
     ],
-    "annotation": "5. Тумблер «ТЕРМ» на бл. Ус.-12- «ВКЛ»."
+    "annotation": "6. Тумблер «ТЕРМ» на бл. Ус.-12- «ВКЛ»."
   },
-  "step_6": {
-    "step": 6,
+  "step_7": {
+    "step": 7,
     "id": 2014,
     "before_id": 2014,
     "draggable": false,
@@ -219,10 +271,10 @@
         "tag": "button"
       }
     ],
-    "annotation": "6. Установить тумблер «КЧ» на бл. ПКК-64/16 в положение «16»."
+    "annotation": "7. Установить тумблер «КЧ» на бл. ПКК-64/16 в положение «16»."
   },
-    "step_7": {
-      "step": 7,
+    "step_8": {
+      "step": 8,
       "id": 2011,
       "before_id": 2011,
       "draggable": false,
@@ -239,10 +291,10 @@
           "tag": "button"
         }
       ],
-    "annotation": "7. Нажать кнопку «УСТ.МРУ» установить стрелку МРУ  на нуль."
+    "annotation": "8. Нажать кнопку «УСТ.МРУ» установить стрелку МРУ  на нуль."
   },
-  "step_8": {
-    "step": 8,
+  "step_9": {
+    "step": 9,
     "id": 2022,
     "before_id": 2022,
     "draggable": false,
@@ -260,7 +312,7 @@
         "tag": "button"
       }
     ],
-    "annotation": "8. Тумблеры «АРУ»  на бл.ПКК 64/16 и Ус.-12 в положение «ВКЛ»."
+    "annotation": "9. Тумблеры «АРУ»  на бл.ПКК 64/16 и Ус.-12 в положение «ВКЛ»."
   },
     "step_10": {
       "step": 10,
