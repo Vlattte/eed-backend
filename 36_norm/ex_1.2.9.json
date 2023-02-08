@@ -102,10 +102,8 @@
       {
         "apparat_id": 3,
         "next_id": 3002,
-        "draggable": true,
-        "left": 161.1,
-        "top": 48.2,
-        "current_value": "null",
+        "draggable": false,
+        "current_value": "jumper2",
         "tag": "drag"
       }
     ],
@@ -115,10 +113,8 @@
     "step": 2,
     "id": 3002,
     "before_id": 3002,
-    "draggable": true,
-    "left": 161.1,
-    "top": 48.2,
-    "current_value": "null",
+    "draggable": false,
+    "current_value": "jumper2",
     "tag": "drag",
     "actions_for_step": 1,
     "count_action": 0,
