@@ -57,6 +57,7 @@
     "id": "multiple",
     "draggable": false,
     "current_value": "multiple",
+    "before_id": "multiple",
     "tag": "multiple",
     "actions_for_step": 5,
     "sub_steps": [
