@@ -18,9 +18,9 @@ CREATE TABLE test_table
 # Параметры для подключения к БД
 connect_params = {"user": "postgres",  # пароль, который указали при установке PostgreSQL
                   "database": "test_db",
-                  "password": "ghj5jhg5f",
+                  "password": "Admin",
                   "host": "localhost",
-                  "port": "5433"}
+                  "port": "5432"}
 
 
 def get_session_id_list():
