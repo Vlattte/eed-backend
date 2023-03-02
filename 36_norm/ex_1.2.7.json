@@ -103,9 +103,9 @@
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3014,
+        "next_id": 3003,
         "draggable": true,
-        "current_value": "null",
+        "current_value": "off",
         "tag": "drag"
       }
     ],
@@ -113,12 +113,31 @@
   },
   "step_2": {
     "step": 2,
-    "id": 3014,
-    "before_id": 3014,
+    "id": 3003,
+    "before_id": 3003,
     "draggable": true,
-    "left": 398.1,
-    "top": 47.5,
-    "current_value": "null",
+    "current_value": "off",
+    "tag": "drag",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3002,
+        "draggable": true,
+        "current_value": "on",
+        "tag": "drag"
+      }
+    ],
+    "annotation": "2. Из гн. «16» на бл. ГП.Пер. упаковки ГО-12 вынуть перемычку и вставить её в гн. «120» на бл. КЧ-64;ГНЧ-120-1."
+  },
+  "step_3": {
+    "step": 3,
+    "id": 3002,
+    "before_id": 3002,
+    "draggable": true,
+    "current_value": "off",
     "tag": "drag",
     "actions_for_step": 1,
     "count_action": 0,
@@ -134,8 +153,8 @@
     ],
     "annotation": "3. Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
   },
-  "step_3": {
-    "step": 3,
+  "step_4": {
+    "step": 4,
     "id": 6003,
     "before_id": 6003,
     "draggable": false,
@@ -155,8 +174,8 @@
     ],
     "annotation": "3. Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
   },
-  "step_4": {
-    "step": 4,
+  "step_5": {
+    "step": 5,
     "id": 6003,
     "before_id": 6003,
     "draggable": false,
@@ -176,8 +195,8 @@
     ],
     "annotation": "4. Переключатель «Нп» → «-2»"
   },
-  "step_5": {
-    "step": 5,
+  "step_6": {
+    "step": 6,
     "id": 6004,
     "before_id": 6004,
     "draggable": false,
@@ -197,8 +216,8 @@
     ],
     "annotation": "4. Переключатель «Нп» → «-2»"
   },
-  "step_6": {
-    "step": 6,
+  "step_7": {
+    "step": 7,
     "id": 6004,
     "before_id": 6004,
     "draggable": false,
@@ -218,8 +237,8 @@
     ],
     "annotation": "4. Переключатель «Нп» → «-2»"
   },
-  "step_7": {
-    "step": 7,
+  "step_8": {
+    "step": 8,
     "id": 6004,
     "before_id": 6004,
     "draggable": false,
@@ -239,8 +258,8 @@
     ],
     "annotation": "4. Переключатель «Нп» → «-2»"
   },
-  "step_8": {
-    "step": 8,
+  "step_9": {
+    "step": 9,
     "id": 6004,
     "before_id": 6004,
     "draggable": false,
@@ -252,14 +271,14 @@
     "next_actions": [
       {
         "apparat_id": 6,
-        "next_id": "провод1",
+        "next_id": 6202,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
       },
       {
         "apparat_id": 2,
-        "next_id": "провод2",
+        "next_id": 2201,
         "draggable": false,
         "current_value": "on",
         "tag": "cabel"
@@ -267,8 +286,8 @@
     ],
     "annotation": "5. Подключить гнездо «ВХ.» бл. УУ к гнездам перемычки в блоке ПИТ.ДСВ"
   },
-  "step_9": {
-    "step": 9,
+  "step_10": {
+    "step": 10,
     "id": "multiple",
     "before_id": "multiple",
     "draggable": false,
@@ -278,42 +297,44 @@
     "sub_steps": [
       {
         "name": "sub_step_1",
-        "action_id": "провод1",
+        "action_id": 2201,
         "current_value": "on",
-        "before_id": "провод1"
+        "before_id": 2201
       },
       {
         "name": "sub_step_2",
-        "action_id": "провод2",
+        "action_id": 6202,
         "current_value": "on",
-        "before_id": "провод2"
+        "before_id": 6202
       }
     ],
-    "count_action": 1,
+    "count_action": 3,
     "array_actions": [
       {
         "apparat_id": 6,
-        "action_id": "кабель",
+        "action_id": 6302,
         "action_value": "cabel",
         "tag": "cabel"
       },
       {
         "apparat_id": 2,
-        "action_id": "кабель",
+        "action_id": 2301,
         "action_value": "cabel",
         "tag": "cabel"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "pos_2",
+        "tag": "arrow"
       }
-    ],
-    "count_next": 1,
+  ],
+    "count_next": 0,
     "next_actions": [
       {
-        "apparat_id": 3,
-        "next_id": 3002,
-        "draggable": true,
-        "current_value": "null",
-        "tag": "drag"
+        "name": "nan"
       }
     ],
-    "annotation": "6. Переставив перемычку из гн. «64» в гн. «16» МОЖНО ДОДЕЛАТЬ ПОСЛЕ ШТУКИ ИЗ ЗАМЕТОК ПО 1.2.7"
+    "annotation": "НОРМАТИВ ЗАВЕРШЕН"
   }
 }

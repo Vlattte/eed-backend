@@ -7,97 +7,6 @@
     "current_value": "multiple",
     "tag": "multiple",
     "count_action": 0,
-    "count_next": 5,
-    "next_actions": [
-      {
-        "apparat_id": 11,
-        "next_id": 11012,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "button"
-      },
-      {
-        "apparat_id": 1,
-        "next_id": 1019,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "button"
-      },
-      {
-        "apparat_id": 9,
-        "next_id": 9010,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "button"
-      },
-      {
-        "apparat_id": 4,
-        "next_id": 4000,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "lever"
-      },
-      {
-        "apparat_id": 4,
-        "next_id": 4001,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "lever"
-      }
-    ],
-    "array_actions": [
-      {
-        "name": "nan"
-      }
-    ],
-    "annotation": "1. На упаковках ПИТ, ДСВ, ДП, СС-О аппаратуры П- 302-О тумблеры питания перевести в положение «ВКЛ»."
-  },
-  "step_1": {
-    "step": 1,
-    "id": "multiple",
-    "before_id":"multiple",
-    "draggable": false,
-    "current_value": "multiple",
-    "tag": "multiple",
-    "actions_for_step": 5,
-    "sub_steps": [
-      {
-        "name": "sub_step_1",
-        "action_id": 11012,
-        "current_value": "on",
-        "before_id": 11012,
-        "tag": "button"
-      },
-      {
-        "name": "sub_step_2",
-        "action_id": 1019,
-        "current_value": "on",
-        "before_id": 1019,
-        "tag": "button"
-      },
-      {
-        "name": "sub_step_3",
-        "action_id": 9010,
-        "current_value": "on",
-        "before_id": 9010,
-        "tag": "button"
-      },
-      {
-        "name": "sub_step_4",
-        "action_id": 4000,
-        "current_value": "on",
-        "before_id": 4000,
-        "tag": "lever"
-      },
-      {
-        "name": "sub_step_5",
-        "action_id": 4001,
-        "current_value": "on",
-        "before_id": 4001,
-        "tag": "lever"
-      }
-    ],
-    "count_action": 0,
     "count_next": 2,
     "next_actions": [
       {
@@ -115,10 +24,15 @@
         "tag": "cabel"
       }
     ],
-    "annotation": "2. Соединить шнуром «ВЫХ» и «ВХ» бл.УУ."
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "Соединить шнуром «ВЫХ» и «ВХ» бл.УУ."
   },
-  "step_2": {
-    "step": 2,
+  "step_1": {
+    "step": 1,
     "id": "multiple",
     "before_id": "multiple",
     "draggable": false,
@@ -167,10 +81,10 @@
         "draggable": false
       }
     ],
-    "annotation": "3. Переключатели: \n«кГц» → «0,8»;\n«Нп» на ГЕН→ «0»."
+    "annotation": "Переключатели: \n«кГц» → «0,8»;\n«Нп» на ГЕН→ «0»."
   },
-  "step_3": {
-    "step": 3,
+  "step_2": {
+    "step": 2,
     "id": "multiple",
     "before_id": "multiple",
     "draggable": false,
@@ -255,8 +169,8 @@
     ],
     "annotation": "4. Переключатели: «СОПР.ВХ»→ «600», «Нп» → «0»."
   },
-  "step_4": {
-    "step": 4,
+  "step_3": {
+    "step": 3,
     "id": "multiple",
     "before_id": "multiple",
     "draggable": false,
@@ -294,6 +208,6 @@
     ],
     "count_next": 0,
     "next_actions": [],
-    "annotation": "Проверить работоспособность блока указателя уровня (УУ) ВЫПОЛНЕНО"
+    "annotation": "ВЫПОЛНЕНО"
   }
 }

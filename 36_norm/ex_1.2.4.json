@@ -6,99 +6,6 @@
     "draggable": false,
     "current_value": "start",
     "tag": "multiple",
-    "count_next": 5,
-    "next_actions": [
-      {
-        "apparat_id": 11,
-        "next_id": 11012,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "lever"
-      },
-      {
-        "apparat_id": 1,
-        "next_id": 1019,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "lever"
-      },
-      {
-        "apparat_id": 9,
-        "next_id": 9010,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "lever"
-      },
-      {
-        "apparat_id": 4,
-        "next_id": 4000,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "lever"
-      },
-      {
-        "apparat_id": 4,
-        "next_id": 4001,
-        "draggable": false,
-        "current_value": "on",
-        "tag": "lever"
-      }
-    ],
-    "count_action": 0,
-    "actions_for_step": 0,
-    "array_actions": [
-      {
-        "name": "nan"
-      }
-    ],
-    "annotation": "1. На упаковках ПИТ, ДСВ, ДП, СС-О аппаратуры П- 302-О тумблеры питания перевести в положение «ВКЛ»"
-  },
-  "step_1": {
-    "step": 1,
-    "id": "multiple",
-    "before_id": "multiple",
-    "draggable": false,
-    "current_value": "multiple",
-    "tag": "multiple",
-    "actions_for_step": 5,
-    "sub_steps": [
-      {
-        "name": "sub_step_1",
-        "action_id": 11012,
-        "current_value": "on",
-        "before_id": 11012,
-        "tag": "lever"
-      },
-      {
-        "name": "sub_step_2",
-        "action_id": 1019,
-        "current_value": "on",
-        "before_id": 1019,
-        "tag": "lever"
-      },
-      {
-        "name": "sub_step_3",
-        "action_id": 9010,
-        "current_value": "on",
-        "before_id": 9010,
-        "tag": "lever"
-      },
-      {
-        "name": "sub_step_4",
-        "action_id": 4000,
-        "current_value": "on",
-        "before_id": 4000,
-        "tag": "lever"
-      },
-      {
-        "name": "sub_step_5",
-        "action_id": 4001,
-        "current_value": "on",
-        "before_id": 4001,
-        "tag": "lever"
-      }
-    ],
-    "count_action": 0,
     "count_next": 2,
     "next_actions": [
       {
@@ -116,10 +23,17 @@
         "tag": "cabel"
       }
     ],
-    "annotation": "2. Поочередно соединить 2-х пр. шнуром гн. «ВХ» на бл. УУ \nи гн. на ГО-12 с гравировками, соответствующими значениям измеряемых частот"
+    "count_action": 0,
+    "actions_for_step": 0,
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "Поочередно соединить 2-х пр. шнуром гн. «ВХ» на бл. УУ \nи гн. на ГО-12 с гравировками, соответствующими значениям измеряемых частот"
   },
-  "step_2": {
-    "step": 2,
+  "step_1": {
+    "step": 1,
     "id": "multiple",
     "before_id": "multiple",
     "draggable": false,
@@ -166,10 +80,10 @@
         "tag": "rotate"
       }
     ],
-    "annotation": "3. Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
+    "annotation": "Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
   },
-  "step_3": {
-    "step": 3,
+  "step_2": {
+    "step": 2,
     "id": 6003,
     "before_id": 6003,
     "draggable": false,
@@ -187,10 +101,10 @@
         "tag": "rotate"
       }
     ],
-    "annotation": "3. Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
+    "annotation": "Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
   },
-  "step_4": {
-    "step": 4,
+  "step_3": {
+    "step": 3,
     "id": 6003,
     "before_id": 6003,
     "draggable": false,
@@ -212,6 +126,6 @@
         "name": "nan"
       }
     ],
-    "annotation": "Норматив пройден"
+    "annotation": "ВЫПОЛНЕНО"
   }
 }
