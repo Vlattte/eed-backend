@@ -1,6 +1,6 @@
 {
     "ex_test": "ex_test.json",
-    "ex_1_1": "36_norm/ex_1.2.1.json",
+    "ex_1_1": "norm/ex_1.1.json",
     "ex_1_2": "36_norm/ex_1.2.2.json",
     "ex_1_3": "36_norm/ex_1.2.3.json",
     "ex_1_4": "36_norm/ex_1.2.4.json",

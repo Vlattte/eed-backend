@@ -12,13 +12,14 @@ CREATE TABLE test_table
 	sub_steps json, 
 	attempts_left smallint,
 	is_training text,
-    ex_id text
+    ex_id text,
+    step_status text
 )
 """
 # Параметры для подключения к БД
 connect_params = {"user": "postgres",  # пароль, который указали при установке PostgreSQL
                   "database": "test_db",
-                  "password": "Admin",
+                  "password": "postgres",
                   "host": "localhost",
                   "port": "5432"}
 
@@ -44,7 +45,8 @@ def get_session_id_list():
     #     if connection:
     #         connection.close()
 
-def write_row(session_id, step_num, actions_for_step, sub_steps, attempts_left, ex_id, is_training = True):
+def write_row(session_id, step_num, actions_for_step, sub_steps, attempts_left, ex_id,
+              is_training=True, step_status="default_step"):
     # Функция для записи о действии пользователя в таблицу
     try:
         # Подключение к существующей базе данных
@@ -54,9 +56,10 @@ def write_row(session_id, step_num, actions_for_step, sub_steps, attempts_left, 
         if step_num == 0:
             cursor.execute(
                 f"""
-                    INSERT INTO test_table (session_id, step_num, actions_per_step, sub_steps, attempts_left, is_training, ex_id)
+                    INSERT INTO test_table (session_id, step_num, actions_per_step, sub_steps, attempts_left, 
+                    is_training, ex_id, step_status)
                     VALUES('{session_id}', {step_num}, {actions_for_step},
-                            '{json.dumps(sub_steps)}', {attempts_left}, {is_training}, {ex_id})
+                            '{json.dumps(sub_steps)}', {attempts_left}, {is_training}, {ex_id}, '{step_status}')
                 """
             )
         elif step_num >= 1:
@@ -64,8 +67,37 @@ def write_row(session_id, step_num, actions_for_step, sub_steps, attempts_left, 
                 f"""
                     UPDATE test_table SET step_num = {step_num}, 
                     actions_per_step = {actions_for_step}, sub_steps = '{json.dumps(sub_steps)}', 
-                    attempts_left = {attempts_left}, ex_id = {ex_id}
+                    attempts_left = {attempts_left}, ex_id = {ex_id}, step_status = '{step_status}'
                     WHERE session_id = '{session_id}'
+                """
+            )
+        cursor.close()
+        connection.commit()
+    except (Exception, Error) as error:
+        print("Ошибка при работе с PostgreSQL", error)
+    finally:
+        if connection:
+            connection.close()
+
+def UpdateSingleField(field_name,  field_value, session_id, step_num):
+    # Функция для записи о действии пользователя в таблицу
+    try:
+        # Подключение к существующей базе данных
+        connection = psycopg2.connect(**connect_params)
+
+        cursor = connection.cursor()
+        if step_num == 0:
+            cursor.execute(
+                f"""
+                        INSERT INTO test_table '{field_name}' VALUE '{field_value}'
+                        WHERE session_id = '{session_id}'
+                """
+            )
+        elif step_num >= 1:
+            cursor.execute(
+                f"""
+                        UPDATE test_table  SET '{field_name}' = '{field_value}'
+                        WHERE session_id = '{session_id}'
                 """
             )
         cursor.close()
@@ -85,13 +117,13 @@ def get_step_attempts(session_id):
         cursor = connection.cursor()
         cursor.execute(
             f"""
-            SELECT step_num, attempts_left, actions_per_step, is_training FROM test_table 
+            SELECT step_num, attempts_left, actions_per_step, is_training, step_status FROM test_table 
             WHERE id = (SELECT MAX(id) FROM test_table WHERE session_id = '{session_id}')
             """
         )
-        step, left_attempts, left_steps, is_training = cursor.fetchone()
+        step, left_attempts, left_steps, is_training, step_status = cursor.fetchone()
         cursor.close()
-        return step, left_attempts, left_steps, is_training
+        return step, left_attempts, left_steps, is_training, step_status
     except (Exception, Error) as error:
         print("Ошибка при работе с PostgreSQL", error)
     finally:
