@@ -5,6 +5,7 @@ import random
 def GetInstruction(app, step_id): #app - аппаратура, step_id - номер шага
     instr_file = open(app, encoding='utf-8')
     data = json.load(instr_file)
+    instr_file.close()
 
     for i in range(len(data)):
         if data["step_"+str(i)]["step"] == step_id:
@@ -106,20 +107,26 @@ def RandomPrepare(app_id, instruction):
     file_name = "init_jsons\id2type_" + app_name + ".json"
     id2type_file = open(file_name, encoding="utf-8")
     id2type_data = json.load(id2type_file)
+    sub_steps_num = 0
 
     prepare_values = []
     for tag in id2type_data:
-        if tag == "cabel" or tag == "cabel_head":
+        #УБРАТЬ JUMPER, КОГДА ИХ ДОБАВЯТ ПОЛНОЦЕННО НА ФРОНТЕ
+        if tag == "cabel" or tag == "cabel_head" or tag == "jumper" or tag == "mover":
             continue
         if id2type_data[tag]["all_values"]:
             for id in id2type_data[tag]["ids"]:
                 state_id = random.randint(0, id2type_data[tag]["values_arr_size"]-1)
                 state = id2type_data[tag]["values"][state_id]
-                new_el = {"id": id, "value": state}
+                app_id = id // 1000
+
+                new_el = {"apparat_id": app_id, "next_id": id, "draggable": False, "current_value": state, "tag": tag}
                 isRandomStateRight = CheckIsRandomRight(instruction, new_el)
 
-                if isRandomStateRight:
+                if not isRandomStateRight:
+                    new_el["current_value"] = id2type_data[tag]["values"].index(state)
                     prepare_values.append(new_el)
+                    sub_steps_num += 1
         else:
             for el in id2type_data[tag]["elements"]:
                 id = el["id"]
@@ -127,21 +134,25 @@ def RandomPrepare(app_id, instruction):
 
                 state_id = random.randint(0,  values_count-1)
                 state = el["values"][state_id]
-                new_el = {"id": id, "value": state}
+                app_id = id // 1000
+
+                new_el = {"apparat_id": app_id, "next_id": id, "draggable": False, "current_value": state, "tag": tag}
                 isRandomStateRight = CheckIsRandomRight(instruction, new_el)
 
                 if not isRandomStateRight:
+                    new_el["current_value"] = el["values"].index(state)
                     prepare_values.append(new_el)
-    return prepare_values
+                    sub_steps_num += 1
+    return prepare_values, sub_steps_num
 
 def CheckIsRandomRight(instruction, new_el):
     isRandomStateRight = False
-    print(instruction)
 
     steps = instruction["actions_for_step"]
     for i in range(steps):
-        if instruction["sub_steps"][i]["action_id"] == new_el["id"]:
-            if str(instruction["sub_steps"][i]["current_value"]) == new_el["value"]:
+        if instruction["sub_steps"][i]["action_id"] == new_el["next_id"]:
+            if str(instruction["sub_steps"][i]["current_value"]) == new_el["current_value"]:
+                
                 isRandomStateRight = True
 
     return isRandomStateRight
@@ -210,6 +221,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
     # Если session_id нет в таблице, то создаем запись для него и устанавливаем номер шага = 0
     if session_id not in session_id_list:
         # берем первый шаг, потому что count_next, может отличаться от actions_for_step
+
         instruction = GetInstruction(exercise_name, 1)
         sub_steps = {'name': 'nan'}
         is_zero_step = True
@@ -225,7 +237,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
         # instruction = GetInstruction(exercise_name, 0)
         return_request = {'next_actions': instruction['next_actions']}
 
-    step, left_attempts, left_steps, is_training, step_status = db.get_step_attempts(session_id=session_id)
+    step, left_attempts, left_sub_steps, is_training, step_status = db.get_step_attempts(session_id=session_id)
 
     if step == 0 and not is_zero_step:
         step = 1
@@ -263,18 +275,46 @@ def Comparer(message): #message - json от фронта, app - аппарату
                       "next_actions":  instruction["next_actions"],
                       "finish":     False,
                       "before_id":     instruction["before_id"],
-                      "is_random_step": False}
+                      "is_random_step": False,
+                      "status": "incorrect"}
+    
 
     isRandomStep = IsForRandomStep(key_name)
     if isRandomStep and step_status != "random_step_progress":
-        prepare_values = RandomPrepare(app_id, instruction)
+        random_step_instruction = GetInstruction(exercise_name, 1)
+
+        prepare_values, sub_steps_num = RandomPrepare(app_id, random_step_instruction)
         return_request["is_random_step"] = True
         return_request["random_values"] = prepare_values
-        step_status = "random_step_progress"
+        return_request["next_actions"] = prepare_values
+        step_status = "random_step_progress"  # положения зарандомили, теперь обрабатываем шаги обработчиком рандомных шагов
         db.write_row(session_id=session_id,
-                     step_num=0,
-                     actions_for_step=instruction["actions_for_step"],
-                     sub_steps=sub_steps,
+                     step_num=1,
+                     actions_for_step=random_step_instruction["actions_for_step"],
+                     sub_steps=sub_steps_num,
+                     attempts_left=1,
+                     ex_id=ex_id,
+                     is_training=is_training,
+                     step_status=step_status)
+    elif step_status == "random_step_progress":   
+        random_step_instruction = GetInstruction(exercise_name, 1)
+        random_status = CheckRandomedValues(instruction, message)
+        if random_status == 1:
+            print("CORRECT")
+            return_request["status"] = "correct"
+            return_request["validation"] = True
+        else:
+            return_request["status"] = "progres"
+            return_request["validation"] = False
+
+        left_sub_steps -= 1
+        if left_sub_steps == 1:
+            step_status = "regular_steps"
+
+        db.write_row(session_id=session_id,
+                     step_num=1,
+                     actions_for_step=random_step_instruction["actions_for_step"],
+                     sub_steps=left_sub_steps-1,
                      attempts_left=1,
                      ex_id=ex_id,
                      is_training=is_training,
@@ -283,14 +323,12 @@ def Comparer(message): #message - json от фронта, app - аппарату
     step_increm = 1
     multiple_res = 1
 
-    return_request["status"] = "incorrect"
-
     if not is_zero_step and not isRandomStep:
 
         ###### MULTIPLE STEPS ######
         # multiple == несколько действий за шаг
         if instruction["id"] == "multiple":
-            multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_steps, ex_id)
+            multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_sub_steps, ex_id)
 
             # если еще есть подшаги и не было ошибки
             if multiple_res != -1:
