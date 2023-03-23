@@ -287,6 +287,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
         return_request["is_random_step"] = True
         return_request["random_values"] = prepare_values
         return_request["next_actions"] = prepare_values
+
         step_status = "random_step_progress"  # положения зарандомили, теперь обрабатываем шаги обработчиком рандомных шагов
         db.write_row(session_id=session_id,
                      step_num=1,
@@ -296,6 +297,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
                      ex_id=ex_id,
                      is_training=is_training,
                      step_status=step_status)
+        
     elif step_status == "random_step_progress":   
         random_step_instruction = GetInstruction(exercise_name, 1)
         random_status = CheckRandomedValues(instruction, message)
@@ -303,18 +305,19 @@ def Comparer(message): #message - json от фронта, app - аппарату
             print("CORRECT")
             return_request["status"] = "correct"
             return_request["validation"] = True
+            left_sub_steps -= 1
         else:
             return_request["status"] = "progres"
             return_request["validation"] = False
 
-        left_sub_steps -= 1
         if left_sub_steps == 1:
             step_status = "regular_steps"
-
+        
+        
         db.write_row(session_id=session_id,
                      step_num=1,
                      actions_for_step=random_step_instruction["actions_for_step"],
-                     sub_steps=left_sub_steps-1,
+                     sub_steps=left_sub_steps,
                      attempts_left=1,
                      ex_id=ex_id,
                      is_training=is_training,
@@ -324,7 +327,6 @@ def Comparer(message): #message - json от фронта, app - аппарату
     multiple_res = 1
 
     if not is_zero_step and not isRandomStep:
-
         ###### MULTIPLE STEPS ######
         # multiple == несколько действий за шаг
         if instruction["id"] == "multiple":
@@ -394,5 +396,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
                         sub_steps=sub_steps,
                         attempts_left=left_attempts - 11, 
                         ex_id=ex_id)
-    
+
+    print(return_request)
+
     return return_request
