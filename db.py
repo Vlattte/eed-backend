@@ -117,7 +117,7 @@ def get_step_attempts(session_id):
         cursor = connection.cursor()
         cursor.execute(
             f"""
-            SELECT step_num, attempts_left, actions_per_step, is_training, step_status FROM test_table 
+            SELECT step_num, attempts_left, sub_steps, is_training, step_status FROM test_table 
             WHERE id = (SELECT MAX(id) FROM test_table WHERE session_id = '{session_id}')
             """
         )

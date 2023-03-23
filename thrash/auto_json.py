@@ -1,7 +1,7 @@
 import json
 import os
 
-with open(os.path.abspath(r"norm\ex_1.1 copy.json"), 'r', encoding='utf-8') as f:
+with open(os.path.abspath(r"norm\ex_1.1.json"), 'r', encoding='utf-8') as f:
     json_file = json.load(f)
 
 

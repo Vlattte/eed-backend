@@ -109,7 +109,9 @@ def RandomPrepare(app_id, instruction):
     id2type_data = json.load(id2type_file)
     sub_steps_num = 0
 
-    prepare_values = []
+    prepare_random_values = []
+    prepare_action_values = []
+
     for tag in id2type_data:
         #УБРАТЬ JUMPER, КОГДА ИХ ДОБАВЯТ ПОЛНОЦЕННО НА ФРОНТЕ
         if tag == "cabel" or tag == "cabel_head" or tag == "jumper" or tag == "mover":
@@ -125,8 +127,12 @@ def RandomPrepare(app_id, instruction):
 
                 if not isRandomStateRight:
                     new_el["current_value"] = id2type_data[tag]["values"].index(state)
-                    prepare_values.append(new_el)
+                    prepare_action_values.append(new_el)
                     sub_steps_num += 1
+
+                new_el["current_value"] = id2type_data[tag]["values"].index(state)
+                prepare_random_values.append(new_el)
+                # sub_steps_num += 1
         else:
             for el in id2type_data[tag]["elements"]:
                 id = el["id"]
@@ -141,9 +147,13 @@ def RandomPrepare(app_id, instruction):
 
                 if not isRandomStateRight:
                     new_el["current_value"] = el["values"].index(state)
-                    prepare_values.append(new_el)
+                    prepare_action_values.append(new_el)
                     sub_steps_num += 1
-    return prepare_values, sub_steps_num
+
+                new_el["current_value"] = el["values"].index(state)
+                prepare_random_values.append(new_el)
+
+    return prepare_action_values, prepare_random_values, sub_steps_num
 
 def CheckIsRandomRight(instruction, new_el):
     isRandomStateRight = False
@@ -283,10 +293,10 @@ def Comparer(message): #message - json от фронта, app - аппарату
     if isRandomStep and step_status != "random_step_progress":
         random_step_instruction = GetInstruction(exercise_name, 1)
 
-        prepare_values, sub_steps_num = RandomPrepare(app_id, random_step_instruction)
+        prepare_action_values, prepare_random_values, sub_steps_num = RandomPrepare(app_id, random_step_instruction)
         return_request["is_random_step"] = True
-        return_request["random_values"] = prepare_values
-        return_request["next_actions"] = prepare_values
+        return_request["random_values"] = prepare_random_values
+        return_request["next_actions"] = prepare_action_values
 
         step_status = "random_step_progress"  # положения зарандомили, теперь обрабатываем шаги обработчиком рандомных шагов
         db.write_row(session_id=session_id,
@@ -396,7 +406,5 @@ def Comparer(message): #message - json от фронта, app - аппарату
                         sub_steps=sub_steps,
                         attempts_left=left_attempts - 11, 
                         ex_id=ex_id)
-
-    print(return_request)
 
     return return_request
