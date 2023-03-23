@@ -132,7 +132,11 @@ def RandomPrepare(app_id, instruction):
 
                 new_el["current_value"] = id2type_data[tag]["values"].index(state)
                 prepare_random_values.append(new_el)
-                # sub_steps_num += 1
+
+                if id == 1019:
+                    print(state)
+                    print(state_id)
+
         else:
             for el in id2type_data[tag]["elements"]:
                 id = el["id"]
