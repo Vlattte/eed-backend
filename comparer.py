@@ -103,6 +103,10 @@ def GetAppName(app_id):
 
 # формирует массив рандомных положений и сразу проверяет попало ли в правильное положение
 def RandomPrepare(app_id, instruction):
+    # app_name      - получаем название аппаратуры (P302O)
+    # file_name     - название файл с id всех элементов
+    # id2type_file  - дескриптор файла с id всех элементов
+    # id2type_data  - данные из этого файла
     app_name = GetAppName(app_id)
     file_name = "init_jsons\id2type_" + app_name + ".json"
     id2type_file = open(file_name, encoding="utf-8")
@@ -114,8 +118,10 @@ def RandomPrepare(app_id, instruction):
 
     for tag in id2type_data:
         #УБРАТЬ JUMPER, КОГДА ИХ ДОБАВЯТ ПОЛНОЦЕННО НА ФРОНТЕ
+        # эти элементы пока не сделаны, пропускаем
         if tag == "cabel" or tag == "cabel_head" or tag == "jumper" or tag == "mover":
             continue
+
         if id2type_data[tag]["all_values"]:
             for id in id2type_data[tag]["ids"]:
                 state_id = random.randint(0, id2type_data[tag]["values_arr_size"]-1)
@@ -156,7 +162,7 @@ def RandomPrepare(app_id, instruction):
 
                 new_el["current_value"] = el["values"].index(state)
                 prepare_random_values.append(new_el)
-
+    print(prepare_action_values)
     return prepare_action_values, prepare_random_values, sub_steps_num
 
 def CheckIsRandomRight(instruction, new_el):
