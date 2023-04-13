@@ -122,6 +122,10 @@ def RandomPrepare(app_id, instruction):
         if tag == "cabel" or tag == "cabel_head" or tag == "jumper" or tag == "mover":
             continue
 
+        # temp
+        if tag != 'lever': continue
+        # end_temp
+
         if id2type_data[tag]["all_values"]:
             for id in id2type_data[tag]["ids"]:
                 state_id = random.randint(0, id2type_data[tag]["values_arr_size"]-1)
@@ -162,6 +166,7 @@ def RandomPrepare(app_id, instruction):
 
                 new_el["current_value"] = el["values"].index(state)
                 prepare_random_values.append(new_el)
+
     print(prepare_action_values)
     return prepare_action_values, prepare_random_values, sub_steps_num
 
@@ -324,14 +329,16 @@ def Comparer(message): #message - json от фронта, app - аппарату
         if random_status == 1:
             print("CORRECT")
             return_request["status"] = "correct"
-            return_request["validation"] = True
+            # return_request["validation"] = True
+            return_request["validation"] = False
             left_sub_steps -= 1
         else:
             return_request["status"] = "progres"
             return_request["validation"] = False
 
-        if left_sub_steps == 1:
+        if left_sub_steps == 0:
             step_status = "regular_steps"
+            return_request["validation"] = True
         
         
         db.write_row(session_id=session_id,

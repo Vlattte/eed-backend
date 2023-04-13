@@ -21,7 +21,7 @@ connect_params = {"user": "postgres",  # пароль, который указа
                   "database": "test_db",
                   "password": "Admin",
                   "host": "localhost",
-                  "port": "5433"}
+                  "port": "5432"}
 
 
 def get_session_id_list():
