@@ -9,7 +9,7 @@
   },
   "tumbler": {
       "all_values": true,
-      "values": [ "on", "off"],
+      "values": [ "off", "on"],
       "values_arr_size": 2,
       "ids": [1013, 1019,
               2001, 2002, 2009, 2010, 2011, 2012, 2013, 2014, 2021,
