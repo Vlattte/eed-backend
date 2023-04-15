@@ -3,7 +3,7 @@ import db
 
 import randomSteps
 
-def GetInstruction(app, step_id): #app - аппаратура, step_id - номер шага
+def GetInstruction(app, step_id): #app - название аппаратура, step_id - номер шага
     instr_file = open(app, encoding='utf-8')
     data = json.load(instr_file)
     instr_file.close()
@@ -70,8 +70,6 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                     if is_no_element_actions:
                         return_code = 2
 
-                    print("LEFT = ")
-                    print(left_steps)
                     if left_steps == 1:
                         return_code = 1
                     else:
@@ -154,32 +152,34 @@ def GetStepsFromJson(key_name):
     data = json.load(steps_json)
     return data[key_name]
 
-#[["session_id","1gjolm7fq"],["id",1015],["draggble",false],["rotatable",true],["currentValue",60],["left",249.99999999999997],["top",105.55555555555554]]
+# message:
+# [["session_id","1gjolm7fq"],["id",1015],["draggble",false],["rotatable",true],["currentValue",60],["left",249.99999999999997],["top",105.55555555555554]]
 def Comparer(message): #message - json от фронта, app - аппаратура
     # по id норматива получаем название соответсвующего файла
     # так же получаем значение флага is_training
 
     # is_zero_step - True, если еще такого session_id нет
-    # session_id - id
-    # session_id_list
-    # instruction
-    # sub_steps
+    # session_id - id сессии
+    # session_id_list - список id всех сессий
+    # instruction - данные по текущему шагу
 
     is_zero_step = False
     session_id = message[0][1]
     session_id_list = db.get_session_id_list()
     instruction = {}
 
-    # exercise_name
-    # is_training
-    # ex_id
-    # key_name
-    # app_id
+    # exercise_name - путь до файла с картой (например: 36_norm/ex_1.2.3.json)
+    # is_training - какой режим: если True - тренировка, False - экзамен
+    # ex_id - id упражнения (например, 12: 1 - id аппаратуры, 2 - номер упражнения)
+    # key_name - название файла с упражнением
+    # app_id - id аппаратуры
+    # return_request - словарь, который отправляется на фронт
     # например: key_name = "ex_1_1"; ex_id = 11; app_id = 1
 
     exercise_name, is_training, ex_id, key_name, app_id = WhatExercise(message, session_id)
 
     return_request = {}
+
     # Если session_id нет в таблице, то создаем запись для него и устанавливаем номер шага = 0
     if session_id not in session_id_list:
         # берем первый шаг, потому что count_next, может отличаться от actions_for_step
@@ -195,9 +195,16 @@ def Comparer(message): #message - json от фронта, app - аппарату
                      ex_id=ex_id,
                      is_training=is_training)
 
+
     if is_training != 'nan':
         # instruction = GetInstruction(exercise_name, 0)
         return_request = {'next_actions': instruction['next_actions']}
+
+    # step - номер шага
+    # left_attempts - оставшееся колличество ошибок
+    # left_sub_steps - оставшееся колличество подшагов
+    # sub_steps - json вида {"sub_step_num": False}, где sub_step_num - номер подшага, а False - статус завершения подшага
+    # step_status - строковый статус шага TODO: доработать, используется пока только рандома
 
     step, left_attempts, left_sub_steps, sub_steps, is_training, step_status = db.get_step_attempts(session_id=session_id)
 

@@ -1,6 +1,8 @@
 import psycopg2
 from psycopg2 import Error
 import json
+
+
 # Создание таблицы
 """
 CREATE TABLE test_table
