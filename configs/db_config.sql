@@ -1,5 +1,6 @@
 # Создание таблицы
-"""
+
+'''
 CREATE TABLE test_table
 (
 	Id SERIAL PRIMARY KEY,

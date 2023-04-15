@@ -131,7 +131,7 @@
         "apparat_id": 2,
         "next_id": 2004,
         "draggable": false,
-        "current_value": "-35",
+        "current_value": "300",
         "tag": "rotate"
       },
       {
@@ -993,7 +993,7 @@
       {
         "name": "sub_step_17",
         "action_id": 2004,
-        "current_value": "-35",
+        "current_value": "300",
         "before_id": 2004,
         "tag": "rotate"
       },
