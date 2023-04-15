@@ -1,6 +1,7 @@
 import json
 import db
-import random
+
+import randomSteps
 
 def GetInstruction(app, step_id): #app - аппаратура, step_id - номер шага
     instr_file = open(app, encoding='utf-8')
@@ -101,86 +102,6 @@ def GetAppName(app_id):
 
     return "P302O"
 
-# формирует массив рандомных положений и сразу проверяет попало ли в правильное положение
-def RandomPrepare(app_id, instruction):
-    # app_name      - получаем название аппаратуры (P302O)
-    # file_name     - название файл с id всех элементов
-    # id2type_file  - дескриптор файла с id всех элементов
-    # id2type_data  - данные из этого файла
-    app_name = GetAppName(app_id)
-    file_name = "init_jsons\id2type_" + app_name + ".json"
-    id2type_file = open(file_name, encoding="utf-8")
-    id2type_data = json.load(id2type_file)
-    sub_steps_num = 0
-
-    prepare_random_values = []
-    prepare_action_values = []
-
-    for tag in id2type_data:
-        #УБРАТЬ JUMPER, КОГДА ИХ ДОБАВЯТ ПОЛНОЦЕННО НА ФРОНТЕ
-        # эти элементы пока не сделаны, пропускаем
-        if tag == "cabel" or tag == "cabel_head" or tag == "jumper" or tag == "mover":
-            continue
-
-        # temp
-        if tag != 'lever': continue
-        # end_temp
-
-        if id2type_data[tag]["all_values"]:
-            for id in id2type_data[tag]["ids"]:
-                state_id = random.randint(0, id2type_data[tag]["values_arr_size"]-1)
-                state = id2type_data[tag]["values"][state_id]
-                app_id = id // 1000
-
-                new_el = {"apparat_id": app_id, "next_id": id, "draggable": False, "current_value": state, "tag": tag}
-                isRandomStateRight = CheckIsRandomRight(instruction, new_el)
-
-                if not isRandomStateRight:
-                    new_el["current_value"] = id2type_data[tag]["values"].index(state)
-                    prepare_action_values.append(new_el)
-                    sub_steps_num += 1
-
-                new_el["current_value"] = id2type_data[tag]["values"].index(state)
-                prepare_random_values.append(new_el)
-
-                if id == 1019:
-                    print(state)
-                    print(state_id)
-
-        else:
-            for el in id2type_data[tag]["elements"]:
-                id = el["id"]
-                values_count = len(el["values"])
-
-                state_id = random.randint(0,  values_count-1)
-                state = el["values"][state_id]
-                app_id = id // 1000
-
-                new_el = {"apparat_id": app_id, "next_id": id, "draggable": False, "current_value": state, "tag": tag}
-                isRandomStateRight = CheckIsRandomRight(instruction, new_el)
-
-                if not isRandomStateRight:
-                    new_el["current_value"] = el["values"].index(state)
-                    prepare_action_values.append(new_el)
-                    sub_steps_num += 1
-
-                new_el["current_value"] = el["values"].index(state)
-                prepare_random_values.append(new_el)
-
-    print(prepare_action_values)
-    return prepare_action_values, prepare_random_values, sub_steps_num
-
-def CheckIsRandomRight(instruction, new_el):
-    isRandomStateRight = False
-
-    steps = instruction["actions_for_step"]
-    for i in range(steps):
-        if instruction["sub_steps"][i]["action_id"] == new_el["next_id"]:
-            if str(instruction["sub_steps"][i]["current_value"]) == new_el["current_value"]:
-                
-                isRandomStateRight = True
-
-    return isRandomStateRight
 
 
 def IsForRandomStep(key_name):
@@ -235,11 +156,13 @@ def GetStepsFromJson(key_name):
 def Comparer(message): #message - json от фронта, app - аппаратура
     # по id норматива получаем название соответсвующего файла
     # так же получаем значение флага is_training
+
     is_zero_step = False
     session_id = message[0][1]
     session_id_list = db.get_session_id_list()
+    instruction = {}
 
-    # key_name = "ex_1_1"; ex_id = 11; app_id = 1
+    # например: key_name = "ex_1_1"; ex_id = 11; app_id = 1
     exercise_name, is_training, ex_id, key_name, app_id = WhatExercise(message, session_id)
 
     return_request = {}
@@ -308,7 +231,10 @@ def Comparer(message): #message - json от фронта, app - аппарату
     if isRandomStep and step_status != "random_step_progress":
         random_step_instruction = GetInstruction(exercise_name, 1)
 
-        prepare_action_values, prepare_random_values, sub_steps_num = RandomPrepare(app_id, random_step_instruction)
+        app_name = GetAppName(app_id)
+        prepare_action_values, prepare_random_values, sub_steps_num = \
+            randomSteps.RandomPrepare(app_id, random_step_instruction, app_name)
+
         return_request["is_random_step"] = True
         return_request["random_values"] = prepare_random_values
         return_request["next_actions"] = prepare_action_values
@@ -327,7 +253,6 @@ def Comparer(message): #message - json от фронта, app - аппарату
         random_step_instruction = GetInstruction(exercise_name, 1)
         random_status = CheckRandomedValues(instruction, message)
         if random_status == 1:
-            print("CORRECT")
             return_request["status"] = "correct"
             # return_request["validation"] = True
             return_request["validation"] = False
