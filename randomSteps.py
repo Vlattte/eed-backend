@@ -1,7 +1,6 @@
 import random
 import json
 
-# TODO: сделать рандомизацию только элементов из карты
 # формирует массив рандомных положений и сразу проверяет попало ли в правильное положение
 def RandomPrepare(app_id, instruction, app_name):
     # app_name      - получаем название аппаратуры (P302O)
@@ -20,6 +19,10 @@ def RandomPrepare(app_id, instruction, app_name):
     prepare_random_values = []
     prepare_action_values = []
 
+    # ID отслеживаемых элементов, чтобы рандомить только их
+    instruction_id_list = parse_ids(instruction)
+    print(instruction_id_list)
+
     # цикл по отдельным видам элементов
     for tag in id2type_data:
         # NOTE: УБРАТЬ JUMPER, КОГДА ИХ ДОБАВЯТ ПОЛНОЦЕННО НА ФРОНТЕ
@@ -27,16 +30,13 @@ def RandomPrepare(app_id, instruction, app_name):
         if tag == "cabel" or tag == "cabel_head" or tag == "jumper" or tag == "mover":
             continue
 
-        if tag != "lever":
-            continue
-
         # если все возможные положения элементов одинаковы
         # например, для всех тумблеров положения только on и off => all_values == True
         if id2type_data[tag]["all_values"]:
-
-            # рандомизируем значения
-            # TODO: сделать не для всех, а для тех кто в карте
             for id in id2type_data[tag]["ids"]:
+                # если ID не в списке отслеживаемых, пропускаем
+                if id not in instruction_id_list:
+                    continue
                 # state_id - зарандомленное положение элемента
                 # state - значение элемента на позиции state_id
                 # app_id - id упаковки (модуль оборудования, например, ЩКЧН)
@@ -63,6 +63,8 @@ def RandomPrepare(app_id, instruction, app_name):
         else:
             for el in id2type_data[tag]["elements"]:
                 id = el["id"]
+                if id not in instruction_id_list:
+                    continue
                 values_count = len(el["values"])
 
                 state_id = random.randint(0,  values_count-1)
@@ -95,7 +97,23 @@ def CheckIsRandomRight(instruction, new_el):
         # когда найдем шаг связанный с нужным элементом
         # сравниваем соответсвует ли рандомизированное значение с нужным из карты
         if instruction["sub_steps"][i]["action_id"] == new_el["next_id"]:
-            if str(instruction["sub_steps"][i]["current_value"]) == new_el["current_value"]:
+            if str(instruction["sub_steps"][i]["current_value"]) == str(new_el["current_value"]):
                 isRandomStateRight = True
 
     return isRandomStateRight
+
+def parse_ids(instruction):
+    '''
+    Принимает на вход инструкцию и возвращает массив ID, 
+    которые использовались в инструкции.
+
+    Необходима, чтобы рандомить только отслеживаемые в инструкции элементы
+    '''
+
+    id_mas = []
+    for sub_step in instruction['sub_steps']:
+        id = sub_step['action_id']
+        if id not in id_mas:
+            id_mas.append(id)
+
+    return id_mas
