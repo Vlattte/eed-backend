@@ -159,12 +159,24 @@ def Comparer(message): #message - json от фронта, app - аппарату
     # по id норматива получаем название соответсвующего файла
     # так же получаем значение флага is_training
 
+    # is_zero_step - True, если еще такого session_id нет
+    # session_id - id
+    # session_id_list
+    # instruction
+    # sub_steps
+
     is_zero_step = False
     session_id = message[0][1]
     session_id_list = db.get_session_id_list()
     instruction = {}
 
+    # exercise_name
+    # is_training
+    # ex_id
+    # key_name
+    # app_id
     # например: key_name = "ex_1_1"; ex_id = 11; app_id = 1
+
     exercise_name, is_training, ex_id, key_name, app_id = WhatExercise(message, session_id)
 
     return_request = {}
@@ -187,7 +199,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
         # instruction = GetInstruction(exercise_name, 0)
         return_request = {'next_actions': instruction['next_actions']}
 
-    step, left_attempts, left_sub_steps, is_training, step_status = db.get_step_attempts(session_id=session_id)
+    step, left_attempts, left_sub_steps, sub_steps, is_training, step_status = db.get_step_attempts(session_id=session_id)
 
     if step == 0 and not is_zero_step:
         step = 1
@@ -244,8 +256,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
         step_status = "random_step_progress"  # положения зарандомили, теперь обрабатываем шаги обработчиком рандомных шагов
         db.write_row(session_id=session_id,
                      step_num=1,
-                     actions_for_step=random_step_instruction["actions_for_step"],
-                     sub_steps=sub_steps_num,
+                     actions_for_step=sub_steps_num,
+                     sub_steps=sub_steps,
                      attempts_left=1,
                      ex_id=ex_id,
                      is_training=is_training,
@@ -270,8 +282,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
         
         db.write_row(session_id=session_id,
                      step_num=1,
-                     actions_for_step=random_step_instruction["actions_for_step"],
-                     sub_steps=left_sub_steps,
+                     actions_for_step=left_sub_steps,
+                     sub_steps=sub_steps,
                      attempts_left=1,
                      ex_id=ex_id,
                      is_training=is_training,

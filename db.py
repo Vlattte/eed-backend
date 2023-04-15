@@ -117,13 +117,13 @@ def get_step_attempts(session_id):
         cursor = connection.cursor()
         cursor.execute(
             f"""
-            SELECT step_num, attempts_left, actions_per_step, is_training, step_status FROM test_table 
+            SELECT step_num, attempts_left, actions_per_step, sub_steps, is_training, step_status FROM test_table 
             WHERE id = (SELECT MAX(id) FROM test_table WHERE session_id = '{session_id}')
             """
         )
-        step, left_attempts, left_steps, is_training, step_status = cursor.fetchone()
+        step, left_attempts, left_steps, sub_steps, is_training, step_status = cursor.fetchone()
         cursor.close()
-        return step, left_attempts, left_steps, is_training, step_status
+        return step, left_attempts, left_steps, sub_steps, is_training, step_status
     except (Exception, Error) as error:
         print("Ошибка при работе с PostgreSQL", error)
     finally:
