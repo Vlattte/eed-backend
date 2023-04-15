@@ -70,6 +70,8 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                     if is_no_element_actions:
                         return_code = 2
 
+                    print("LEFT = ")
+                    print(left_steps)
                     if left_steps == 1:
                         return_code = 1
                     else:
@@ -349,4 +351,5 @@ def Comparer(message): #message - json от фронта, app - аппарату
                         attempts_left=left_attempts - 11, 
                         ex_id=ex_id)
 
+    print(return_request)
     return return_request

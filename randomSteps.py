@@ -80,7 +80,7 @@ def RandomPrepare(app_id, instruction, app_name):
                 new_el["current_value"] = el["values"].index(state)
                 prepare_random_values.append(new_el)
 
-    print(prepare_action_values)
+    # print(prepare_action_values)
     return prepare_action_values, prepare_random_values, sub_steps_num
 
 # сравнивает соответсвует ли рандомизированное значение с нужным из карты
