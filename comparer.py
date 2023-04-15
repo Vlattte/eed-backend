@@ -282,7 +282,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
             return_request["status"] = "progres"
             return_request["validation"] = False
 
-        if left_sub_steps == 0:
+        if left_sub_steps == 1:
             step_status = "regular_steps"
             return_request["validation"] = True
         
