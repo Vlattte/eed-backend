@@ -15,6 +15,7 @@ def RandomPrepare(app_id, instruction, app_name, session_id):
     id2type_file = open(file_name, encoding="utf-8")
     id2type_data = json.load(id2type_file)
     sub_steps_num = 0
+    sub_steps_names = []
 
     # prepare_random_values - массив всех элементов (для выставления их в нужное положение)
     # ^^^^^^^^^ TODO: это кажется лучше поменять ^^^^^^^^^
@@ -64,6 +65,10 @@ def RandomPrepare(app_id, instruction, app_name, session_id):
                     prepare_action_values.append(new_el)
                     sub_steps_num += 1
 
+                    # массив с именами подшагов из инструкции
+                    sub_step__name = get_sub_step_name(instruction, id)
+                    sub_steps_names.append(sub_step__name)
+
                     # запоминаем сколько элементов загорится на каждом блоке
                     if not str(app_id) in app_el_count:
                         app_el_count[str(app_id)] = 1
@@ -93,6 +98,10 @@ def RandomPrepare(app_id, instruction, app_name, session_id):
                     new_el["current_value"] = el["values"].index(state)
                     prepare_action_values.append(new_el)
                     sub_steps_num += 1
+                    
+                    # массив с именами подшагов из инструкции 
+                    sub_step__name = get_sub_step_name(instruction, id)
+                    sub_steps_names.append(sub_step__name)
 
                     # запоминаем сколько элементов загорится на каждом блоке
                     if not str(app_id) in app_el_count:
@@ -103,8 +112,9 @@ def RandomPrepare(app_id, instruction, app_name, session_id):
                 new_el["current_value"] = el["values"].index(state)
                 prepare_random_values.append(new_el)
 
-    for i in range(sub_steps_num):
-        sub_steps.append({instruction["sub_steps"][i]["name"]: "False"})
+    for name in sub_steps_names:
+        sub_steps.append({name: "False"})
+
 
     db.UpdateSingleField(field_name="sub_steps",
                          field_value=json.dumps(sub_steps),
@@ -141,3 +151,13 @@ def parse_ids(instruction):
             id_mas.append(id)
 
     return id_mas
+
+# мы должны создать массив из подшагов с такими же названиями, как 
+def get_sub_step_name(instruction, id):
+    sub_steps = instruction["sub_steps"]
+
+    for elem in sub_steps:
+        if elem['action_id'] == id:
+            sub_step_name = elem['name']
+
+    return sub_step_name

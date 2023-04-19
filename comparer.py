@@ -3,6 +3,12 @@ import db
 
 import randomSteps
 
+# функция для получения id элемента с данным именем в sub_steps бд
+def get_name_id(json_mas, name):
+    for i, elem in enumerate(json_mas):
+        if list(elem.keys())[0] == name:
+            return i
+
 def GetInstruction(app, step_id): #app - название аппаратура, step_id - номер шага
     instr_file = open(app, encoding='utf-8')
     data = json.load(instr_file)
@@ -101,14 +107,17 @@ def CheckRandomedValues(instruction, message):
                 app_id = instruction["sub_steps"][i]["action_id"] // 1000
 
                 name = instruction["sub_steps"][i]["name"]
-                if sub_steps[0][name] == True:
+                name_ind = get_name_id(sub_steps, name)
+            
+                if sub_steps[name_ind][name] == True:
                     return_code = -1
                     return return_code, app_id
                 return_code = 1
 
-                sub_steps[0][name] = True
+                sub_steps[name_ind][name] = True
+
                 print("STEP")
-                print(sub_steps[0][name])
+                print(sub_steps[name_ind][name])
                 app_el_count = db.get_field_data(session_id=message[0][1], field_name="app_el_count")
                 app_el_count[str(app_id)] -= 1
 
