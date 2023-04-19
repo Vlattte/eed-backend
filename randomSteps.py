@@ -16,12 +16,14 @@ def RandomPrepare(app_id, instruction, app_name):
     # prepare_random_values - массив всех элементов (для выставления их в нужное положение)
     # ^^^^^^^^^ TODO: это кажется лучше поменять ^^^^^^^^^
     # prepare_action_values - массив для подсветки следующих элементов
+    # app_el_count - словарь соответствия id аппаратуры и количества подсвеченных элементов на ней
+
     prepare_random_values = []
     prepare_action_values = []
+    app_el_count = {}
 
     # ID отслеживаемых элементов, чтобы рандомить только их
     instruction_id_list = parse_ids(instruction)
-    print(instruction_id_list)
 
     # цикл по отдельным видам элементов
     for tag in id2type_data:
@@ -57,6 +59,12 @@ def RandomPrepare(app_id, instruction, app_name):
                     prepare_action_values.append(new_el)
                     sub_steps_num += 1
 
+                    # запоминаем сколько элементов загорится на каждом блоке
+                    if not str(app_id) in app_el_count:
+                        app_el_count[str(app_id)] = 1
+                    else:
+                        app_el_count[str(app_id)] += 1
+
                 new_el["current_value"] = id2type_data[tag]["values"].index(state)
                 prepare_random_values.append(new_el)
 
@@ -79,11 +87,17 @@ def RandomPrepare(app_id, instruction, app_name):
                     prepare_action_values.append(new_el)
                     sub_steps_num += 1
 
+                    # запоминаем сколько элементов загорится на каждом блоке
+                    if not str(app_id) in app_el_count:
+                        app_el_count[str(app_id)] = 1
+                    else:
+                        app_el_count[str(app_id)] += 1
+
                 new_el["current_value"] = el["values"].index(state)
                 prepare_random_values.append(new_el)
 
     # print(prepare_action_values)
-    return prepare_action_values, prepare_random_values, sub_steps_num
+    return prepare_action_values, prepare_random_values, sub_steps_num, app_el_count
 
 # сравнивает соответсвует ли рандомизированное значение с нужным из карты
 def CheckIsRandomRight(instruction, new_el):

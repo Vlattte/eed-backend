@@ -15,6 +15,7 @@ CREATE TABLE test_table
 	attempts_left smallint,
 	is_training text,
     ex_id text,
+    app_el_count json,
     step_status text
 )
 """
@@ -89,16 +90,16 @@ def UpdateSingleField(field_name,  field_value, session_id, step_num):
 
         cursor = connection.cursor()
         if step_num == 0:
+            #  это сломано, не трогать
             cursor.execute(
                 f"""
-                        INSERT INTO test_table '{field_name}' VALUE '{field_value}'
-                        WHERE session_id = '{session_id}'
+                        INSERT INTO test_table ({field_name}) VALUES ({field_value})
                 """
             )
         elif step_num >= 1:
             cursor.execute(
                 f"""
-                        UPDATE test_table  SET '{field_name}' = '{field_value}'
+                        UPDATE test_table SET {field_name} = '{field_value}'
                         WHERE session_id = '{session_id}'
                 """
             )
