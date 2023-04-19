@@ -85,12 +85,15 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
 def CheckRandomedValues(instruction, message):
     # 0 - остались еще под шаги (status="correct")
     # 1 - шаги кончились, все правильно (status="correct")
-    return_code = 0
+    # -1 - неправильно
+    return_code = -1
     app_id = -1
 
     steps = instruction["actions_for_step"]
     for i in range(steps):
         if instruction["sub_steps"][i]["action_id"] == message[1][1]:
+            # TODO тут проверка на sub_step = TRUE
+            return_code = 0
             if str(instruction["sub_steps"][i]["current_value"]) == str(message[4][1]):
                 return_code = 1
 
@@ -105,7 +108,6 @@ def CheckRandomedValues(instruction, message):
                     app_id = -1
 
     return return_code, app_id
-
 
 def GetAppName(app_id):
     if app_id == 1:
@@ -297,8 +299,24 @@ def Comparer(message): #message - json от фронта, app - аппарату
             return_request["status"] = "correct"
             return_request["validation"] = False
             left_sub_steps -= 1
-        else:
+        elif random_status == 0:
             return_request["status"] = "progres"
+            return_request["validation"] = False
+        else:
+            print('Неправильное действие')
+            sub_steps = {'name': 'nan'}
+            db.write_row(session_id=session_id,
+                         step_num=step,
+                         actions_for_step=instruction['actions_for_step'],
+                         sub_steps=sub_steps,
+                         attempts_left=left_attempts - 1,
+                         ex_id=ex_id)
+
+            if left_attempts == 1:
+                print('Попытка провалена')
+                return_request['fail'] = True
+                pass
+            return_request["status"] = "incorrect"
             return_request["validation"] = False
 
         if app_end_id != -1:
@@ -338,8 +356,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
             #
 
             multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_sub_steps, ex_id)
-            print("******APP_EL_COUNT*******")
-            print(app_el_count)
+            # print("******APP_EL_COUNT*******")
+            # print(app_el_count)
 
 
             # если еще есть подшаги и не было ошибки

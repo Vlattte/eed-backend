@@ -17,9 +17,11 @@ def RandomPrepare(app_id, instruction, app_name):
     # ^^^^^^^^^ TODO: это кажется лучше поменять ^^^^^^^^^
     # prepare_action_values - массив для подсветки следующих элементов
     # app_el_count - словарь соответствия id аппаратуры и количества подсвеченных элементов на ней
+    # sub_steps - подшаги вида "sub_step1"
 
     prepare_random_values = []
     prepare_action_values = []
+    sub_steps = []
     app_el_count = {}
 
     # ID отслеживаемых элементов, чтобы рандомить только их
@@ -64,6 +66,8 @@ def RandomPrepare(app_id, instruction, app_name):
                         app_el_count[str(app_id)] = 1
                     else:
                         app_el_count[str(app_id)] += 1
+
+
 
                 new_el["current_value"] = id2type_data[tag]["values"].index(state)
                 prepare_random_values.append(new_el)
