@@ -285,7 +285,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
         if left_sub_steps == 1:
             step_status = "regular_steps"
             return_request["validation"] = True
-        
+            return_request["finish"] = True
+
         
         db.write_row(session_id=session_id,
                      step_num=1,
