@@ -432,11 +432,12 @@ def Comparer(message): #message - json от фронта, app - аппарату
             print('Неправильное действие')
             # return_request['is_finished'] = True
             sub_steps = {'name': 'nan'}
+            left_attempts -= 1
             db.write_row(session_id=session_id,
                          step_num=step,
                          actions_for_step=instruction['actions_for_step'],
                          sub_steps=sub_steps,
-                         attempts_left=left_attempts - 1,
+                         attempts_left=left_attempts,
                          ex_id=ex_id)
 
             if left_attempts == 1:
