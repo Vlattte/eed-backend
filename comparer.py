@@ -200,7 +200,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
                      step_num=0,
                      actions_for_step=instruction["actions_for_step"],
                      sub_steps=sub_steps,
-                     attempts_left=1,
+                     attempts_left=2,
                      ex_id=ex_id,
                      is_training=is_training)
 
@@ -266,9 +266,6 @@ def Comparer(message): #message - json от фронта, app - аппарату
         prepare_action_values, prepare_random_values, sub_steps_num, app_el_count = \
             randomSteps.RandomPrepare(app_id, random_step_instruction, app_name)
 
-        print("******APP_EL_COUNT*******")
-        print(app_el_count)
-
         db.UpdateSingleField(field_name="app_el_count",
                              field_value=json.dumps(app_el_count),
                              session_id=session_id,
@@ -313,6 +310,11 @@ def Comparer(message): #message - json от фронта, app - аппарату
             return_request["validation"] = True
             return_request["finish"] = True
 
+            db.UpdateSingleField(field_name="app_el_count",
+                                field_value=json.dumps({"name": "nan"}),
+                                session_id=session_id,
+                                step_num=1)
+
         
         db.write_row(session_id=session_id,
                      step_num=1,
@@ -330,7 +332,15 @@ def Comparer(message): #message - json от фронта, app - аппарату
         ###### MULTIPLE STEPS ######
         # multiple == несколько действий за шаг
         if instruction["id"] == "multiple":
+            # если начало шага и еще не посчитано количество элементов
+            # app_el_count = db.get_field_data(session_id=message[0][1], field_name="app_el_count")
+            # if not "name" in app_el_count:
+            #
+
             multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_sub_steps, ex_id)
+            print("******APP_EL_COUNT*******")
+            print(app_el_count)
+
 
             # если еще есть подшаги и не было ошибки
             if multiple_res != -1:
@@ -378,24 +388,25 @@ def Comparer(message): #message - json от фронта, app - аппарату
                             step_num=step + step_increm,
                             actions_for_step=new_instruction['actions_for_step'],
                             sub_steps=sub_steps,
-                            attempts_left=1, 
+                            attempts_left=2,
                             ex_id=ex_id)
 
         elif return_request['validation'] == False:
             print('Неправильное действие')
+            # return_request['is_finished'] = True
+            sub_steps = {'name': 'nan'}
+            db.write_row(session_id=session_id,
+                         step_num=step,
+                         actions_for_step=instruction['actions_for_step'],
+                         sub_steps=sub_steps,
+                         attempts_left=left_attempts - 1,
+                         ex_id=ex_id)
+
             if left_attempts == 1:
                 print('Попытка провалена')
                 return_request['fail'] = True
                 pass
-            else:
-                #return_request['is_finished'] = True
-                sub_steps = {'name': 'nan'}
-                db.write_row(session_id=session_id, 
-                        step_num=step, 
-                        actions_for_step=instruction['actions_for_step'],
-                        sub_steps=sub_steps,
-                        attempts_left=left_attempts - 11, 
-                        ex_id=ex_id)
+
 
     print(return_request)
     return return_request
