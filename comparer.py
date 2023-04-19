@@ -88,6 +88,9 @@ def CheckRandomedValues(instruction, message):
     # -1 - неправильно
     return_code = -1
     app_id = -1
+    sub_steps = db.get_field_data(session_id=message[0][1], field_name="sub_steps")
+    print("SUBBBBBB")
+    print(sub_steps)
 
     steps = instruction["actions_for_step"]
     for i in range(steps):
@@ -95,11 +98,25 @@ def CheckRandomedValues(instruction, message):
             # TODO тут проверка на sub_step = TRUE
             return_code = 0
             if str(instruction["sub_steps"][i]["current_value"]) == str(message[4][1]):
+                app_id = instruction["sub_steps"][i]["action_id"] // 1000
+
+                name = instruction["sub_steps"][i]["name"]
+                if sub_steps[0][name] == True:
+                    return_code = -1
+                    return return_code, app_id
                 return_code = 1
 
-                app_id = instruction["sub_steps"][i]["action_id"] // 1000
+                sub_steps[0][name] = True
+                print("STEP")
+                print(sub_steps[0][name])
                 app_el_count = db.get_field_data(session_id=message[0][1], field_name="app_el_count")
                 app_el_count[str(app_id)] -= 1
+
+                db.UpdateSingleField(session_id=message[0][1],
+                                     field_name="sub_steps",
+                                     step_num=1,
+                                     field_value=json.dumps(sub_steps))
+
                 db.UpdateSingleField(session_id=message[0][1],
                                      field_name="app_el_count",
                                      step_num=1,
@@ -266,12 +283,16 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
         app_name = GetAppName(app_id)
         prepare_action_values, prepare_random_values, sub_steps_num, app_el_count = \
-            randomSteps.RandomPrepare(app_id, random_step_instruction, app_name)
+            randomSteps.RandomPrepare(app_id, random_step_instruction, app_name, session_id)
 
         db.UpdateSingleField(field_name="app_el_count",
                              field_value=json.dumps(app_el_count),
                              session_id=session_id,
                              step_num=1)
+
+        sub_steps = db.get_field_data(session_id=session_id, field_name="sub_steps")
+        print("AAAAAAAA")
+        print(sub_steps)
 
         return_request["is_random_step"] = True
         return_request["random_values"] = prepare_random_values
@@ -293,8 +314,6 @@ def Comparer(message): #message - json от фронта, app - аппарату
         random_step_instruction = GetInstruction(exercise_name, 1)
         random_status, app_end_id = CheckRandomedValues(instruction, message)
 
-        print("APPP_END")
-        print(app_end_id)
         if random_status == 1:
             return_request["status"] = "correct"
             return_request["validation"] = False
@@ -333,7 +352,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
                                 session_id=session_id,
                                 step_num=1)
 
-        
+        sub_steps = db.get_field_data(session_id=session_id, field_name="sub_steps")
         db.write_row(session_id=session_id,
                      step_num=1,
                      actions_for_step=left_sub_steps,

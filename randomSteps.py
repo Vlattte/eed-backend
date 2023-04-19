@@ -1,8 +1,11 @@
 import random
 import json
 
+import db
+
+
 # формирует массив рандомных положений и сразу проверяет попало ли в правильное положение
-def RandomPrepare(app_id, instruction, app_name):
+def RandomPrepare(app_id, instruction, app_name, session_id):
     # app_name      - получаем название аппаратуры (P302O)
     # file_name     - название файл с id всех элементов
     # id2type_file  - дескриптор файла с id всех элементов
@@ -99,6 +102,14 @@ def RandomPrepare(app_id, instruction, app_name):
 
                 new_el["current_value"] = el["values"].index(state)
                 prepare_random_values.append(new_el)
+
+    for i in range(sub_steps_num):
+        sub_steps.append({instruction["sub_steps"][i]["name"]: "False"})
+
+    db.UpdateSingleField(field_name="sub_steps",
+                         field_value=json.dumps(sub_steps),
+                         session_id=session_id,
+                         step_num=1)
 
     # print(prepare_action_values)
     return prepare_action_values, prepare_random_values, sub_steps_num, app_el_count
