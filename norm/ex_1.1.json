@@ -232,7 +232,7 @@
         "next_id": 2015,
         "draggable": false,
         "current_value": "180",
-        "tag": "rotate"
+        "tag": "channel"
       },
       {
         "apparat_id": 2,
@@ -1093,7 +1093,7 @@
         "action_id": 2015,
         "current_value": "180",
         "before_id": 2015,
-        "tag": "rotate"
+        "tag": "channel"
       },
       {
         "name": "sub_step_32",

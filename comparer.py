@@ -300,8 +300,6 @@ def Comparer(message): #message - json от фронта, app - аппарату
                              step_num=1)
 
         sub_steps = db.get_field_data(session_id=session_id, field_name="sub_steps")
-        print("AAAAAAAA")
-        print(sub_steps)
 
         return_request["is_random_step"] = True
         return_request["random_values"] = prepare_random_values
@@ -351,7 +349,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
             return_request["block_end"] = True
             return_request["block_end_id"] = app_end_id
 
-        if left_sub_steps == 1:
+        if left_sub_steps == 0:
             step_status = "regular_steps"
             return_request["validation"] = True
             return_request["finish"] = True
