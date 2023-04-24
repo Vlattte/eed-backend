@@ -11,3 +11,4 @@ six==1.11.0
 Werkzeug==0.14.1
 websockets
 psycopg2
+os

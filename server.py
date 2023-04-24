@@ -6,6 +6,7 @@ import json
 import asyncio
 import itertools
 import json
+import os
 
 import websockets
 

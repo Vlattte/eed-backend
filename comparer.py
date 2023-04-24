@@ -1,10 +1,12 @@
 import json
 import db
+import os
 
 import randomSteps
 
 def GetInstruction(app, step_id): #app - название аппаратура, step_id - номер шага
-    instr_file = open(app, encoding='utf-8')
+    project_path = os.path.abspath(__file__ + "/..")
+    instr_file = open(project_path + "/" + app, encoding='utf-8')
     data = json.load(instr_file)
     instr_file.close()
 
@@ -114,7 +116,8 @@ def GetAppName(app_id):
     return "P302O"
 
 def IsForRandomStep(key_name):
-    random_steps_file = open("random_exersices.json", encoding="utf-8")
+    project_path = os.path.abspath(__file__ + "/..")
+    random_steps_file = open(project_path + "/" + "random_exersices.json", encoding="utf-8")
     random_steps_names = json.load(random_steps_file)
     if key_name in random_steps_names["for_random"]:
         return True
@@ -130,8 +133,9 @@ def WhatExercise(message, session_id):
     # проверяем флаг тренировки
     if message[1][0] == "is_training":
         is_training = message[1][1]
-    
-    exercise_json = open("id_json.json", encoding='utf-8')
+
+    project_path = os.path.abspath(__file__ + "/..")
+    exercise_json = open(project_path + "/" + "id_json.json", encoding='utf-8')
     data = json.load(exercise_json)
 
     # id норматива
@@ -157,7 +161,8 @@ def WhatExercise(message, session_id):
     return exercise_name, is_training, full_id, key_name, app_id
 
 def GetStepsFromJson(key_name):
-    steps_json = open("steps_json.json", encoding='utf-8')
+    project_path = os.path.abspath(__file__ + "/..")
+    steps_json = open(project_path + "/" + "steps_json.json", encoding='utf-8')
     data = json.load(steps_json)
     return data[key_name]
 

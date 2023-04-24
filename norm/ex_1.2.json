@@ -1,0 +1,340 @@
+{
+  "step_0": {
+    "step": 0,
+    "id": 11012,
+    "before_id": 11012,
+    "draggable": false,
+    "current_value": "start",
+    "tag": "multiple",
+    "count_next": 5,
+    "next_actions": [
+      {
+        "apparat_id": 11,
+        "next_id": 11012,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 1,
+        "next_id": 1019,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 9,
+        "next_id": 9010,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4000,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4001,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      }
+    ],
+    "count_action": 0,
+    "actions_for_step": 0,
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "1. На упаковках ПИТ, ДСВ, ДП, СС-О аппаратуры П- 302-О тумблеры питания перевести в положение «ВКЛ»"
+  },
+  "step_1": {
+    "step": 1,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 5,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": 11012,
+        "current_value": "on",
+        "before_id": 11012,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": 1019,
+        "current_value": "on",
+        "before_id": 1019,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_3",
+        "action_id": 9010,
+        "current_value": "on",
+        "before_id": 9010,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_4",
+        "action_id": 4000,
+        "current_value": "on",
+        "before_id": 4000,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_5",
+        "action_id": 4001,
+        "current_value": "on",
+        "before_id": 4001,
+        "tag": "lever"
+      }
+    ],
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3003,
+        "draggable": true,
+        "current_value": "off",
+        "tag": "drag"
+      }
+    ],
+    "annotation": "2. Из гн. «16» на бл. ГП.Пер. упаковки ГО-12 вынуть перемычку и вставить её в гн. «120» на бл. КЧ-64;ГНЧ-120-1."
+  },
+  "step_2": {
+    "step": 2,
+    "id": 3003,
+    "before_id": 3003,
+    "draggable": true,
+    "current_value": "off",
+    "tag": "drag",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3002,
+        "draggable": true,
+        "current_value": "on",
+        "tag": "drag"
+      }
+    ],
+    "annotation": "2. Из гн. «16» на бл. ГП.Пер. упаковки ГО-12 вынуть перемычку и вставить её в гн. «120» на бл. КЧ-64;ГНЧ-120-1."
+  },
+  "step_3": {
+    "step": 3,
+    "id": 3002,
+    "before_id": 3002,
+    "draggable": true,
+    "current_value": "off",
+    "tag": "drag",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6003,
+        "draggable": false,
+        "current_value": "-15",
+        "tag": "rotate"
+      }
+    ],
+    "annotation": "3. Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
+  },
+  "step_4": {
+    "step": 4,
+    "id": 6003,
+    "before_id": 6003,
+    "draggable": false,
+    "current_value": "-15",
+    "tag": "rotate",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6003,
+        "draggable": false,
+        "current_value": "15",
+        "tag": "rotate"
+      }
+    ],
+    "annotation": "3. Переключатель «СОПР.ВХ.» в блоке УУ в положение « >6000»"
+  },
+  "step_5": {
+    "step": 5,
+    "id": 6003,
+    "before_id": 6003,
+    "draggable": false,
+    "current_value": "15",
+    "tag": "rotate",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6004,
+        "draggable": false,
+        "current_value": "-80",
+        "tag": "rotate"
+      }
+    ],
+    "annotation": "4. Переключатель «Нп» → «-2»"
+  },
+  "step_6": {
+    "step": 6,
+    "id": 6004,
+    "before_id": 6004,
+    "draggable": false,
+    "current_value": "-80",
+    "tag": "rotate",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6004,
+        "draggable": false,
+        "current_value": "-60",
+        "tag": "rotate"
+      }
+    ],
+    "annotation": "4. Переключатель «Нп» → «-2»"
+  },
+  "step_7": {
+    "step": 7,
+    "id": 6004,
+    "before_id": 6004,
+    "draggable": false,
+    "current_value": "-60",
+    "tag": "rotate",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6004,
+        "draggable": false,
+        "current_value": "-30",
+        "tag": "rotate"
+      }
+    ],
+    "annotation": "4. Переключатель «Нп» → «-2»"
+  },
+  "step_8": {
+    "step": 8,
+    "id": 6004,
+    "before_id": 6004,
+    "draggable": false,
+    "current_value": "-30",
+    "tag": "rotate",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6004,
+        "draggable": false,
+        "current_value": "-10",
+        "tag": "rotate"
+      }
+    ],
+    "annotation": "4. Переключатель «Нп» → «-2»"
+  },
+  "step_9": {
+    "step": 9,
+    "id": 6004,
+    "before_id": 6004,
+    "draggable": false,
+    "current_value": "10",
+    "tag": "rotate",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6202,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 2,
+        "next_id": 2201,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "5. Подключить гнездо «ВХ.» бл. УУ к гнездам перемычки в блоке ПИТ.ДСВ"
+  },
+  "step_10": {
+    "step": 10,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": 2201,
+        "current_value": "on",
+        "before_id": 2201
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": 6202,
+        "current_value": "on",
+        "before_id": 6202
+      }
+    ],
+    "count_action": 3,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6302,
+        "action_value": "cabel",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2301,
+        "action_value": "cabel",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "pos_2",
+        "tag": "arrow"
+      }
+  ],
+    "count_next": 0,
+    "next_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "НОРМАТИВ ЗАВЕРШЕН"
+  }
+}
