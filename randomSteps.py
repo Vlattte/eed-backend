@@ -12,7 +12,7 @@ def RandomPrepare(app_id, instruction, app_name, session_id):
     # id2type_data  - данные из этого файла
 
     project_path = os.path.abspath(__file__ + "/..")
-    file_name = project_path + "init_jsons\id2type_" + app_name + ".json"
+    file_name = project_path + "\\" + "init_jsons\id2type_" + app_name + ".json"
     id2type_file = open(file_name, encoding="utf-8")
     id2type_data = json.load(id2type_file)
     sub_steps_num = 0
