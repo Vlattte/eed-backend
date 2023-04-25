@@ -1,0 +1,96 @@
+{
+  "step_0": {
+    "step": 0,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "start",
+    "tag": "multiple",
+    "count_next": 1,
+    "next_actions": [
+      {
+        "comment":  "тут новые и непонятные провода",
+        "apparat_id": 6,
+        "next_id": 6003,
+        "draggable": false,
+        "current_value": "15",
+        "tag": "rotator"
+      }
+    ],
+    "count_action": 0,
+    "actions_for_step": 0,
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "Измерить уровни токов частот"
+  },
+  "step_1": {
+    "step": 1,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 1,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": 6003,
+        "current_value": "15",
+        "before_id": 6003,
+        "tag": "rotator"
+      }
+    ],
+    "count_action": 0,
+    "array_actions": [
+    {
+      "name": "nan"
+    }
+  ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "comment": "еще есть СОПР.ВХ на >6000, но надо сделалать какой-то замер значений и узнать куда что какой провод ставить",
+        "comment2": "а в этом шаге тоже вроде провод",
+        "apparat_id": 9,
+        "next_id": 9204,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Измерить выходной уровень генератора тонального вызова."
+  },
+  "step_2": {
+    "step": 2,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 1,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": 9204,
+        "current_value": "jumper2",
+        "before_id": 9204,
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 0,
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "count_next": 0,
+    "next_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "ВЫПОЛНЕНО"
+  }
+}
