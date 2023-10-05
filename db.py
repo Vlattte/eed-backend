@@ -1,6 +1,7 @@
 import psycopg2
 from psycopg2 import Error
 import json
+import configparser
 
 
 # Создание таблицы
@@ -22,12 +23,16 @@ CREATE TABLE test_table
 # Параметры для подключения к БД
 connect_params = {"user": "student",  # пароль, который указали при установке PostgreSQL
                   "database": "test_db",
-                  "password": "vucstudent",
+                  "password": "postgres",
                   "host": "localhost",
                   "port": "5432"}
 
-
-
+def connect_to_db():
+    try:
+        # Подключение к существующей базе данных
+        connection = psycopg2.connect(**connect_params)
+    except (Exception, Error) as error:
+        print("Ошибка подключения к PostgreSQL", error)
 def get_session_id_list():
     # Функция возвращает список session_id, хранящихся в таблице
     try:
