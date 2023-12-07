@@ -4,15 +4,17 @@ import os
 
 import randomSteps
 
-def GetInstruction(app, step_id): #app - название аппаратура, step_id - номер шага
+
+def GetInstruction(app, step_id):  # app - название аппаратура, step_id - номер шага
     project_path = os.path.abspath(__file__ + "/..")
     instr_file = open(project_path + "/" + app, encoding='utf-8')
     data = json.load(instr_file)
     instr_file.close()
 
     for i in range(len(data)):
-        if data["step_"+str(i)]["step"] == step_id:
-            return data["step_"+str(i)]
+        if data["step_" + str(i)]["step"] == step_id:
+            return data["step_" + str(i)]
+
 
 # проверяет есть ли еще такой id в инструкции, то есть проверяет нужно ли убрать выделение желтым с элемента с этим id
 def IsMoreSameId(id, instruction, db_steps, steps_count):
@@ -51,10 +53,10 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                      step_num=step,
                      actions_for_step=instruction['actions_for_step'],
                      sub_steps=sub_steps,
-                     attempts_left=left_attempts, 
+                     attempts_left=left_attempts,
                      ex_id=ex_id)
     else:
-         sub_steps = db.get_field_data(session_id, "sub_steps")
+        sub_steps = db.get_field_data(session_id, "sub_steps")
 
     for i in range(steps):
         if instruction["sub_steps"][i]["action_id"] == message[1][1]:
@@ -76,13 +78,14 @@ def CheckMultipleInstructions(session_id, instruction, message, left_attempts, s
                         return_code = 1
                     else:
                         db.write_row(session_id=session_id,
-                                 step_num=step,
-                                 actions_for_step=left_steps-1,
-                                 sub_steps=sub_steps,
-                                 attempts_left=left_attempts, 
-                                 ex_id=ex_id)
+                                     step_num=step,
+                                     actions_for_step=left_steps - 1,
+                                     sub_steps=sub_steps,
+                                     attempts_left=left_attempts,
+                                     ex_id=ex_id)
 
     return return_code
+
 
 def CheckRandomedValues(instruction, message):
     # 0 - остались еще под шаги (status="correct")
@@ -115,6 +118,7 @@ def GetAppName(app_id):
 
     return "P302O"
 
+
 def IsForRandomStep(key_name):
     project_path = os.path.abspath(__file__ + "/..")
     random_steps_file = open(project_path + "/" + "random_exersices.json", encoding="utf-8")
@@ -122,6 +126,7 @@ def IsForRandomStep(key_name):
     if key_name in random_steps_names["for_random"]:
         return True
     return False
+
 
 def WhatExercise(message, session_id):
     is_training = "nan"
@@ -143,7 +148,7 @@ def WhatExercise(message, session_id):
 
         full_id = message[3][1]
         if message[3][1] != "0":
-            app_id = message[3][1][0]    # id оборуования
+            app_id = message[3][1][0]  # id оборуования
             ex_id = message[3][1][1:]  # id упражнения
             key_name = "ex_" + app_id + "_" + ex_id
 
@@ -160,15 +165,17 @@ def WhatExercise(message, session_id):
 
     return exercise_name, is_training, full_id, key_name, app_id
 
+
 def GetStepsFromJson(key_name):
     project_path = os.path.abspath(__file__ + "/..")
     steps_json = open(project_path + "/" + "steps_json.json", encoding='utf-8')
     data = json.load(steps_json)
     return data[key_name]
 
+
 # message:
 # [["session_id","1gjolm7fq"],["id",1015],["draggble",false],["rotatable",true],["currentValue",60],["left",249.99999999999997],["top",105.55555555555554]]
-def Comparer(message): #message - json от фронта, app - аппаратура
+def Comparer(message):  # message - json от фронта, app - аппаратура
     # по id норматива получаем название соответсвующего файла
     # так же получаем значение флага is_training
 
@@ -201,14 +208,13 @@ def Comparer(message): #message - json от фронта, app - аппарату
         instruction = GetInstruction(exercise_name, 1)
         sub_steps = {'name': 'nan'}
         is_zero_step = True
-        db.write_row(session_id=session_id, 
+        db.write_row(session_id=session_id,
                      step_num=0,
                      actions_for_step=instruction["actions_for_step"],
                      sub_steps=sub_steps,
                      attempts_left=1,
                      ex_id=ex_id,
                      is_training=is_training)
-
 
     if is_training != 'nan':
         # instruction = GetInstruction(exercise_name, 0)
@@ -220,7 +226,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
     # sub_steps - json вида {"sub_step_num": False}, где sub_step_num - номер подшага, а False - статус завершения подшага
     # step_status - строковый статус шага TODO: доработать, используется пока только рандома
 
-    step, left_attempts, left_sub_steps, sub_steps, is_training, step_status = db.get_step_attempts(session_id=session_id)
+    step, left_attempts, left_sub_steps, sub_steps, is_training, step_status = db.get_step_attempts(
+        session_id=session_id)
 
     if step == 0 and not is_zero_step:
         step = 1
@@ -250,18 +257,17 @@ def Comparer(message): #message - json от фронта, app - аппарату
 
     return_request = {"validation": False,
                       "has_action": has_action,
-                      "annotation":    instruction["annotation"],
-                      "fail":       False,
-                      "count_action":  instruction["count_action"],
+                      "annotation": instruction["annotation"],
+                      "fail": False,
+                      "count_action": instruction["count_action"],
                       "array_actions": array_actions,
-                      "count_next":    instruction["count_next"],
-                      "next_actions":  instruction["next_actions"],
-                      "finish":     False,
-                      "before_id":     instruction["before_id"],
+                      "count_next": instruction["count_next"],
+                      "next_actions": instruction["next_actions"],
+                      "finish": False,
+                      "before_id": instruction["before_id"],
                       "is_random_step": False,
                       "status": "incorrect",
                       "block_end": False}
-    
 
     isRandomStep = IsForRandomStep(key_name)
     if isRandomStep and step_status != "random_step_progress":
@@ -292,7 +298,7 @@ def Comparer(message): #message - json от фронта, app - аппарату
                      ex_id=ex_id,
                      is_training=is_training,
                      step_status=step_status)
-        
+
     elif step_status == "random_step_progress":
         # app_end_id - id блока, на котором закончились действия
 
@@ -318,7 +324,6 @@ def Comparer(message): #message - json от фронта, app - аппарату
             return_request["validation"] = True
             return_request["finish"] = True
 
-        
         db.write_row(session_id=session_id,
                      step_num=1,
                      actions_for_step=left_sub_steps,
@@ -335,7 +340,8 @@ def Comparer(message): #message - json от фронта, app - аппарату
         ###### MULTIPLE STEPS ######
         # multiple == несколько действий за шаг
         if instruction["id"] == "multiple":
-            multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step, left_sub_steps, ex_id)
+            multiple_res = CheckMultipleInstructions(session_id, instruction, message, left_attempts, step,
+                                                     left_sub_steps, ex_id)
 
             # если еще есть подшаги и не было ошибки
             if multiple_res != -1:
@@ -368,9 +374,9 @@ def Comparer(message): #message - json от фронта, app - аппарату
                     return_request["status"] = "correct"
 
         ###### ПРОВЕРКА НА ПРАВИЛЬНОСТЬ ДЕЙСТВИЯ ######
-        if return_request['validation'] or return_request["status"] != "incorrect":        # если правильное действие
+        if return_request['validation'] or return_request["status"] != "incorrect":  # если правильное действие
             print('Правильное действие')
-            if step == steps_num+1 and multiple_res == 1:                       # если финальный шаг
+            if step == steps_num + 1 and multiple_res == 1:  # если финальный шаг
                 print('Карта пройдена')
                 return_request['finish'] = True
                 pass
@@ -380,11 +386,11 @@ def Comparer(message): #message - json от фронта, app - аппарату
                     new_instruction = GetInstruction(exercise_name, step + 1)
                     sub_steps = {'name': 'nan'}
                     db.write_row(session_id=session_id,
-                            step_num=step + step_increm,
-                            actions_for_step=new_instruction['actions_for_step'],
-                            sub_steps=sub_steps,
-                            attempts_left=1, 
-                            ex_id=ex_id)
+                                 step_num=step + step_increm,
+                                 actions_for_step=new_instruction['actions_for_step'],
+                                 sub_steps=sub_steps,
+                                 attempts_left=1,
+                                 ex_id=ex_id)
 
         elif return_request['validation'] == False:
             print('Неправильное действие')
@@ -393,14 +399,14 @@ def Comparer(message): #message - json от фронта, app - аппарату
                 return_request['fail'] = True
                 pass
             else:
-                #return_request['is_finished'] = True
+                # return_request['is_finished'] = True
                 sub_steps = {'name': 'nan'}
-                db.write_row(session_id=session_id, 
-                        step_num=step, 
-                        actions_for_step=instruction['actions_for_step'],
-                        sub_steps=sub_steps,
-                        attempts_left=left_attempts - 11, 
-                        ex_id=ex_id)
+                db.write_row(session_id=session_id,
+                             step_num=step,
+                             actions_for_step=instruction['actions_for_step'],
+                             sub_steps=sub_steps,
+                             attempts_left=left_attempts - 11,
+                             ex_id=ex_id)
 
     print(return_request)
     return return_request

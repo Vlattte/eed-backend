@@ -1,0 +1,52 @@
+{
+  "step_0": {
+    "description": "проверяем ток на ДСВ, ПИТ-ДСВ",
+    "step": 0,
+    "id": 9204,
+    "before_id": 9204,
+    "draggable": false,
+    "current_value": "start",
+    "tag": "cabel",
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 9,
+        "next_id": 9204,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "count_action": 0,
+    "actions_for_step": 0,
+    "array_actions": [{"name": "nan"}],
+    "annotation": "Присоедините провод на ВКЛ на упаковке ДСВ на блоке ПИТ ДСВ"
+  },
+  "step_1": {
+    "step": 1,
+    "id": 9204,
+    "before_id": 9204,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9404,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 0,
+    "next_actions": [{"name": "nan"}],
+    "annotation": "ВЫПОЛНЕНО"
+  }
+}

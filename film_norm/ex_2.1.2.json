@@ -1,0 +1,767 @@
+{
+  "step_0": {
+    "description": "проверяем ток на ГО-12",
+    "step": 0,
+    "id": 3301,
+    "before_id": 3301,
+    "draggable": false,
+    "current_value": "start",
+    "tag": "cabel",
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3301,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "annotation": "Подключите кабель «ИЗМ» на упаковке ГО-12 в КЧ-64"
+  },
+  "step_1": {
+    "step": 1,
+    "id": 3301,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3301,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "стрелка вправо положение 0",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3401,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3301,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в КЧ-64"
+  },
+  "step_2": {
+    "step": 2,
+    "id": 3301,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3301,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3401,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3302,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в ТНЧ-120-1"
+  },
+  "step_3": {
+    "step": 3,
+    "id": 3302,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3302,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "стрелка в положении -0,6",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3402,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3302,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в ТНЧ-120-1"
+  },
+  "step_4": {
+    "step": 4,
+    "id": 3302,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3302,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3402,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3303,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в КЧ-84"
+  },
+  "step_5": {
+    "step": 5,
+    "id": 3303,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3303,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "положение 0",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3403,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3303,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в КЧ-84"
+  },
+  "step_6": {
+    "step": 6,
+    "id": 3303,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3303,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3403,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3304,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в ИНЧ-12"
+  },
+  "step_7": {
+    "step": 7,
+    "id": 3304,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3304,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "-0.2",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3404,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3304,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в ИНЧ-12"
+  },
+  "step_8": {
+    "step": 8,
+    "id": 3304,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3304,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3404,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3305,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в ИНЧ-20"
+  },
+  "step_9": {
+    "step": 9,
+    "id": 3305,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3305,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Не знаем какое положение необходимо",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3405,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3305,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в ИНЧ-20"
+  },
+  "step_10": {
+    "step": 10,
+    "id": 3305,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3305,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Не знаем какое положение необходимо",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3405,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3306,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в ИНЧ-16"
+  },
+  "step_11": {
+    "step": 11,
+    "id": 3306,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3306,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Не знаем какое положение необходимо",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3406,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3306,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в ИНЧ-16"
+  },
+  "step_12": {
+    "step": 12,
+    "id": 3306,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3306,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3406,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3307,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в КЧ-16"
+  },
+  "step_13": {
+    "step": 13,
+    "id": 3307,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3307,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Не знаем положение 2",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3407,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3307,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отисоедините кабель «ИЗМ» на упаковке ГО-12 в ИНЧ-16"
+  },
+  "step_14": {
+    "step": 14,
+    "id": 3307,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3307,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3407,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3308,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в ГНЧ-84"
+  },
+  "step_15": {
+    "step": 15,
+    "id": 3308,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3308,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "-0.8",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3408,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3308,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в ГНЧ-84"
+  },
+  "step_16": {
+    "step": 16,
+    "id": 3308,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3308,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3408,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3309,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в ГНЧ-108"
+  },
+  "step_17": {
+    "step": 17,
+    "id": 3309,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3309,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Положение не известно 3",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3409,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3309,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в ГНЧ-108"
+  },
+  "step_18": {
+    "step": 18,
+    "id": 3309,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3309,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3409,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3310,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в ГНЧ-96"
+  },
+  "step_19": {
+    "step": 19,
+    "id": 3310,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3310,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Положение не известно 4",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3410,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3310,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в ГНЧ-96"
+  },
+  "step_20": {
+    "step": 20,
+    "id": 3310,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3310,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Начальное положение",
+        "tag": "arrow"
+      },
+
+      {
+        "apparat_id": 3,
+        "action_id": 3410,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3311,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Присоедините кабель «ИЗМ» на упаковке ГО-12 в ГНЧ-120"
+  },
+  "step_21": {
+    "step": 21,
+    "id": 3311,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 3311,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Положение не звестно 5",
+        "tag": "arrow"
+      },
+
+      {
+        "apparat_id": 3,
+        "action_id": 3411,
+        "action_value": "cabel",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3311,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Отсоедините кабель «ИЗМ» на упаковке ГО-12 в ГНЧ-120"
+  },
+  "step_22": {
+    "step": 22,
+    "id": 3311,
+    "draggable": false,
+    "current_value": "off",
+    "before_id": 3311,
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "Начальное положение",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3411,
+        "action_value": "none",
+        "tag": "cabel"
+      }
+    ],
+    "next_actions": [{"name": "nan"}],
+    "annotation": "ВЫПОЛНЕНО"
+  }
+}
