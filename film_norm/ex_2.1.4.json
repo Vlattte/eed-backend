@@ -36,7 +36,37 @@
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3002 "в провод вставили перемычку",
+        "next_id": 3002,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Вставьте перемемычку в гнездо ГНЧ-120-1"
+  },
+  Остановился тут, передвинули перемычку в это гнездо ^^^
+  "step_2": {
+    "step": 2,
+    "id": 3302,
+    "before_id": 3302,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 3,
+        "action_id": 3302,
+        "action_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 0,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3002,
         "draggable": false,
         "current_value": "off",
         "tag": "jumper"
