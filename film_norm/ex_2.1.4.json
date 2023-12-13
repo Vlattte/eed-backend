@@ -31,8 +31,9 @@
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 2,
-    "array_actions": [{"name": "nan"}],
-    "count_next": 0,
+    "array_actions": [
+      {"name": "nan"}],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -44,7 +45,6 @@
     ],
     "annotation": "Вставьте перемемычку в гнездо ГНЧ-120-1"
   },
-  Остановился тут, передвинули перемычку в это гнездо ^^^
   "step_2": {
     "step": 2,
     "id": 3302,
@@ -53,16 +53,22 @@
     "current_value": "on",
     "tag": "cabel",
     "actions_for_step": 1,
-    "count_action": 1,
+    "count_action": 2,
     "array_actions": [
       {
         "apparat_id": 3,
         "action_id": 3302,
         "action_value": "on",
         "tag": "cabel"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3040,
+        "action_value": "on",
+        "tag": "lamp"
       }
     ],
-    "count_next": 0,
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
