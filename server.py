@@ -17,6 +17,7 @@ async def handler(websocket):
     print(message)
     event = json.loads(message)
     return_json = comparer.Comparer(event)
+    print("[data for front]", return_json)
     await websocket.send(json.dumps(return_json, ensure_ascii=False))
 
 
