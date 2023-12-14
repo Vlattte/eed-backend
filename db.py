@@ -21,8 +21,8 @@ CREATE TABLE test_table
 )
 """
 # Параметры для подключения к БД
-connect_params = {"user": "student",  # пароль, который указали при установке PostgreSQL
-                  "database": "test_db",
+connect_params = {"user": "postgres",  # пароль, который указали при установке PostgreSQL
+                  "database": "postgres",
                   "password": "postgres",
                   "host": "localhost",
                   "port": "5432"}

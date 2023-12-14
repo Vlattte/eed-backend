@@ -22,7 +22,7 @@ async def handler(websocket):
 
 async def main():
     print("SERVER ON")
-    async with websockets.serve(handler, "", 8083):
+    async with websockets.serve(handler, "", 8083, max_size=1000000):
         await asyncio.Future()
 
 if __name__ == "__main__":

@@ -1,0 +1,136 @@
+{
+  "step_0": {
+    "step": 0,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "count_next": 5,
+    "next_actions": [
+      {
+        "apparat_id": 11,
+        "next_id": 11012,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 1,
+        "next_id": 1019,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 9,
+        "next_id": 9010,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4000,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 4,
+        "next_id": 4001,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "lever"
+      }
+    ],
+    "count_action": 0,
+    "array_actions": [{"name": "nan"} ],
+    "annotation": "На упаковках ПИТ, ДСВ, ДП, СС-О аппаратуры П- 302-О тумблеры питания перевести в положение «ВКЛ»"
+  },
+  "step_1": {
+    "step": 1,
+    "id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "before_id": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 5,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": 11012,
+        "current_value": "on",
+        "before_id": 11012,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": 1019,
+        "current_value": "on",
+        "before_id": 1019,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_3",
+        "action_id": 9010,
+        "current_value": "on",
+        "before_id": 9010,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_4",
+        "action_id": 4000,
+        "current_value": "on",
+        "before_id": 4000,
+        "tag": "lever"
+      },
+      {
+        "name": "sub_step_5",
+        "action_id": 4001,
+        "current_value": "on",
+        "before_id": 4001,
+        "tag": "lever"
+      }
+    ],
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "pos_3",
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": 7007,
+        "action_value": "on",
+        "tag": "lamp"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 7,
+        "next_id": 7008,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "button"
+      }
+    ],
+    "annotation": "Выключить звук нажатием кнопки «ВЫКЛ. ЗВ.» на ЩКНЧ."
+  },
+  "step_2": {
+    "step": 2,
+    "id": 7008,
+    "draggable": false,
+    "current_value": "on",
+    "before_id": 7008,
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "count_next": 0,
+    "next_actions": [{"name": "nan"}],
+    "annotation": "ВЫПОЛНЕНО"
+  }
+}

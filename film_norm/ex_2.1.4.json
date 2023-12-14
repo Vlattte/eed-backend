@@ -1,0 +1,83 @@
+{
+  "step_0": {
+    "description": "перемычки ГО-12",
+    "step": 0,
+    "id": 3002,
+    "before_id": 3002,
+    "draggable": false,
+    "current_value": "start",
+    "tag": "jumper",
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3002,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 0,
+    "actions_for_step": 0,
+    "array_actions": [{"name": "nan"}],
+    "annotation": "Вытащите перемычку 64 на упаковке ГО-12 на блоке ГП пер"
+  },
+  "step_1": {
+    "step": 1,
+    "id": 3002,
+    "before_id": 3002,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "jumper",
+    "actions_for_step": 1,
+    "count_action": 2,
+    "array_actions": [
+      {"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3002,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Вставьте перемемычку в гнездо ГНЧ-120-1"
+  },
+  "step_2": {
+    "step": 2,
+    "id": 3302,
+    "before_id": 3302,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 3,
+        "action_id": 3302,
+        "action_value": "on",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3040,
+        "action_value": "on",
+        "tag": "lamp"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3002,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Вставьте перемемычку в гнездо ГНЧ-120-1"
+  }
+}
