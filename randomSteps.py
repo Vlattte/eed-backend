@@ -145,6 +145,7 @@ def CheckIsRandomRight(instruction, new_el):
 # Принимает на вход инструкцию и возвращает массив ID, которые использовались в инструкции.
 # Необходима, чтобы рандомить только отслеживаемые в инструкции элементы
 def parse_ids(instruction):
+    print('instruction:', instruction)
     id_mas = []
     for sub_step in instruction['sub_steps']:
         id = sub_step['action_id']

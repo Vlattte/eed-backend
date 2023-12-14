@@ -11,6 +11,7 @@ def get_name_id(json_mas, name):
             return i
 
 def GetInstruction(app, step_id): #app - название аппаратура, step_id - номер шага
+    print("[step_id]", step_id)
     project_path = os.path.abspath(__file__ + "/..")
     instr_file = open(project_path + "/" + app, encoding='utf-8')
     data = json.load(instr_file)
@@ -424,6 +425,9 @@ def Comparer(message): #message - json от фронта, app - аппарату
         ###### ПРОВЕРКА НА ПРАВИЛЬНОСТЬ ДЕЙСТВИЯ ######
         if return_request['validation'] or return_request["status"] != "incorrect":        # если правильное действие
             print('Правильное действие')
+            print("[steps_num]", steps_num)
+            print("[step]", step)
+            print("STATUS:", multiple_res)
             if step == steps_num+1 and multiple_res == 1:                       # если финальный шаг
                 print('Карта пройдена')
                 return_request['finish'] = True
@@ -431,7 +435,11 @@ def Comparer(message): #message - json от фронта, app - аппарату
             else:
                 # если закончились подшаги
                 if multiple_res == 1:
+                    print("[exercise_name]", exercise_name)
+                    print("[step + 1]", step + 1)
+
                     new_instruction = GetInstruction(exercise_name, step + 1)
+                    print("[new instruction]", new_instruction)
                     sub_steps = {'name': 'nan'}
                     db.write_row(session_id=session_id,
                             step_num=step + step_increm,

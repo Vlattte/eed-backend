@@ -155,12 +155,12 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": "Начальное положение",
+        "action_value": -54,
         "tag": "arrow"
       },
       {
         "apparat_id": 9,
-        "action_id": 9404,
+        "action_id": 9302,
         "action_value": "cabel",
         "tag": "cabel"
       },
@@ -177,7 +177,7 @@
         "tag": "lamp"
       }
     ],
-    "count_next": 0,
+    "count_next": 1,
     "next_actions": [{"name": "nan"}],
     "annotation": "ВЫПОЛНЕНО"
   }

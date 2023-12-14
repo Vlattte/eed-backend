@@ -6,14 +6,13 @@
     "before_id": 3301,
     "draggable": false,
     "current_value": "start",
-    "tag": "cabel",
     "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3301,
+        "next_id": 3014,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -25,7 +24,7 @@
     "step": 1,
     "id": 3014,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3014,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -39,7 +38,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3302,
+        "action_id": 3304,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -74,17 +73,18 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3302,
+        "action_id": 3304,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3017,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -94,7 +94,7 @@
     "step": 3,
     "id": 3017,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3017,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -113,6 +113,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -147,12 +148,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3016,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -162,7 +164,7 @@
     "step": 5,
     "id": 3016,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3016,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -176,11 +178,12 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3304,
+        "action_id": 3302,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -215,12 +218,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3006,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -230,7 +234,7 @@
     "step": 7,
     "id": 3006,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3006,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -249,6 +253,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -283,12 +288,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3008,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -298,7 +304,7 @@
     "step": 9,
     "id": 3008,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3008,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -318,6 +324,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -352,12 +359,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3009,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -367,7 +375,7 @@
     "step": 11,
     "id": 3009,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3009,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -387,6 +395,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -421,12 +430,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3011,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -436,7 +446,7 @@
     "step": 13,
     "id": 3011,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3011,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -456,6 +466,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -490,12 +501,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3010,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -505,7 +517,7 @@
     "step": 15,
     "id": 3010,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3010,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -524,6 +536,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -558,12 +571,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3012,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -573,7 +587,7 @@
     "step": 17,
     "id": 3012,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3012,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -593,6 +607,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -627,12 +642,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3013,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -642,7 +658,7 @@
     "step": 19,
     "id": 3013,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3013,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -662,6 +678,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -696,12 +713,13 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
         "next_id": 3015,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -711,7 +729,7 @@
     "step": 21,
     "id": 3015,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "before_id": 3015,
     "tag": "cabel",
     "actions_for_step": 1,
@@ -731,6 +749,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
@@ -765,6 +784,7 @@
         "tag": "cabel"
       }
     ],
+    "count_next": 1,
     "next_actions": [{"name": "nan"}],
     "annotation": "ВЫПОЛНЕНО"
   }
