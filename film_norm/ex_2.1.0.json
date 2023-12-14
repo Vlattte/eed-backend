@@ -1,0 +1,874 @@
+{
+  "step_0": {
+    "step": 0,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "count_next": 0,
+    "next_actions": [], 
+    "count_action": 118,
+    "array_actions": [
+      {
+        "comment": "// 1-3 (CC-O)",
+        "apparat_id": 1,
+        "action_id": 1001,
+        "draggable": false,
+        "action_value": "center",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1002,
+        "draggable": false,
+        "action_value": "center",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1003,
+        "draggable": false,
+        "action_value": "-150",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1005,
+        "draggable": false,
+        "action_value": "0",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1004,
+        "draggable": false,
+        "action_value": "-35",
+        "tag": "rotate"
+      },
+      {
+        "comment": "// 4-9 (CC-O)",
+        "apparat_id": 1,
+        "action_id": 1010,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1011,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1008,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// 6 start (CC-O)",
+        "apparat_id": 1,
+        "action_id": "jumper_under 1006",
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// 6 end (CC-O)",
+        "apparat_id": 1,
+        "action_id": 1006,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1007,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1009,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1000,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// 10-11 (CC-O)",
+        "apparat_id": 1,
+        "action_id": 1012,
+        "draggable": false,
+        "action_value": "on",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 1,
+        "action_id": 1013,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "comment": "// others (CC-O)",
+        "apparat_id": 1,
+        "action_id": 1019,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "comment": "// LO         // 2 - 6 (YC L 12)",
+        "apparat_id": 2,
+        "action_id": 2004,
+        "draggable": false,
+        "action_value": "300",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2008,
+        "draggable": false,
+        "action_value": "-160",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2001,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2002,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2005,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2006,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2007,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// 1 - 2 (PKK 64/16)",
+        "apparat_id": 2,
+        "action_id": 2009,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2021,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2010,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2011,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2012,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "comment": "// 1 - 4 (YC-12)",
+        "apparat_id": 2,
+        "action_id": 2013,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2014,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2015,
+        "draggable": false,
+        "action_value": "180",
+        "tag": "channel"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2016,
+        "draggable": false,
+        "action_value": "110",
+        "tag": "rotate"
+      },
+      {
+        "comment": "// GO-12    // 1 - 2 (GP Per)",
+        "apparat_id": 3,
+        "action_id": 3004,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3003,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3002,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3021,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// 1 - 2 (GP PR)",
+        "apparat_id": 3,
+        "action_id": 3018,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3019,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3000,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3001,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+
+      {
+        "comment": "// DCH GG",
+        "apparat_id": 3,
+        "action_id": 3005,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "comment": "      // PIT",
+        "apparat_id": 4,
+        "action_id": 4000,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 4,
+        "action_id": 4001,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "comment": "// VKO     // 1 - 4 (UVO - 1)",
+        "apparat_id": 5,
+        "action_id": 5006,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5001,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5007,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5003,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5008,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5002,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5004,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5202,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5005,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5201,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5000,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// 1 - 3 (K)",
+        "apparat_id": 5,
+        "action_id": 5011,
+        "draggable": false,
+        "action_value": "-90",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 5,
+        "action_id": 5009,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "comment": "// CHKNCH 1   // 1 - 5 (YY)",
+        "apparat_id": 6,
+        "action_id": 6001,
+        "draggable": false,
+        "action_value": "40",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6000,
+        "draggable": false,
+        "action_value": "-30",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6002,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6003,
+        "draggable": false,
+        "action_value": "15",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6004,
+        "draggable": false,
+        "action_value": "-60",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6202,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6201,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "cabel"
+      },
+      {
+        "comment": "// 1 (PVU)",
+        "apparat_id": 6,
+        "action_id": 6014,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "button"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6005,
+        "draggable": false,
+        "action_value": "center",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6006,
+        "draggable": false,
+        "action_value": "center",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6007,
+        "draggable": false,
+        "action_value": "center",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6008,
+        "draggable": false,
+        "action_value": "center",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6009,
+        "draggable": false,
+        "action_value": "center",
+        "tag": "lever"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6010,
+        "draggable": false,
+        "action_value": "center",
+        "tag": "lever"
+      },
+      {
+        "comment": "// CHKNCH 1    // 1 - 2",
+        "apparat_id": 7,
+        "action_id": 7000,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": 7001,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": 7002,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": 7003,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// CHKVCH  // 1 - 3",
+        "apparat_id": 8,
+        "action_id": 8000,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 8,
+        "action_id": 8001,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": 8002,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 8,
+        "action_id": 8003,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 8,
+        "action_id": 8004,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 8,
+        "action_id": 8005,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 8,
+        "action_id": 8006,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 8,
+        "action_id": 8007,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 8,
+        "action_id": 8008,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 8,
+        "action_id": 8009,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// DSV   // 1 - 3 (DSV)",
+        "apparat_id": 9,
+        "action_id": 9000,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9001,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9002,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9003,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9004,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9005,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9006,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9007,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9008,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9011,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9012,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9013,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9014,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9015,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9016,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// 1 - 2 (PIT DSV)",
+        "apparat_id": 9,
+        "action_id": 9010,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9204,
+        "draggable": false,
+        "action_value": "off",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9009,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": " // IPP - 12        // 1 - 2 (PGP PER)",
+        "apparat_id": 10,
+        "action_id": 10000,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10001,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10002,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10003,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10004,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// 1 - 2 (PGP PR)",
+        "apparat_id": 10,
+        "action_id": 10005,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10006,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10007,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10008,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10009,
+        "draggable": false,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "comment": "// MD3",
+        "apparat_id": 10,
+        "action_id": 10019,
+        "draggable": false,
+        "action_value": "0",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10020,
+        "draggable": false,
+        "action_value": "0",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10021,
+        "draggable": false,
+        "action_value": "0",
+        "tag": "rotate"
+      },
+      {
+        "comment": "// MD3",
+        "apparat_id": 10,
+        "action_id": 100169,
+        "draggable": false,
+        "action_value": "0",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10017,
+        "draggable": false,
+        "action_value": "0",
+        "tag": "rotate"
+      },
+      {
+        "apparat_id": 10,
+        "action_id": 10018,
+        "draggable": false,
+        "action_value": "0",
+        "tag": "rotate"
+      }, 
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": -54,
+        "tag": "arrow"
+      }
+    ],
+    "annotation": "Аппратура подготовлена"
+  }
+}
