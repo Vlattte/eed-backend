@@ -39,7 +39,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3401, # первый кабель ГО-12
+        "action_id": 3302,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -74,7 +74,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3401, # первый кабель ГО-12
+        "action_id": 3302,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -108,7 +108,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3402, # второй кабель ГО-12
+        "action_id": 3303,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -142,8 +142,8 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3402, # второй кабель ГО-12
-        "action_value": "cabel",
+        "action_id": 3303,
+        "action_value": "none",
         "tag": "cabel"
       }
     ],
@@ -176,8 +176,8 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3403,
-        "action_value": "cabel", # третий кабель ГО-12
+        "action_id": 3304,
+        "action_value": "cabel",
         "tag": "cabel"
       }
     ],
@@ -210,7 +210,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3403, # третий кабель ГО-12
+        "action_id": 3304,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -244,8 +244,8 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3404,
-        "action_value": "cabel", # первый нижний кабель ГО-12
+        "action_id": 3315,
+        "action_value": "cabel",
         "tag": "cabel"
       }
     ],
@@ -278,7 +278,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3404, # первый нижний кабель ГО-12
+        "action_id": 3315,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -313,7 +313,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3405, # второй нижний кабель ГО-12
+        "action_id": 3314,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -347,7 +347,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3405, # второй нижний кабель ГО-12
+        "action_id": 3314,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -382,8 +382,8 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3009,
-        "action_value": "cabel", # третий нижний кабель ГО-12
+        "action_id": 3312,
+        "action_value": "cabel",
         "tag": "cabel"
       }
     ],
@@ -416,7 +416,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3406, # третий нижний кабель ГО-12
+        "action_id": 3312,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -451,7 +451,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3407, # четвертый нижний кабель ГО-12
+        "action_id": 3313,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -485,7 +485,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3407, # четвертый нижний кабель ГО-12
+        "action_id": 3313,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -519,7 +519,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3408, # пятый нижний кабель ГО-12
+        "action_id": 3309,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -553,7 +553,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3408, # пятый нижний кабель ГО-12
+        "action_id": 3309,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -588,7 +588,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3409, # шестой нижний кабель ГО-12
+        "action_id": 3308,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -622,7 +622,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3409, # шестой нижний кабель ГО-12
+        "action_id": 3308,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -657,7 +657,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3410, # седьмой нижний кабель ГО-12
+        "action_id": 3307,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -689,10 +689,9 @@
         "action_value": -54,
         "tag": "arrow"
       },
-
       {
         "apparat_id": 3,
-        "action_id": 3410, # седьмой нижний кабель ГО-12
+        "action_id": 3307,
         "action_value": "none",
         "tag": "cabel"
       }
@@ -725,10 +724,9 @@
         "action_value": 0,
         "tag": "arrow"
       },
-
       {
         "apparat_id": 3,
-        "action_id": 3411, # последний нижний кабель ГО-12
+        "action_id": 3306,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -762,7 +760,7 @@
       },
       {
         "apparat_id": 3,
-        "action_id": 3411, # последний нижний кабель ГО-12
+        "action_id": 3306,
         "action_value": "none",
         "tag": "cabel"
       }

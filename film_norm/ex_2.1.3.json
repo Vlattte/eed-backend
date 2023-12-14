@@ -30,7 +30,7 @@
     "current_value": "on",
     "tag": "cabel",
     "actions_for_step": 1,
-    "count_action": 2,
+    "count_action": 4,
     "array_actions": [
       {
         "apparat_id": 6,
@@ -43,6 +43,18 @@
         "action_id": 9404,
         "action_value": "none",
         "tag": "cabel"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2018,
+        "action_value": "on",
+        "tag": "lamp"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2020,
+        "action_value": "on",
+        "tag": "lamp"
       }
     ],
     "count_next": 0,
