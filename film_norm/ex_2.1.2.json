@@ -681,7 +681,7 @@
     "before_id": 3013,
     "tag": "cabel",
     "actions_for_step": 1,
-    "count_action": 1,
+    "count_action": 2,
     "array_actions": [
       {
         "apparat_id": 6,
@@ -715,7 +715,7 @@
     "before_id": 3015,
     "tag": "cabel",
     "actions_for_step": 1,
-    "count_action": 1,
+    "count_action": 2,
     "array_actions": [
       {
         "description": "Положение не звестно 5",

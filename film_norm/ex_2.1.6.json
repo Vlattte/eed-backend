@@ -1,26 +1,26 @@
 {
   "step_0": {
-    "description": "перемычка 16 ГО-12",
+    "description": "упражнение с болтом",
     "step": 0,
-    "id": 3003,
-    "before_id": 3003,
+    "id": 2023,
+    "before_id": 2023,
     "draggable": false,
     "current_value": "start",
-    "tag": "jumper",
+    "tag": "button",
     "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3003,
+        "next_id": 2023,
         "draggable": false,
         "current_value": "off",
-        "tag": "jumper"
+        "tag": "button"
       }
     ],
     "count_action": 0,
     "actions_for_step": 0,
     "array_actions": [{"name": "nan"}],
-    "annotation": "Вытащите перемычку 16 на упаковке ГО-12 на блоке ГП пер"
+    "annotation": "Зажмите кнопку "
   },
   "step_1": {
     "step": 1,
