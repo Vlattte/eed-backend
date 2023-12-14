@@ -31,8 +31,7 @@
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 2,
-    "array_actions": [
-      {"name": "nan"}],
+    "array_actions": [{"name": "nan"}],
     "count_next": 1,
     "next_actions": [
       {
