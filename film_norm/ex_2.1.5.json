@@ -1,9 +1,9 @@
 {
   "step_0": {
-    "description": "перемычки ГО-12",
+    "description": "перемычка 16 ГО-12",
     "step": 0,
-    "id": 3002,
-    "before_id": 3002,
+    "id": 3003,
+    "before_id": 3003,
     "draggable": false,
     "current_value": "start",
     "tag": "jumper",
@@ -11,7 +11,7 @@
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3002,
+        "next_id": 3003,
         "draggable": false,
         "current_value": "off",
         "tag": "jumper"
@@ -20,53 +20,51 @@
     "count_action": 0,
     "actions_for_step": 0,
     "array_actions": [{"name": "nan"}],
-    "annotation": "Вытащите перемычку 64 на упаковке ГО-12 на блоке ГП пер"
+    "annotation": "Вытащите перемычку 16 на упаковке ГО-12 на блоке ГП пер"
   },
   "step_1": {
     "step": 1,
-    "id": 3002,
-    "before_id": 3002,
+    "id": 3003,
+    "before_id": 3003,
     "draggable": false,
     "current_value": "off",
     "tag": "jumper",
     "actions_for_step": 1,
-    "count_action": 2,
+    "count_action": 0,
     "array_actions": [{"name": "nan"}],
     "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3303,
+        "next_id": 3002,
+        "draggable": false,
         "current_value": "on",
-        "tag": "cabel"
+        "tag": "jumper"
       }
     ],
-    "annotation": "Вставьте перемемычку в гнездо ГНЧ-120-1"
+    "annotation": "Вставьте перемемычку в гнездо ГП Пер."
   },
   "step_2": {
     "step": 2,
-    "id": 3303,
-    "before_id": 3303,
+    "id": 3302,
+    "before_id": 3302,
     "draggable": false,
     "current_value": "on",
-    "tag": "jumper",
+    "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
     "array_actions": [
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": "",
+        "action_value": 50,
         "tag": "arrow"
       }
     ],
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 2,
-        "next_id": 2201,
-        "current_value": "on",
-        "tag": "cabel"
+
       }
     ],
     "annotation": "Вставить провод на упаковке ЛО на блоке Ус.-12"
@@ -111,21 +109,21 @@
     "id": 2201,
     "before_id": 2201,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "off",
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 2,
     "array_actions": [
       {
-        "apparat_id": 2,
-        "action_id": 2301,
-        "action_value": "on",
+        "apparat_id": 3,
+        "action_id": 3302,
+        "action_value": "none",
         "tag": "cabel"
       },
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 40,
+        "action_value": 50,
         "tag": "arrow"
       }
     ],
@@ -138,7 +136,7 @@
         "tag": "cabel"
       }
     ],
-    "annotation": "Вставить провод на упаковке ЛО на блоке Ус.-12 вых."
+    "annotation": "Вставить провод на упаковке ЛО на блоке Ус.-12"
   },
   "step_5": {
     "step": 5,
@@ -151,8 +149,9 @@
     "count_action": 2,
     "array_actions": [
       {
-        "apparat_id": 2,
-        "action_id": 2301,
+        "description": "ЛО кабель справа",
+        "apparat_id": 3,
+        "action_id": 3302,
         "action_value": "none",
         "tag": "cabel"
       },
