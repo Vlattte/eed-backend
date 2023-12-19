@@ -30,7 +30,7 @@
     "current_value": "off",
     "tag": "jumper",
     "actions_for_step": 1,
-    "count_action": 2,
+    "count_action": 0,
     "array_actions": [
       {"name": "nan"}],
     "count_next": 1,

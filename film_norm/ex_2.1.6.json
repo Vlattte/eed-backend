@@ -1,0 +1,203 @@
+{
+  "step_0": {
+    "description": "упражнение с болтом",
+    "step": 0,
+    "id": 2023,
+    "before_id": 2023,
+    "draggable": false,
+    "current_value": "start",
+    "tag": "button",
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2023,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "button"
+      }
+    ],
+    "actions_for_step": 0,
+    "count_action": 3,
+    "array_actions": [
+      {
+        "apparat_id": 2,
+        "action_id": 2010,
+        "action_value": "on",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2011,
+        "action_value": "on",
+        "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2012,
+        "action_value": "on",
+        "tag": "tumbler"
+      }
+    ],
+    "annotation": "Зажмите кнопку -0.7НП"
+  },
+  "step_1": {
+    "step": 1,
+    "id": 2023,
+    "before_id": 2023,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2502,  # id правого болта,
+        "draggable": false,
+        "current_value": 0,
+        "tag": "bolt"     # тут возможно другой тип
+      }
+    ],
+    "annotation": "Переведите стрелку на блоке ПКК 64/16 в положение 0"
+  },
+  "step_2": {
+    "step": 2,
+    "id": 2502, # id правого болта,
+    "before_id": 2502, # id правого болта,
+    "draggable": false,
+    "current_value": 0,
+    "right_border": 55, # уточнить у Вани
+    "left_border": -54, # уточнить у Вани
+    "tag": "bolt",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2023,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "button"
+      }
+    ],
+    "annotation": "Отпустите кнопку -0.7НП"
+  },
+  "step_3": {
+    "step": 3,
+    "id": 2023,
+    "before_id": 2023,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2011,
+        "draggable": false,
+        "current_value": "off", # левое положение
+        "tag": "tumbler"
+      }
+    ],
+    "annotation": "перевести тумблер КЧ 64/16 в положение 64"
+  },
+  "step_4": {
+    "step": 4,
+    "id": 2011,
+    "before_id": 2011,
+    "draggable": false,
+    "current_value": "off", # левое положение
+    "tag": "tumbler",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "description": "# небольшое смешение стрелки вправо",
+        "apparat_id": 2,
+        "action_id": 2401,
+        "action_value": 5,
+        "tag": "arrow"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2023,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "button"
+      }
+    ],
+    "annotation": "Зажмите кнопку -0.7НП"
+  },
+  "step_5": {
+    "step": 5,
+    "id": 2023,
+    "before_id": 2023,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2501,
+        "draggable": false,
+        "current_value": 0,
+        "tag": "bolt",
+        "description": "нужно чтобы -0.2"
+      }
+    ],
+    "annotation": "Переведите стрелку на блоке ПКК 64/16 в положение 0"
+  },
+  "step_6": {
+    "step": 6,
+    "id": 2501,
+    "before_id": 2501,
+    "draggable": false,
+    "current_value": 0,
+    "right_border": 55, # точнить у Вани
+    "left_border": -54, # точнить у Вани
+    "tag": "bolt",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2023,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "button"
+      }
+    ],
+    "annotation": "Отпустите кнопку -0.7НП"
+  },
+  "step_7": {
+    "step": 7,
+    "id": 2023,
+    "before_id": 2023,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 0,
+    "next_actions": [{"name": "nan"}],
+    "annotation": "ВЫПОЛНЕНО"
+  }
+}

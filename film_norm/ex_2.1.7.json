@@ -1,0 +1,205 @@
+{
+  "step_0": {
+    "description": "упражнение с перемычкой 4:23",
+    "step": 0,
+    "id": 3002,
+    "before_id": 3002,
+    "draggable": false,
+    "current_value": "start",
+    "tag": "jumper",
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3002,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "jumper"
+      }
+    ],
+    "actions_for_step": 0,
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 3,
+        "action_id": 3002,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 3,
+        "action_id": 3001,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Вытащите перемычку 64 на блоке ГП Пер упаковки ГО-12"
+  },
+  "step_1": {
+    "step": 1,
+    "id": 3002,
+    "before_id": 3002,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "jumper",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2014,
+        "draggable": false,
+        "current_value": "on", # тут надо вверх его сделать, а он в стороны
+        "tag": "tumbler"
+      }
+    ],
+    "annotation": "Переключить тумблер Терм на блоке Ус-12 на упаковке ЛО в положение ВКЛ"
+  },
+  "step_3": {
+    "step": 3,
+    "id": 2014,
+    "before_id": 2014,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "tumbler",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2015,
+        "draggable": false,
+        "current_value": 240,
+        "tag": "channel"
+      }
+    ],
+    "annotation": "Повернуть крутилку РМ в положение 2 непера"
+  },
+  "step_2": {
+    "step": 2,
+    "id": 2015,        # вообще тут крутилка, которой нет
+    "before_id": 2015,
+    "draggable": false,
+    "current_value": 240,
+    "tag": "channel",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2013,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "tumbler"
+      }
+    ],
+    "annotation": "Перевести тумблер АРУ на блоке Ус-12 в положение ВКЛ"
+  },
+  "step_4": {
+    "step": 4,
+    "id": 2013,
+    "before_id": 2013,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "tumbler",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2012,
+        "draggable": false,
+        "current_value": "on", # правое положение
+        "tag": "tumbler"
+      }
+    ],
+    "annotation": "Переключить тумблер НУ/ВУ в положение ВУ"
+  },
+  "step_5": {
+    "step": 5,
+    "id": 2012,
+    "before_id": 2012,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "tumbler",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2024,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "button"
+      }
+    ],
+    "annotation": "Зажать кнопку УСТ. МРУ"
+  },
+  "step_6": {
+    "step": 6,
+    "id": 2024,
+    "before_id": 2024,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        # тут переместить треугольник вправо
+        "apparat_id": 2,
+        "action_id": 2023,
+        "action_value": 50,
+        "tag": "arrow"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2021,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "tumbler"
+      }
+    ],
+    "annotation": "Переведите тумблер АРУ на блоке ПКК 64/16 в положение ВКЛ"
+  },
+  "step_7": {
+    "step": 7,
+    "id": 2021,
+    "before_id": 2021,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "tumbler",
+    "actions_for_step": 1,
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 2,
+        "action_id": 2020,
+        "action_value": "on",
+        "tag": "lamp"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": # стрелку вернуть в 0,
+        "action_value": # стрелку вернуть в 0,
+        "tag": "triangle"
+      }
+    ],
+    "count_next": 0,
+    "next_actions": [{"name": "nan"}],
+    "annotation": "ВЫПОЛНЕНО"
+  }
+}

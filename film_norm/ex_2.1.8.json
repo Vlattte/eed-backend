@@ -1,0 +1,156 @@
+{
+  "step_0": {
+    "description": "перемычки ГО-12 v.2",
+    "step": 0,
+    "id": 3003,
+    "before_id": 3003,
+    "draggable": false,
+    "current_value": "start",
+    "tag": "jumper",
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3003,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 0,
+    "actions_for_step": 0,
+    "array_actions": [{"name": "nan"}],
+    "annotation": "Вытащите перемычку 64 на упаковке ГО-12 на блоке ГП пер"
+  },
+  "step_1": {
+    "step": 1,
+    "id": 3003,
+    "before_id": 3003,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "jumper",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 3,
+        "next_id": 3002,
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Вставьте перемычку в гнездо 16 на упаковке ГО-12 на блоке ГП пер"
+  },
+  "step_2": {
+    "step": 2,
+    "id": 3002,
+    "before_id": 3002,
+    "draggable": false,
+    "current_value": "jumper2",
+    "tag": "jumper",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2002,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "tumbler"
+      }
+    ],
+    "annotation": "Переведите тумблер Терм на блоке Ус.Л-12 в положение ВКЛ"
+  },
+  "step_3": {
+    "step": 3,
+    "id": 2002,
+    "before_id": 2002,
+    "draggable": false,
+    "current_value": "off", # верхнее положение
+    "tag": "tumbler",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2004,
+        "draggable": false,
+        "current_value": 215,
+        "tag": "channel"
+      }
+    ],
+    "annotation": "Переведите стрелку в положение -2 Нп с помощью крутилки Рл2 на блоке Ус.Л-12 на упаковке ЛО"
+  },
+  "step_4": {
+    "step": 4,
+    "id": 2004,
+    "before_id": 2004,
+    "draggable": false,
+    "current_value": 215,
+    "tag": "channel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": 44,
+        "tag": "arrow"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2001,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "tumbler"
+      }
+    ],
+    "annotation": "Переведите тумблер Ару на блоке Ус.Л-12 на упаковке ЛО в положение ВКЛ"
+  },
+  "step_5": {
+    "step": 5,
+    "id": 2001,
+    "before_id": 2001,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "tumbler",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2022,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "button"
+      }
+    ],
+    "annotation": "Зажать левую кнопку УСТ. МРУ"
+  },
+  "step_6": {
+    "step": 6,
+    "id": 2022,
+    "before_id": 2022,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 0,
+    "next_actions": [{"name": "nan"}],
+    "annotation": "ВЫПОЛНЕНО"
+  }
+}
