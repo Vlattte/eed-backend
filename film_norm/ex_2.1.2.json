@@ -6,13 +6,14 @@
     "before_id": 3301,
     "draggable": false,
     "current_value": "start",
+    "tag": "cabel",
     "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3014,
+        "next_id": 3301,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -22,10 +23,10 @@
   },
   "step_1": {
     "step": 1,
-    "id": 3014,
+    "id": 3301,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3014,
+    "current_value": "on",
+    "before_id": 3301,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -33,12 +34,12 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 45,
+        "action_value": "стрелка вправо положение 0",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3304,
+        "action_id": 3401,
         "action_value": "cabel",
         "tag": "cabel"
       }
@@ -47,7 +48,7 @@
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3014,
+        "next_id": 3301,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -57,10 +58,10 @@
   },
   "step_2": {
     "step": 2,
-    "id": 3014,
+    "id": 3301,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3014,
+    "before_id": 3301,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -68,23 +69,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3304,
+        "action_id": 3401,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3017,
+        "next_id": 3302,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -92,10 +92,10 @@
   },
   "step_3": {
     "step": 3,
-    "id": 3017,
+    "id": 3302,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3017,
+    "current_value": "on",
+    "before_id": 3302,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -103,21 +103,20 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 0,
+        "action_value": "стрелка в положении -0,6",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3303,
+        "action_id": 3402,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3017,
+        "next_id": 3302,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -127,10 +126,10 @@
   },
   "step_4": {
     "step": 4,
-    "id": 3017,
+    "id": 3302,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3017,
+    "before_id": 3302,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -138,23 +137,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3303,
-        "action_value": "none",
+        "action_id": 3402,
+        "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3016,
+        "next_id": 3303,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -162,10 +160,10 @@
   },
   "step_5": {
     "step": 5,
-    "id": 3016,
+    "id": 3303,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3016,
+    "current_value": "on",
+    "before_id": 3303,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -173,21 +171,20 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 44,
+        "action_value": "положение 0",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3302,
+        "action_id": 3403,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3016,
+        "next_id": 3303,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -197,10 +194,10 @@
   },
   "step_6": {
     "step": 6,
-    "id": 3016,
+    "id": 3303,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3016,
+    "before_id": 3303,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -208,23 +205,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "Начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3304,
+        "action_id": 3403,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3006,
+        "next_id": 3304,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -232,10 +228,10 @@
   },
   "step_7": {
     "step": 7,
-    "id": 3006,
+    "id": 3304,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3006,
+    "current_value": "on",
+    "before_id": 3304,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -243,21 +239,20 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 28,
+        "action_value": "-0.2",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3315,
+        "action_id": 3404,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3006,
+        "next_id": 3304,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -267,10 +262,10 @@
   },
   "step_8": {
     "step": 8,
-    "id": 3006,
+    "id": 3304,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3006,
+    "before_id": 3304,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -278,23 +273,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3315,
+        "action_id": 3404,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3008,
+        "next_id": 3305,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -302,33 +296,31 @@
   },
   "step_9": {
     "step": 9,
-    "id": 3008,
+    "id": 3305,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3008,
+    "current_value": "on",
+    "before_id": 3305,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
     "array_actions": [
       {
-        "description": "не знаем нужного положения",
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 0,
+        "action_value": "Не знаем какое положение необходимо",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3314,
+        "action_id": 3405,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3008,
+        "next_id": 3305,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -338,10 +330,10 @@
   },
   "step_10": {
     "step": 10,
-    "id": 3008,
+    "id": 3305,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3008,
+    "before_id": 3305,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -349,23 +341,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "Не знаем какое положение необходимо",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3314,
+        "action_id": 3405,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3009,
+        "next_id": 3306,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -373,33 +364,31 @@
   },
   "step_11": {
     "step": 11,
-    "id": 3009,
+    "id": 3306,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3009,
+    "current_value": "on",
+    "before_id": 3306,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
     "array_actions": [
       {
-        "description": "Не знаем какое положение необходимо",
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 0,
+        "action_value": "Не знаем какое положение необходимо",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3312,
+        "action_id": 3406,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3009,
+        "next_id": 3306,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -409,10 +398,10 @@
   },
   "step_12": {
     "step": 12,
-    "id": 3009,
+    "id": 3306,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3009,
+    "before_id": 3306,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -420,23 +409,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "Начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3312,
+        "action_id": 3406,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3011,
+        "next_id": 3307,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -444,33 +432,31 @@
   },
   "step_13": {
     "step": 13,
-    "id": 3011,
+    "id": 3307,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3011,
+    "current_value": "on",
+    "before_id": 3307,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
     "array_actions": [
       {
-        "description": "Не знаем положение 2",
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 0,
+        "action_value": "Не знаем положение 2",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3313,
+        "action_id": 3407,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3011,
+        "next_id": 3307,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -480,10 +466,10 @@
   },
   "step_14": {
     "step": 14,
-    "id": 3011,
+    "id": 3307,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3011,
+    "before_id": 3307,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -491,23 +477,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 0,
+        "action_value": "Начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3313,
+        "action_id": 3407,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3010,
+        "next_id": 3308,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -515,10 +500,10 @@
   },
   "step_15": {
     "step": 15,
-    "id": 3010,
+    "id": 3308,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3010,
+    "current_value": "on",
+    "before_id": 3308,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -526,21 +511,20 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -10,
+        "action_value": "-0.8",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3309,
+        "action_id": 3408,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3010,
+        "next_id": 3308,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -550,10 +534,10 @@
   },
   "step_16": {
     "step": 16,
-    "id": 3010,
+    "id": 3308,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3010,
+    "before_id": 3308,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -561,23 +545,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "Начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3309,
+        "action_id": 3408,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3012,
+        "next_id": 3309,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -585,33 +568,31 @@
   },
   "step_17": {
     "step": 17,
-    "id": 3012,
+    "id": 3309,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3012,
+    "current_value": "on",
+    "before_id": 3309,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
     "array_actions": [
       {
-        "descripton": "Положение не известно 3",
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 0,
+        "action_value": "Положение не известно 3",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3308,
+        "action_id": 3409,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3012,
+        "next_id": 3309,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -621,10 +602,10 @@
   },
   "step_18": {
     "step": 18,
-    "id": 3012,
+    "id": 3309,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3012,
+    "before_id": 3309,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -632,23 +613,22 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "Начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3308,
+        "action_id": 3409,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3013,
+        "next_id": 3310,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -656,33 +636,31 @@
   },
   "step_19": {
     "step": 19,
-    "id": 3013,
+    "id": 3310,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3013,
+    "current_value": "on",
+    "before_id": 3310,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
     "array_actions": [
       {
-        "description": "Положение не известно 4",
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 0,
+        "action_value": "Положение не известно 4",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3307,
+        "action_id": 3410,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3013,
+        "next_id": 3310,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -692,34 +670,34 @@
   },
   "step_20": {
     "step": 20,
-    "id": 3013,
+    "id": 3310,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3013,
+    "before_id": 3310,
     "tag": "cabel",
     "actions_for_step": 1,
-    "count_action": 2,
+    "count_action": 1,
     "array_actions": [
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "Начальное положение",
         "tag": "arrow"
       },
+
       {
         "apparat_id": 3,
-        "action_id": 3307,
+        "action_id": 3410,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3015,
+        "next_id": 3311,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -727,33 +705,32 @@
   },
   "step_21": {
     "step": 21,
-    "id": 3015,
+    "id": 3311,
     "draggable": false,
-    "current_value": "jumper2",
-    "before_id": 3015,
+    "current_value": "on",
+    "before_id": 3311,
     "tag": "cabel",
     "actions_for_step": 1,
-    "count_action": 2,
+    "count_action": 1,
     "array_actions": [
       {
-        "description": "Положение не звестно 5",
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": 0,
+        "action_value": "Положение не звестно 5",
         "tag": "arrow"
       },
+
       {
         "apparat_id": 3,
-        "action_id": 3306,
+        "action_id": 3411,
         "action_value": "cabel",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3015,
+        "next_id": 3311,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -763,10 +740,10 @@
   },
   "step_22": {
     "step": 22,
-    "id": 3015,
+    "id": 3311,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3015,
+    "before_id": 3311,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -774,17 +751,16 @@
       {
         "apparat_id": 6,
         "action_id": 6401,
-        "action_value": -54,
+        "action_value": "Начальное положение",
         "tag": "arrow"
       },
       {
         "apparat_id": 3,
-        "action_id": 3306,
+        "action_id": 3411,
         "action_value": "none",
         "tag": "cabel"
       }
     ],
-    "count_next": 1,
     "next_actions": [{"name": "nan"}],
     "annotation": "ВЫПОЛНЕНО"
   }
