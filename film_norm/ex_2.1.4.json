@@ -13,13 +13,20 @@
         "apparat_id": 3,
         "next_id": 3003,
         "draggable": false,
-        "current_value": "off",
+        "current_value": "jumper2",
         "tag": "jumper"
       }
     ],
-    "count_action": 0,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 3,
+        "action_id": 3002,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
     "actions_for_step": 0,
-    "array_actions": [{"name": "nan"}],
     "annotation": "Вытащите перемычку 16 на упаковке ГО-12 на блоке ГП пер"
   },
   "step_1": {
@@ -27,7 +34,7 @@
     "id": 3003,
     "before_id": 3003,
     "draggable": false,
-    "current_value": "off",
+    "current_value": "jumper2",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 0,
@@ -38,7 +45,7 @@
         "apparat_id": 3,
         "next_id": 3002,
         "draggable": false,
-        "current_value": "on",
+        "current_value": "off",
         "tag": "jumper"
       }
     ],
@@ -46,10 +53,10 @@
   },
   "step_2": {
     "step": 2,
-    "id": 3302,
-    "before_id": 3302,
+    "id": 3002,
+    "before_id": 3002,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "off",
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,

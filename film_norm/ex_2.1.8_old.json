@@ -1,0 +1,336 @@
+{
+  "step_0": {
+    "description": "Упражнение с проводами 7:21 - 8:39 (Провести проверку прохождения сигнала по каналам и работу вызывных устройств)",
+    "step": 0,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6221,
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "next_id": "id jumper 9",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 0,
+    "actions_for_step": 0,
+    "array_actions": [{"name": "nan"}],
+    "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
+  },
+  "step_1": {
+    "step": 1,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": 6221,
+        "current_value": "jumper2",
+        "before_id": 6221,
+        "tag": "jumper"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "id jumper 9",
+        "current_value": "jumper2",
+        "before_id": "id jumper 9",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": "cable from id jumper *1",
+        "action_value": "on",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 9",
+        "action_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": 7,
+        "next_id": "id jumper 8",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "next_id": "id jumper 1",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
+  },
+  "step_2": {
+    "step": 2,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "id jumper 8",
+        "current_value": "jumper2",
+        "before_id": "id jumper 8",
+        "tag": "jumper"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "id jumper 1",
+        "current_value": "jumper2",
+        "before_id": "id jumper 1",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 1",
+        "action_value": "on",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 8",
+        "action_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": 7,
+        "next_id": "id jumper 6",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "next_id": "id jumper 2",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
+  },
+  "step_3": {
+    "step": 3,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "id jumper 2",
+        "current_value": "jumper2",
+        "before_id": "id jumper 2",
+        "tag": "jumper"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "id jumper 6",
+        "current_value": "jumper2",
+        "before_id": "id jumper 6",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 6",
+        "action_value": "on",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 2",
+        "action_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": 7,
+        "next_id": "id jumper 5",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "next_id": "id jumper 3",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
+  },
+  "step_4": {
+    "step": 4,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "id jumper 5",
+        "current_value": "jumper2",
+        "before_id": "id jumper 5",
+        "tag": "jumper"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "id jumper 3",
+        "current_value": "jumper2",
+        "before_id": "id jumper 3",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 3",
+        "action_value": "on",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 5",
+        "action_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 2,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": "id jumper 4",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      },
+      {
+        "apparat_id": 7,
+        "next_id": "id jumper 7",
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
+  },
+  "step_5": {
+    "step": 5,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "actions_for_step": 2,
+    "sub_steps": [
+      {
+        "name": "sub_step_1",
+        "action_id": "id jumper 4",
+        "current_value": "jumper2",
+        "before_id": "id jumper 4",
+        "tag": "jumper"
+      },
+      {
+        "name": "sub_step_2",
+        "action_id": "id jumper 7",
+        "current_value": "jumper2",
+        "before_id": "id jumper 7",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 7",
+        "action_value": "on",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 7,
+        "action_id": "cable from id jumper 4",
+        "action_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6014,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "button"
+      }
+    ],
+    "annotation": "Нажать кнопку вызов на блоке ПВУ (должна загореться лампа пос. ив на блоке пид дсв)"
+  },
+  "step_6": {
+    "step": 6,
+    "id": 6014,
+    "before_id": 6014,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 9,
+        "action_id": 9019,
+        "action_value": "on",
+        "tag": "lamp"
+      }
+    ],
+    "count_next": 0,
+    "next_actions": [{"name": "nan"}],
+    "annotation": "ВЫПОЛНЕНО"
+  }
+}
