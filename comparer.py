@@ -165,6 +165,7 @@ def WhatExercise(message, session_id):
 
     project_path = os.path.abspath(__file__ + "/..")
     exercise_json = open(project_path + "/" + "id_json.json", encoding='utf-8')
+    print(exercise_json)
     data = json.load(exercise_json)
 
     # id норматива
