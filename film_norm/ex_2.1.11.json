@@ -1,0 +1,77 @@
+{
+  "step_0": {
+    "description": "Упражнение с проводами 8:39 - 9:03 (Проверка канала служебной связи)",
+    "step": 0,
+    "id": "multiple",
+    "before_id": "multiple",
+    "draggable": false,
+    "current_value": "multiple",
+    "tag": "multiple",
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 1,
+        "next_id": 1011,
+        "draggable": false,
+        "current_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
+    "count_action": 0,
+    "actions_for_step": 0,
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "Подать от генератора сигнал с уровнем 0 Нп с частотой 800 гц в перемычку установленную в гнездо пер 0 Нп на блоке СС-О"
+  },
+  "step_1": {
+    "step": 1,
+    "id": 1011,
+    "before_id": 1011,
+    "draggable": false,
+    "current_value": "jumper2",
+    "tag": "jumper",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 1,
+        "next_id": 1001,
+        "draggable": false,
+        "current_value": "up",
+        "tag": "lever"
+      }
+    ],
+    "annotation": "Ключ ВА ЦРК установить в положение ЦРК"
+  },
+  "step_2": {
+    "step": 2,
+    "id": 1,
+    "before_id": 1001,
+    "draggable": false,
+    "current_value": "up",
+    "tag": "lever",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "count_next": 0,
+    "next_actions": [
+      {
+        "name": "nan"
+      }
+    ],
+    "annotation": "На телефоне должен быть слышен тон достаточной громкости (ВЫПОЛНЕНО)"
+  }
+}
