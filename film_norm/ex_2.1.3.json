@@ -90,7 +90,7 @@
     "array_actions": [
       {
         "description": "ЛО кабель справа",
-        "apparat_id": 3,
+        "apparat_id": 2,
         "action_id": 2301,
         "action_value": "cabel",
         "tag": "cabel"
@@ -107,7 +107,7 @@
       {
         "apparat_id": 2,
         "next_id": 2201,
-        "current_value": "on",
+        "current_value": "off",
         "tag": "cabel"
       }
     ],
@@ -126,7 +126,7 @@
       {
         "apparat_id": 2,
         "action_id": 2301,
-        "action_value": "cabel",
+        "action_value": "none",
         "tag": "cabel"
       },
       {
