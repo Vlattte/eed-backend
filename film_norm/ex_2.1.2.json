@@ -223,7 +223,7 @@
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3006,
+        "next_id": 3203,
         "draggable": false,
         "current_value": "jumper2",
         "tag": "cabel"
@@ -233,10 +233,10 @@
   },
   "step_7": {
     "step": 7,
-    "id": 3006,
+    "id": 3203,
     "draggable": false,
     "current_value": "jumper2",
-    "before_id": 3006,
+    "before_id": 3203,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,
@@ -258,7 +258,7 @@
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3006,
+        "next_id": 3203,
         "draggable": false,
         "current_value": "off",
         "tag": "cabel"
@@ -268,10 +268,10 @@
   },
   "step_8": {
     "step": 8,
-    "id": 3006,
+    "id": 3203,
     "draggable": false,
     "current_value": "off",
-    "before_id": 3006,
+    "before_id": 3203,
     "tag": "cabel",
     "actions_for_step": 1,
     "count_action": 1,

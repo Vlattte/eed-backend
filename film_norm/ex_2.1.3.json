@@ -13,13 +13,20 @@
         "apparat_id": 3,
         "next_id": 3002,
         "draggable": false,
-        "current_value": "off",
+        "current_value": "jumper2",
         "tag": "jumper"
       }
     ],
     "count_action": 0,
-    "actions_for_step": 0,
-    "array_actions": [{"name": "nan"}],
+    "actions_for_step": 1,
+    "array_actions": [
+      {
+        "apparat_id": 3,
+        "action_id": 3002,
+        "action_value": "jumper2",
+        "tag": "jumper"
+      }
+    ],
     "annotation": "Вытащите перемычку 64 на упаковке ГО-12 на блоке ГП пер"
   },
   "step_1": {
@@ -27,17 +34,17 @@
     "id": 3002,
     "before_id": 3002,
     "draggable": false,
-    "current_value": "off",
+    "current_value": "jumper2",
     "tag": "jumper",
     "actions_for_step": 1,
-    "count_action": 2,
+    "count_action": 0,
     "array_actions": [{"name": "nan"}],
     "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3303,
-        "current_value": "on",
+        "next_id": 3017,
+        "current_value": "jumper2",
         "tag": "cabel"
       }
     ],
@@ -45,19 +52,19 @@
   },
   "step_2": {
     "step": 2,
-    "id": 3303,
-    "before_id": 3303,
+    "id": 3017,
+    "before_id": 3017,
     "draggable": false,
-    "current_value": "on",
+    "current_value": "jumper2",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
     "array_actions": [
       {
-        "apparat_id": 6,
-        "action_id": 6401,
-        "action_value": "",
-        "tag": "arrow"
+        "apparat_id": 3,
+        "action_id": 3040,
+        "action_value": "on",
+        "tag": "lamp"
       }
     ],
     "count_next": 1,
@@ -85,7 +92,7 @@
         "description": "ЛО кабель справа",
         "apparat_id": 3,
         "action_id": 3302,
-        "action_value": "on",
+        "action_value": "cabel",
         "tag": "cabel"
       },
       {
@@ -100,7 +107,7 @@
       {
         "apparat_id": 2,
         "next_id": 2201,
-        "current_value": "off",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -119,7 +126,7 @@
       {
         "apparat_id": 2,
         "action_id": 2301,
-        "action_value": "on",
+        "action_value": "jumper2",
         "tag": "cabel"
       },
       {
@@ -153,7 +160,7 @@
       {
         "apparat_id": 2,
         "action_id": 2301,
-        "action_value": "none",
+        "action_value": "cabel",
         "tag": "cabel"
       },
       {
