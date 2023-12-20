@@ -13,13 +13,20 @@
         "apparat_id": 6,
         "next_id": 6221,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "jumper"
       }
     ],
-    "count_action": 0,
     "actions_for_step": 0,
-    "array_actions": [{"name": "nan"}],
+    "count_action": 1,
+    "array_actions": [
+       {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": -54,
+        "tag": "arrow"
+      }
+    ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
   "step_1": {
@@ -27,7 +34,7 @@
     "id": 6221,
     "before_id": 6221,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
@@ -56,7 +63,7 @@
     "id": 7108,
     "before_id": 7108,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
@@ -74,7 +81,7 @@
         "apparat_id": 7,
         "next_id": 7107,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "jumper"
       }
     ],
@@ -85,7 +92,7 @@
     "id": 7107,
     "before_id": 7107,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
@@ -103,7 +110,7 @@
         "apparat_id": 7,
         "next_id": 7100,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "jumper"
       }
     ],
@@ -114,13 +121,13 @@
     "id": 7100,
     "before_id": 7100,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 2,
     "array_actions": [
       {
-        "apparat_id": 6,
+        "apparat_id": 7,
         "action_id": 7700,
         "action_value": "cabel",
         "tag": "cabel"
@@ -132,7 +139,7 @@
         "apparat_id": 7,
         "next_id": 7101,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "jumper"
       }
     ],
@@ -143,7 +150,7 @@
     "id": 7101,
     "before_id": 7101,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "multiple",
     "actions_for_step": 1,
     "count_action": 2,
@@ -161,7 +168,7 @@
         "apparat_id": 7,
         "next_id": 7105,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "jumper"
       }
     ],
@@ -172,7 +179,7 @@
     "id": 7105,
     "before_id": 7105,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
@@ -190,7 +197,7 @@
         "apparat_id": 7,
         "next_id": 7104,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "jumper"
       }
     ],
@@ -201,7 +208,7 @@
     "id": 7104,
     "before_id": 7104,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
@@ -219,7 +226,7 @@
         "apparat_id": 7,
         "next_id": 7102,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "cabel",
         "tag": "jumper"
       }
     ],
@@ -230,7 +237,7 @@
     "id": 7102,
     "before_id": 7102,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
@@ -245,10 +252,10 @@
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 6,
+        "apparat_id": 7,
         "next_id": 7103,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "jumper"
       }
     ],
@@ -259,7 +266,7 @@
     "id": 7103,
     "before_id": 7103,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
@@ -277,7 +284,7 @@
         "apparat_id": 7,
         "next_id": 7106,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "jumper"
       }
     ],
@@ -288,7 +295,7 @@
     "id": 7106,
     "before_id": 7106,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "jumper",
     "actions_for_step": 1,
     "count_action": 1,
@@ -320,11 +327,17 @@
     "current_value": "on",
     "tag": "button",
     "actions_for_step": 1,
-    "count_action": 1,
+    "count_action": 2,
     "array_actions": [
       {
         "apparat_id": 9,
         "action_id": 9019,
+        "action_value": "on",
+        "tag": "lamp"
+      },
+      {
+        "apparat_id": 9,
+        "action_id": 9018,
         "action_value": "on",
         "tag": "lamp"
       }
