@@ -30,24 +30,51 @@
     "current_value": "off",
     "tag": "jumper",
     "actions_for_step": 1,
-    "count_action": 0,
+    "count_action": 2,
     "array_actions": [{"name": "nan"}],
     "count_next": 1,
     "next_actions": [
       {
         "apparat_id": 3,
-        "next_id": 3002,
-        "draggable": false,
-        "current_value": "off",
-        "tag": "jumper"
+        "next_id": 3303,
+        "current_value": "on",
+        "tag": "cabel"
       }
     ],
     "annotation": "Вставьте перемемычку в гнездо ГНЧ-120-1"
   },
   "step_2": {
     "step": 2,
-    "id": 3302,
-    "before_id": 3302,
+    "id": 3303,
+    "before_id": 3303,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "jumper",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": "",
+        "tag": "arrow"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2201,
+        "current_value": "on",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Вставить провод на упаковке ЛО на блоке Ус.-12"
+  },
+  "step_3": {
+    "step": 3,
+    "id": 2201,
+    "before_id": 2201,
     "draggable": false,
     "current_value": "on",
     "tag": "cabel",
@@ -55,45 +82,85 @@
     "count_action": 2,
     "array_actions": [
       {
+        "description": "ЛО кабель справа",
         "apparat_id": 3,
         "action_id": 3302,
         "action_value": "on",
         "tag": "cabel"
       },
       {
-        "apparat_id": 3,
-        "action_id": 3040,
-        "action_value": "on",
-        "tag": "lamp"
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": 40,
+        "tag": "arrow"
       }
     ],
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 3,
+        "apparat_id": 2,
         "next_id": 2201,
-        "draggable": false,
-        "current_value": "jumper2",
-        "tag": "jumper"
+        "current_value": "off",
+        "tag": "cabel"
       }
     ],
-    "annotation": "Вставьте перемемычку в гнездо ГНЧ-120-1"
+    "annotation": "Вставить провод на упаковке ЛО на блоке Ус.-12"
   },
-  "step_3": {
-    "step": 3,
+  "step_4": {
+    "step": 4,
     "id": 2201,
     "before_id": 2201,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "tag": "cabel",
     "actions_for_step": 1,
-    "count_action": 1,
+    "count_action": 2,
     "array_actions": [
       {
-        "apparat_id": 3,
-        "action_id": 3302,
-        "action_value": "on", # какой провод?
+        "apparat_id": 2,
+        "action_id": 2301,
+        "action_value": "on",
         "tag": "cabel"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": 40,
+        "tag": "arrow"
+      }
+    ],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2201,
+        "current_value": "off",
+        "tag": "cabel"
+      }
+    ],
+    "annotation": "Вставить провод на упаковке ЛО на блоке Ус.-12 вых."
+  },
+  "step_5": {
+    "step": 5,
+    "id": 2201,
+    "before_id": 2201,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 2,
+        "action_id": 2301,
+        "action_value": "none",
+        "tag": "cabel"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": -54,
+        "tag": "arrow"
       }
     ],
     "count_next": 0,
