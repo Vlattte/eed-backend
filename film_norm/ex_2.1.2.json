@@ -225,7 +225,7 @@
         "apparat_id": 3,
         "next_id": 3203,
         "draggable": false,
-        "current_value": "jumper2",
+        "current_value": "on",
         "tag": "cabel"
       }
     ],
@@ -235,7 +235,7 @@
     "step": 7,
     "id": 3203,
     "draggable": false,
-    "current_value": "jumper2",
+    "current_value": "on",
     "before_id": 3203,
     "tag": "cabel",
     "actions_for_step": 1,

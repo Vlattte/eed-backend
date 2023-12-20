@@ -91,7 +91,7 @@
       {
         "description": "ЛО кабель справа",
         "apparat_id": 3,
-        "action_id": 3302,
+        "action_id": 2301,
         "action_value": "cabel",
         "tag": "cabel"
       },
@@ -115,40 +115,6 @@
   },
   "step_4": {
     "step": 4,
-    "id": 2201,
-    "before_id": 2201,
-    "draggable": false,
-    "current_value": "on",
-    "tag": "cabel",
-    "actions_for_step": 1,
-    "count_action": 2,
-    "array_actions": [
-      {
-        "apparat_id": 2,
-        "action_id": 2301,
-        "action_value": "jumper2",
-        "tag": "cabel"
-      },
-      {
-        "apparat_id": 6,
-        "action_id": 6401,
-        "action_value": 40,
-        "tag": "arrow"
-      }
-    ],
-    "count_next": 1,
-    "next_actions": [
-      {
-        "apparat_id": 2,
-        "next_id": 2201,
-        "current_value": "off",
-        "tag": "cabel"
-      }
-    ],
-    "annotation": "Вставить провод на упаковке ЛО на блоке Ус.-12 вых."
-  },
-  "step_5": {
-    "step": 5,
     "id": 2201,
     "before_id": 2201,
     "draggable": false,
