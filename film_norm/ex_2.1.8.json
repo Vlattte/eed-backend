@@ -37,8 +37,15 @@
     "current_value": "on",
     "tag": "button",
     "actions_for_step": 1,
-    "count_action": 0,
-    "array_actions": [{"name": "nan"}],
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 2,
+        "action_id": 2401,
+        "action_value": 0,
+        "tag": "arrow"
+      }
+    ],
     "count_next": 1,
     "next_actions": [
       {
