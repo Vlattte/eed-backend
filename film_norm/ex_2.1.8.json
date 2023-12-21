@@ -27,7 +27,7 @@
         "tag": "arrow"
       }
     ],
-    "annotation": "Установите стрелку индикатора на блоке ПКК 64/16 в положение 0"
+    "annotation": "Зажав кнопку -0.7Нп установите стрелку индикатора на блоке ПКК 64/16 в положение 0"
   },
   "step_1": {
     "step": 1,
@@ -37,12 +37,40 @@
     "current_value": "on",
     "tag": "button",
     "actions_for_step": 1,
-    "count_action": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 2,
+        "next_id": 2023,
+        "draggable": false,
+        "current_value": "off",
+        "tag": "button"
+      }
+    ],
+    "annotation": "Зажав кнопку -0.7Нп установите стрелку индикатора на блоке ПКК 64/16 в положение 0"
+  },
+  "step_2": {
+    "step": 2,
+    "id": 2023,
+    "before_id": 2023,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 2,
     "array_actions": [
       {
         "apparat_id": 2,
         "action_id": 2401,
         "action_value": 0,
+        "tag": "arrow"
+      },
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": -54,
         "tag": "arrow"
       }
     ],
@@ -58,8 +86,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_2": {
-    "step": 2,
+  "step_3": {
+    "step": 3,
     "id": 6221,
     "before_id": 6221,
     "draggable": false,
@@ -87,8 +115,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_3": {
-    "step": 3,
+  "step_4": {
+    "step": 4,
     "id": 7108,
     "before_id": 7108,
     "draggable": false,
@@ -116,8 +144,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_4": {
-    "step": 4,
+  "step_5": {
+    "step": 5,
     "id": 7107,
     "before_id": 7107,
     "draggable": false,
@@ -145,8 +173,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_5": {
-    "step": 5,
+  "step_6": {
+    "step": 6,
     "id": 7100,
     "before_id": 7100,
     "draggable": false,
@@ -174,8 +202,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_6": {
-    "step": 6,
+  "step_7": {
+    "step": 7,
     "id": 7101,
     "before_id": 7101,
     "draggable": false,
@@ -203,8 +231,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_7": {
-    "step": 7,
+  "step_8": {
+    "step": 8,
     "id": 7105,
     "before_id": 7105,
     "draggable": false,
@@ -232,8 +260,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_8": {
-    "step": 8,
+  "step_9": {
+    "step": 9,
     "id": 7104,
     "before_id": 7104,
     "draggable": false,
@@ -261,8 +289,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_9": {
-    "step": 9,
+  "step_10": {
+    "step": 10,
     "id": 7102,
     "before_id": 7102,
     "draggable": false,
@@ -290,8 +318,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_10": {
-    "step": 10,
+  "step_11": {
+    "step": 11,
     "id": 7103,
     "before_id": 7103,
     "draggable": false,
@@ -319,8 +347,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-    "step_11": {
-    "step": 11,
+    "step_12": {
+    "step": 12,
     "id": 7106,
     "before_id": 7106,
     "draggable": false,
@@ -348,8 +376,8 @@
     ],
     "annotation": "Нажать кнопку вызов на блоке ПВУ (должна загореться лампа пос. ив на блоке пид дсв)"
   },
-  "step_12": {
-    "step": 12,
+  "step_13": {
+    "step": 13,
     "id": 6014,
     "before_id": 6014,
     "draggable": false,
