@@ -93,7 +93,7 @@
         "tag": "lever"
       }
     ],
-    "count_action": 1,
+    "count_action": 4,
     "array_actions": [
       {
         "apparat_id": 6,
@@ -104,6 +104,18 @@
       {
         "apparat_id": 7,
         "action_id": 7007,
+        "action_value": "on",
+        "tag": "lamp"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2018,
+        "action_value": "on",
+        "tag": "lamp"
+      },
+       {
+        "apparat_id": 2,
+        "action_id": 2020,
         "action_value": "on",
         "tag": "lamp"
       }

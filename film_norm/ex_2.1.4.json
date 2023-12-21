@@ -37,8 +37,21 @@
     "current_value": "jumper2",
     "tag": "jumper",
     "actions_for_step": 1,
-    "count_action": 0,
-    "array_actions": [{"name": "nan"}],
+    "count_action": 2,
+    "array_actions": [
+      {
+        "apparat_id": 2,
+        "action_id": 2018,
+        "action_value": "on",
+        "tag": "lamp"
+      },
+       {
+        "apparat_id": 2,
+        "action_id": 2020,
+        "action_value": "on",
+        "tag": "lamp"
+      }
+    ],
     "count_next": 1,
     "next_actions": [
       {
@@ -49,10 +62,31 @@
         "tag": "jumper"
       }
     ],
-    "annotation": "Вставьте перемемычку в гнездо ГП Пер. 64"
+    "annotation": "Вставьте перемемычку в гнездо ГП Пер. 64. \nУстановите стрелку индикатора на блоке ПКК 64/16 в положение 0"
   },
   "step_2": {
     "step": 2,
+    "id": 3002,
+    "before_id": 3002,
+    "draggable": false,
+    "current_value": "off",
+    "tag": "cabel",
+    "actions_for_step": 1,
+    "count_action": 1,
+    "array_actions": [
+      {
+        "apparat_id": 6,
+        "action_id": 6401,
+        "action_value": 50,
+        "tag": "arrow"
+      }
+    ],
+    "count_next": 0,
+    "next_actions": [{"name": "nan"}],
+    "annotation": "ВЫПОЛНЕНО"
+  },
+  "step_3": {
+    "step": 3,
     "id": 3002,
     "before_id": 3002,
     "draggable": false,
