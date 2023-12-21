@@ -2,19 +2,19 @@
   "step_0": {
     "description": "Упражнение с проводами 7:21 - 8:39 (Провести проверку прохождения сигнала по каналам и работу вызывных устройств)",
     "step": 0,
-    "id": 6221,
-    "before_id": 6221,
+    "id": 2023,
+    "before_id": 2023,
     "draggable": false,
     "current_value": "start",
-    "tag": "jumper",
+    "tag": "button",
     "count_next": 1,
     "next_actions": [
       {
-        "apparat_id": 6,
-        "next_id": 6221,
+        "apparat_id": 2,
+        "next_id": 2023,
         "draggable": false,
         "current_value": "on",
-        "tag": "jumper"
+        "tag": "button"
       }
     ],
     "actions_for_step": 0,
@@ -27,10 +27,32 @@
         "tag": "arrow"
       }
     ],
-    "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
+    "annotation": "Установите стрелку индикатора на блоке ПКК 64/16 в положение 0"
   },
   "step_1": {
     "step": 1,
+    "id": 2023,
+    "before_id": 2023,
+    "draggable": false,
+    "current_value": "on",
+    "tag": "button",
+    "actions_for_step": 1,
+    "count_action": 0,
+    "array_actions": [{"name": "nan"}],
+    "count_next": 1,
+    "next_actions": [
+      {
+        "apparat_id": 6,
+        "next_id": 6221,
+        "draggable": false,
+        "current_value": "on",
+        "tag": "jumper"
+      }
+    ],
+    "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
+  },
+  "step_2": {
+    "step": 2,
     "id": 6221,
     "before_id": 6221,
     "draggable": false,
@@ -58,8 +80,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_2": {
-    "step": 2,
+  "step_3": {
+    "step": 3,
     "id": 7108,
     "before_id": 7108,
     "draggable": false,
@@ -87,8 +109,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_3": {
-    "step": 3,
+  "step_4": {
+    "step": 4,
     "id": 7107,
     "before_id": 7107,
     "draggable": false,
@@ -116,8 +138,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_4": {
-    "step": 4,
+  "step_5": {
+    "step": 5,
     "id": 7100,
     "before_id": 7100,
     "draggable": false,
@@ -145,8 +167,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_5": {
-    "step": 5,
+  "step_6": {
+    "step": 6,
     "id": 7101,
     "before_id": 7101,
     "draggable": false,
@@ -174,8 +196,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_6": {
-    "step": 6,
+  "step_7": {
+    "step": 7,
     "id": 7105,
     "before_id": 7105,
     "draggable": false,
@@ -203,8 +225,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_7": {
-    "step": 7,
+  "step_8": {
+    "step": 8,
     "id": 7104,
     "before_id": 7104,
     "draggable": false,
@@ -232,8 +254,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_8": {
-    "step": 8,
+  "step_9": {
+    "step": 9,
     "id": 7102,
     "before_id": 7102,
     "draggable": false,
@@ -261,8 +283,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-  "step_9": {
-    "step": 9,
+  "step_10": {
+    "step": 10,
     "id": 7103,
     "before_id": 7103,
     "draggable": false,
@@ -290,8 +312,8 @@
     ],
     "annotation": "Проверку производить в каналах попарно в соответствии с чертежем 1аб"
   },
-    "step_10": {
-    "step": 10,
+    "step_11": {
+    "step": 11,
     "id": 7106,
     "before_id": 7106,
     "draggable": false,
@@ -319,8 +341,8 @@
     ],
     "annotation": "Нажать кнопку вызов на блоке ПВУ (должна загореться лампа пос. ив на блоке пид дсв)"
   },
-  "step_11": {
-    "step": 11,
+  "step_12": {
+    "step": 12,
     "id": 6014,
     "before_id": 6014,
     "draggable": false,
