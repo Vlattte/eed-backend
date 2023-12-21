@@ -18,7 +18,7 @@
       }
     ],
     "actions_for_step": 0,
-    "count_action": 3,
+    "count_action": 4,
     "array_actions": [
       {
         "apparat_id": 2,
@@ -37,6 +37,12 @@
         "action_id": 2012,
         "action_value": "on",
         "tag": "tumbler"
+      },
+      {
+        "apparat_id": 2,
+        "action_id": 2401,
+        "action_value": 0,
+        "tag": "arrow"
       }
     ],
     "annotation": "Зажмите кнопку -0.7НП"
