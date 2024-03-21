@@ -8,6 +8,11 @@ import itertools
 import json
 
 import websockets
+from fastapi import FastAPI, WebSocket
+from fastapi.responses import HTMLResponse
+
+
+app = FastAPI()
 
 
 async def handler(websocket):
@@ -20,11 +25,19 @@ async def handler(websocket):
     print("[data for front]", return_json)
     await websocket.send(json.dumps(return_json, ensure_ascii=False))
 
-
-async def main():
+@app.websocket('/')
+async def main(websocket: WebSocket):
     print("SERVER ON")
-    async with websockets.serve(handler, "", 8083, max_size=1000000):
-        await asyncio.Future()
+    await websocket.accept()
+    while True:
+        message = await websocket.receive_json()
+        return_json = comparer.Comparer(message)
+        print("[data for front]", return_json)
+
+        await websocket.send_json(return_json)
+
+    # async with websockets.serve(handler, "", 8083, max_size=1000000):
+    #     await asyncio.Future()
 
 if __name__ == "__main__":
     asyncio.run(main())
