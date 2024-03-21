@@ -35,7 +35,7 @@ async def main(websocket: WebSocket):
         print("[data for front]", return_json)
 
         await websocket.send_json(return_json)
-        # uvicor server:app --reload --port 8083
+        # uvicorn server:app --reload --port 8083
 
     # async with websockets.serve(handler, "", 8083, max_size=1000000):
     #     await asyncio.Future()
